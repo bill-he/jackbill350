@@ -1,0 +1,685 @@
+--
+--	Conversion of EasyBoard.v to vh2:
+--
+--	Cypress Semiconductor - WARP Version 6.3 IR 41
+--	Wed Apr 06 02:03:17 2016
+--
+
+USE cypress.cypress.all;
+USE cypress.rtlpkg.all;
+ENTITY top_RTL IS
+ATTRIBUTE part_name of top_RTL:TYPE IS "cpsoc3";
+END top_RTL;
+--------------------------------------------------------
+ARCHITECTURE R_T_L OF top_RTL IS
+SIGNAL \LCD:tmpOE__LCDPort_net_6\ : bit;
+SIGNAL \LCD:tmpOE__LCDPort_net_5\ : bit;
+SIGNAL \LCD:tmpOE__LCDPort_net_4\ : bit;
+SIGNAL \LCD:tmpOE__LCDPort_net_3\ : bit;
+SIGNAL \LCD:tmpOE__LCDPort_net_2\ : bit;
+SIGNAL \LCD:tmpOE__LCDPort_net_1\ : bit;
+SIGNAL \LCD:tmpOE__LCDPort_net_0\ : bit;
+SIGNAL zero : bit;
+SIGNAL \LCD:tmpFB_6__LCDPort_net_6\ : bit;
+SIGNAL \LCD:tmpFB_6__LCDPort_net_5\ : bit;
+SIGNAL \LCD:tmpFB_6__LCDPort_net_4\ : bit;
+SIGNAL \LCD:tmpFB_6__LCDPort_net_3\ : bit;
+SIGNAL \LCD:tmpFB_6__LCDPort_net_2\ : bit;
+SIGNAL \LCD:tmpFB_6__LCDPort_net_1\ : bit;
+SIGNAL \LCD:tmpFB_6__LCDPort_net_0\ : bit;
+SIGNAL \LCD:tmpIO_6__LCDPort_net_6\ : bit;
+SIGNAL \LCD:tmpIO_6__LCDPort_net_5\ : bit;
+SIGNAL \LCD:tmpIO_6__LCDPort_net_4\ : bit;
+SIGNAL \LCD:tmpIO_6__LCDPort_net_3\ : bit;
+SIGNAL \LCD:tmpIO_6__LCDPort_net_2\ : bit;
+SIGNAL \LCD:tmpIO_6__LCDPort_net_1\ : bit;
+SIGNAL \LCD:tmpIO_6__LCDPort_net_0\ : bit;
+TERMINAL \LCD:tmpSIOVREF__LCDPort_net_0\ : bit;
+SIGNAL one : bit;
+SIGNAL \LCD:tmpINTERRUPT_0__LCDPort_net_0\ : bit;
+SIGNAL tmpOE__WaveDAC_0_OUT_net_0 : bit;
+SIGNAL tmpFB_0__WaveDAC_0_OUT_net_0 : bit;
+TERMINAL Net_3683 : bit;
+SIGNAL tmpIO_0__WaveDAC_0_OUT_net_0 : bit;
+TERMINAL tmpSIOVREF__WaveDAC_0_OUT_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__WaveDAC_0_OUT_net_0 : bit;
+TERMINAL \WaveDAC_1:Net_211\ : bit;
+TERMINAL \WaveDAC_1:Net_189\ : bit;
+TERMINAL \WaveDAC_1:Net_254\ : bit;
+TERMINAL \WaveDAC_1:Net_190\ : bit;
+TERMINAL Net_3754 : bit;
+SIGNAL \WaveDAC_1:Net_183\ : bit;
+SIGNAL Net_3734 : bit;
+SIGNAL \WaveDAC_1:Net_107\ : bit;
+SIGNAL Net_3735 : bit;
+SIGNAL \WaveDAC_1:demux:tmp__demux_0_reg\ : bit;
+SIGNAL \WaveDAC_1:Net_134\ : bit;
+SIGNAL \WaveDAC_1:Net_336\ : bit;
+SIGNAL \WaveDAC_1:demux:tmp__demux_1_reg\ : bit;
+SIGNAL Net_3871 : bit;
+SIGNAL \WaveDAC_1:IDAC8:Net_125\ : bit;
+SIGNAL \WaveDAC_1:IDAC8:Net_158\ : bit;
+SIGNAL \WaveDAC_1:IDAC8:Net_123\ : bit;
+TERMINAL \WaveDAC_1:IDAC8:Net_124\ : bit;
+SIGNAL \WaveDAC_1:IDAC8:Net_157\ : bit;
+SIGNAL \WaveDAC_1:IDAC8:Net_194\ : bit;
+SIGNAL \WaveDAC_1:IDAC8:Net_195\ : bit;
+TERMINAL \WaveDAC_1:Net_256\ : bit;
+SIGNAL \WaveDAC_1:Net_280\ : bit;
+SIGNAL \WaveDAC_1:Net_279\ : bit;
+SIGNAL \WaveDAC_1:Net_80\ : bit;
+SIGNAL \WaveDAC_1:cydff_1\ : bit;
+SIGNAL Net_3732 : bit;
+SIGNAL \USBUART:Net_1010\ : bit;
+SIGNAL \USBUART:tmpOE__Dm_net_0\ : bit;
+SIGNAL \USBUART:tmpFB_0__Dm_net_0\ : bit;
+TERMINAL \USBUART:Net_597\ : bit;
+SIGNAL \USBUART:tmpIO_0__Dm_net_0\ : bit;
+TERMINAL \USBUART:tmpSIOVREF__Dm_net_0\ : bit;
+SIGNAL \USBUART:tmpINTERRUPT_0__Dm_net_0\ : bit;
+SIGNAL \USBUART:tmpOE__Dp_net_0\ : bit;
+SIGNAL \USBUART:tmpFB_0__Dp_net_0\ : bit;
+TERMINAL \USBUART:Net_1000\ : bit;
+SIGNAL \USBUART:tmpIO_0__Dp_net_0\ : bit;
+TERMINAL \USBUART:tmpSIOVREF__Dp_net_0\ : bit;
+SIGNAL Net_2016 : bit;
+SIGNAL \USBUART:Net_1889\ : bit;
+SIGNAL \USBUART:Net_1876\ : bit;
+SIGNAL \USBUART:ep_int_8\ : bit;
+SIGNAL \USBUART:ep_int_7\ : bit;
+SIGNAL \USBUART:ep_int_6\ : bit;
+SIGNAL \USBUART:ep_int_5\ : bit;
+SIGNAL \USBUART:ep_int_4\ : bit;
+SIGNAL \USBUART:ep_int_3\ : bit;
+SIGNAL \USBUART:ep_int_2\ : bit;
+SIGNAL \USBUART:ep_int_1\ : bit;
+SIGNAL \USBUART:ep_int_0\ : bit;
+SIGNAL \USBUART:Net_95\ : bit;
+SIGNAL \USBUART:dma_request_7\ : bit;
+SIGNAL \USBUART:dma_request_6\ : bit;
+SIGNAL \USBUART:dma_request_5\ : bit;
+SIGNAL \USBUART:dma_request_4\ : bit;
+SIGNAL \USBUART:dma_request_3\ : bit;
+SIGNAL \USBUART:dma_request_2\ : bit;
+SIGNAL \USBUART:dma_request_1\ : bit;
+SIGNAL \USBUART:dma_request_0\ : bit;
+SIGNAL \USBUART:dma_terminate\ : bit;
+SIGNAL \USBUART:dma_complete_0\ : bit;
+SIGNAL \USBUART:Net_1922\ : bit;
+SIGNAL \USBUART:dma_complete_1\ : bit;
+SIGNAL \USBUART:Net_1921\ : bit;
+SIGNAL \USBUART:dma_complete_2\ : bit;
+SIGNAL \USBUART:Net_1920\ : bit;
+SIGNAL \USBUART:dma_complete_3\ : bit;
+SIGNAL \USBUART:Net_1919\ : bit;
+SIGNAL \USBUART:dma_complete_4\ : bit;
+SIGNAL \USBUART:Net_1918\ : bit;
+SIGNAL \USBUART:dma_complete_5\ : bit;
+SIGNAL \USBUART:Net_1917\ : bit;
+SIGNAL \USBUART:dma_complete_6\ : bit;
+SIGNAL \USBUART:Net_1916\ : bit;
+SIGNAL \USBUART:dma_complete_7\ : bit;
+SIGNAL \USBUART:Net_1915\ : bit;
+SIGNAL Net_3844 : bit;
+SIGNAL Net_2011 : bit;
+TERMINAL \WaveDAC_0:Net_211\ : bit;
+TERMINAL \WaveDAC_0:Net_189\ : bit;
+TERMINAL \WaveDAC_0:Net_254\ : bit;
+TERMINAL \WaveDAC_0:Net_190\ : bit;
+SIGNAL \WaveDAC_0:Net_183\ : bit;
+SIGNAL Net_3635 : bit;
+SIGNAL \WaveDAC_0:Net_107\ : bit;
+SIGNAL Net_3636 : bit;
+SIGNAL \WaveDAC_0:demux:tmp__demux_0_reg\ : bit;
+SIGNAL \WaveDAC_0:Net_134\ : bit;
+SIGNAL \WaveDAC_0:Net_336\ : bit;
+SIGNAL \WaveDAC_0:demux:tmp__demux_1_reg\ : bit;
+SIGNAL \WaveDAC_0:IDAC8:Net_125\ : bit;
+SIGNAL \WaveDAC_0:IDAC8:Net_158\ : bit;
+SIGNAL \WaveDAC_0:IDAC8:Net_123\ : bit;
+TERMINAL \WaveDAC_0:IDAC8:Net_124\ : bit;
+SIGNAL \WaveDAC_0:IDAC8:Net_157\ : bit;
+SIGNAL \WaveDAC_0:IDAC8:Net_194\ : bit;
+SIGNAL \WaveDAC_0:IDAC8:Net_195\ : bit;
+TERMINAL \WaveDAC_0:Net_256\ : bit;
+SIGNAL \WaveDAC_0:Net_280\ : bit;
+SIGNAL \WaveDAC_0:Net_279\ : bit;
+SIGNAL \WaveDAC_0:Net_80\ : bit;
+SIGNAL \WaveDAC_0:cydff_1\ : bit;
+SIGNAL tmpOE__WaveDAC_1_OUT_net_0 : bit;
+SIGNAL tmpFB_0__WaveDAC_1_OUT_net_0 : bit;
+SIGNAL tmpIO_0__WaveDAC_1_OUT_net_0 : bit;
+TERMINAL tmpSIOVREF__WaveDAC_1_OUT_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__WaveDAC_1_OUT_net_0 : bit;
+SIGNAL \WaveDAC_1:cydff_1\\D\ : bit;
+SIGNAL \WaveDAC_0:cydff_1\\D\ : bit;
+BEGIN
+
+zero <=  ('0') ;
+
+one <=  ('1') ;
+
+\WaveDAC_1:Net_183\ <= ((not \WaveDAC_1:Net_134\ and Net_3871));
+
+\WaveDAC_1:Net_107\ <= ((\WaveDAC_1:Net_134\ and Net_3871));
+
+\WaveDAC_0:Net_183\ <= ((not \WaveDAC_0:Net_134\ and Net_3844));
+
+\WaveDAC_0:Net_107\ <= ((Net_3844 and \WaveDAC_0:Net_134\));
+
+\LCD:LCDPort\:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"8808d97d-8a01-48a8-8b93-0d5fee8bd985/ed092b9b-d398-4703-be89-cebf998501f6",
+		drive_mode=>"110110110110110110110",
+		ibuf_enabled=>"1111111",
+		init_dr_st=>"0000000",
+		input_sync=>"1111111",
+		input_clk_en=>'0',
+		input_sync_mode=>"0000000",
+		intr_mode=>"00000000000000",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>",,,,,,",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0000000",
+		output_sync=>"0000000",
+		output_clk_en=>'0',
+		output_mode=>"0000000",
+		output_reset=>'0',
+		output_clock_mode=>"0000000",
+		oe_sync=>"0000000",
+		oe_conn=>"0000000",
+		oe_reset=>'0',
+		pin_aliases=>",,,,,,",
+		pin_mode=>"OOOOOOO",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1111111",
+		sio_ibuf=>"00000000",
+		sio_info=>"00000000000000",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0000000",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10101010101010",
+		width=>7,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0000000",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0000000",
+		ovt_slew_control=>"00000000000000",
+		ovt_hyst_trim=>"0000000",
+		input_buffer_sel=>"00000000000000")
+	PORT MAP(oe=>(one, one, one, one,
+			one, one, one),
+		y=>(zero, zero, zero, zero,
+			zero, zero, zero),
+		fb=>(\LCD:tmpFB_6__LCDPort_net_6\, \LCD:tmpFB_6__LCDPort_net_5\, \LCD:tmpFB_6__LCDPort_net_4\, \LCD:tmpFB_6__LCDPort_net_3\,
+			\LCD:tmpFB_6__LCDPort_net_2\, \LCD:tmpFB_6__LCDPort_net_1\, \LCD:tmpFB_6__LCDPort_net_0\),
+		analog=>(open, open, open, open,
+			open, open, open),
+		io=>(\LCD:tmpIO_6__LCDPort_net_6\, \LCD:tmpIO_6__LCDPort_net_5\, \LCD:tmpIO_6__LCDPort_net_4\, \LCD:tmpIO_6__LCDPort_net_3\,
+			\LCD:tmpIO_6__LCDPort_net_2\, \LCD:tmpIO_6__LCDPort_net_1\, \LCD:tmpIO_6__LCDPort_net_0\),
+		siovref=>(\LCD:tmpSIOVREF__LCDPort_net_0\),
+		annotation=>(open, open, open, open,
+			open, open, open),
+		in_clock=>zero,
+		in_clock_en=>one,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>one,
+		out_reset=>zero,
+		interrupt=>\LCD:tmpINTERRUPT_0__LCDPort_net_0\);
+WaveDAC_0_OUT:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"e851a3b9-efb8-48be-bbb8-b303b216c393",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"A",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(one),
+		y=>(zero),
+		fb=>(tmpFB_0__WaveDAC_0_OUT_net_0),
+		analog=>Net_3683,
+		io=>(tmpIO_0__WaveDAC_0_OUT_net_0),
+		siovref=>(tmpSIOVREF__WaveDAC_0_OUT_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>one,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>one,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__WaveDAC_0_OUT_net_0);
+\WaveDAC_1:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\WaveDAC_1:Net_211\);
+\WaveDAC_1:cy_analog_virtualmux_1_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\WaveDAC_1:Net_189\,
+		signal2=>\WaveDAC_1:Net_254\);
+\WaveDAC_1:cy_analog_virtualmux_2_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\WaveDAC_1:Net_190\,
+		signal2=>Net_3754);
+\WaveDAC_1:cy_analog_noconnect_2\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\WaveDAC_1:Net_254\);
+\WaveDAC_1:Wave1_DMA\:cy_dma_v1_0
+	GENERIC MAP(drq_type=>"10",
+		num_tds=>0)
+	PORT MAP(drq=>\WaveDAC_1:Net_183\,
+		trq=>zero,
+		nrq=>Net_3734);
+\WaveDAC_1:Wave2_DMA\:cy_dma_v1_0
+	GENERIC MAP(drq_type=>"10",
+		num_tds=>0)
+	PORT MAP(drq=>\WaveDAC_1:Net_107\,
+		trq=>zero,
+		nrq=>Net_3735);
+\WaveDAC_1:IDAC8:viDAC8\:cy_psoc3_vidac8_v1_0
+	GENERIC MAP(cy_registers=>"",
+		reg_data=>'0',
+		is_all_if_any=>'0')
+	PORT MAP(reset=>zero,
+		idir=>zero,
+		ioff=>zero,
+		data=>(zero, zero, zero, zero,
+			zero, zero, zero, zero),
+		strobe=>Net_3871,
+		strobe_udb=>Net_3871,
+		vout=>\WaveDAC_1:IDAC8:Net_124\,
+		iout=>\WaveDAC_1:Net_190\);
+\WaveDAC_1:IDAC8:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\WaveDAC_1:IDAC8:Net_124\);
+\WaveDAC_1:cy_analog_virtualmux_3_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>Net_3754,
+		signal2=>\WaveDAC_1:Net_256\);
+\USBUART:dp_int\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10")
+	PORT MAP(int_signal=>\USBUART:Net_1010\);
+\USBUART:Dm\:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"beca5e2d-f70f-4900-a4db-7eca1ed3126e/8b77a6c4-10a0-4390-971c-672353e2a49c",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"NONCONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"A",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'1',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(one),
+		y=>(zero),
+		fb=>(\USBUART:tmpFB_0__Dm_net_0\),
+		analog=>\USBUART:Net_597\,
+		io=>(\USBUART:tmpIO_0__Dm_net_0\),
+		siovref=>(\USBUART:tmpSIOVREF__Dm_net_0\),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>one,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>one,
+		out_reset=>zero,
+		interrupt=>\USBUART:tmpINTERRUPT_0__Dm_net_0\);
+\USBUART:Dp\:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"beca5e2d-f70f-4900-a4db-7eca1ed3126e/618a72fc-5ddd-4df5-958f-a3d55102db42",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"1",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"10",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"I",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(one),
+		y=>(zero),
+		fb=>(\USBUART:tmpFB_0__Dp_net_0\),
+		analog=>\USBUART:Net_1000\,
+		io=>(\USBUART:tmpIO_0__Dp_net_0\),
+		siovref=>(\USBUART:tmpSIOVREF__Dp_net_0\),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>one,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>one,
+		out_reset=>zero,
+		interrupt=>\USBUART:Net_1010\);
+\USBUART:USB\:cy_psoc3_usb_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(dp=>\USBUART:Net_1000\,
+		dm=>\USBUART:Net_597\,
+		sof_int=>Net_2016,
+		arb_int=>\USBUART:Net_1889\,
+		usb_int=>\USBUART:Net_1876\,
+		ept_int=>(\USBUART:ep_int_8\, \USBUART:ep_int_7\, \USBUART:ep_int_6\, \USBUART:ep_int_5\,
+			\USBUART:ep_int_4\, \USBUART:ep_int_3\, \USBUART:ep_int_2\, \USBUART:ep_int_1\,
+			\USBUART:ep_int_0\),
+		ord_int=>\USBUART:Net_95\,
+		dma_req=>(\USBUART:dma_request_7\, \USBUART:dma_request_6\, \USBUART:dma_request_5\, \USBUART:dma_request_4\,
+			\USBUART:dma_request_3\, \USBUART:dma_request_2\, \USBUART:dma_request_1\, \USBUART:dma_request_0\),
+		dma_termin=>\USBUART:dma_terminate\);
+\USBUART:ep_3\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10")
+	PORT MAP(int_signal=>\USBUART:ep_int_3\);
+\USBUART:ep_2\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10")
+	PORT MAP(int_signal=>\USBUART:ep_int_2\);
+\USBUART:ep_1\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10")
+	PORT MAP(int_signal=>\USBUART:ep_int_1\);
+\USBUART:ep_0\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10")
+	PORT MAP(int_signal=>\USBUART:ep_int_0\);
+\USBUART:bus_reset\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10")
+	PORT MAP(int_signal=>\USBUART:Net_1876\);
+\USBUART:arb_int\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10")
+	PORT MAP(int_signal=>\USBUART:Net_1889\);
+\USBUART:sof_int\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10")
+	PORT MAP(int_signal=>Net_2016);
+WaveDAC_0_Clock:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"30513673-7c59-46f7-88b1-d9179ae88633",
+		source_clock_id=>"CEF43CFB-0213-49b9-B980-2FFAB81C5B47",
+		divisor=>120,
+		period=>"0",
+		is_direct=>'0',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_3844,
+		dig_domain_out=>open);
+\WaveDAC_0:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\WaveDAC_0:Net_211\);
+\WaveDAC_0:cy_analog_virtualmux_1_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\WaveDAC_0:Net_189\,
+		signal2=>\WaveDAC_0:Net_254\);
+\WaveDAC_0:cy_analog_virtualmux_2_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\WaveDAC_0:Net_190\,
+		signal2=>Net_3683);
+\WaveDAC_0:cy_analog_noconnect_2\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\WaveDAC_0:Net_254\);
+\WaveDAC_0:Wave1_DMA\:cy_dma_v1_0
+	GENERIC MAP(drq_type=>"10",
+		num_tds=>0)
+	PORT MAP(drq=>\WaveDAC_0:Net_183\,
+		trq=>zero,
+		nrq=>Net_3635);
+\WaveDAC_0:Wave2_DMA\:cy_dma_v1_0
+	GENERIC MAP(drq_type=>"10",
+		num_tds=>0)
+	PORT MAP(drq=>\WaveDAC_0:Net_107\,
+		trq=>zero,
+		nrq=>Net_3636);
+\WaveDAC_0:IDAC8:viDAC8\:cy_psoc3_vidac8_v1_0
+	GENERIC MAP(cy_registers=>"",
+		reg_data=>'0',
+		is_all_if_any=>'0')
+	PORT MAP(reset=>zero,
+		idir=>zero,
+		ioff=>zero,
+		data=>(zero, zero, zero, zero,
+			zero, zero, zero, zero),
+		strobe=>Net_3844,
+		strobe_udb=>Net_3844,
+		vout=>\WaveDAC_0:IDAC8:Net_124\,
+		iout=>\WaveDAC_0:Net_190\);
+\WaveDAC_0:IDAC8:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\WaveDAC_0:IDAC8:Net_124\);
+\WaveDAC_0:cy_analog_virtualmux_3_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>Net_3683,
+		signal2=>\WaveDAC_0:Net_256\);
+WaveDAC_1_OUT:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"13a2e7f5-3e9a-414c-8f80-58a6cd7460b7",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"A",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(one),
+		y=>(zero),
+		fb=>(tmpFB_0__WaveDAC_1_OUT_net_0),
+		analog=>Net_3754,
+		io=>(tmpIO_0__WaveDAC_1_OUT_net_0),
+		siovref=>(tmpSIOVREF__WaveDAC_1_OUT_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>one,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>one,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__WaveDAC_1_OUT_net_0);
+WaveDAC_1_Clock:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"15a1b6a7-2811-4a33-9c0a-f3ac0c5a3513",
+		source_clock_id=>"CEF43CFB-0213-49b9-B980-2FFAB81C5B47",
+		divisor=>120,
+		period=>"0",
+		is_direct=>'0',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_3871,
+		dig_domain_out=>open);
+\WaveDAC_1:cydff_1\:cy_dff
+	PORT MAP(d=>zero,
+		clk=>Net_3871,
+		q=>\WaveDAC_1:Net_134\);
+\WaveDAC_0:cydff_1\:cy_dff
+	PORT MAP(d=>zero,
+		clk=>Net_3844,
+		q=>\WaveDAC_0:Net_134\);
+
+END R_T_L;

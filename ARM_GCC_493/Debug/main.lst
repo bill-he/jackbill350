@@ -1,0 +1,1460 @@
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global _printf_float
+  19              		.thumb
+  20              		.section	.text.trimString,"ax",%progbits
+  21              		.align	2
+  22              		.global	trimString
+  23              		.thumb
+  24              		.thumb_func
+  25              		.type	trimString, %function
+  26              	trimString:
+  27              	.LFB63:
+  28              		.file 1 ".\\main.c"
+   1:.\main.c      **** /*******************************************************************************
+   2:.\main.c      **** * File Name: main.c
+   3:.\main.c      **** *
+   4:.\main.c      **** * Version: 2.0
+   5:.\main.c      **** *
+   6:.\main.c      **** * Description:
+   7:.\main.c      **** *  The SAR ADC and PrISM datasheet example project.
+   8:.\main.c      **** *  This example project demonstrates SAR ADC measurements and transferring
+   9:.\main.c      **** *  results using ISR and DMA to the LCD and PrISM.
+  10:.\main.c      **** *
+  11:.\main.c      **** * Note:
+  12:.\main.c      **** *  Pin_Vin pin (P1[4]) should be connected to the VR.
+  13:.\main.c      **** *  Pin_LED pin (P1[6]) should be connected to the LED.
+  14:.\main.c      **** *  Verify that VR_PWR(J11) is jumpered to ON.
+  15:.\main.c      **** *
+  16:.\main.c      **** * Hardware Dependency:
+  17:.\main.c      **** *  CY8C55 Family Processor
+  18:.\main.c      **** *
+  19:.\main.c      **** ********************************************************************************
+  20:.\main.c      **** * Copyright 2012, Cypress Semiconductor Corporation. All rights reserved.
+  21:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation and is protected
+  22:.\main.c      **** * by and subject to worldwide patent and copyright laws and treaties.
+  23:.\main.c      **** * Therefore, you may use this software only as provided in the license agreement
+  24:.\main.c      **** * accompanying the software package from which you obtained this software.
+  25:.\main.c      **** * CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  26:.\main.c      **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
+  27:.\main.c      **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  28:.\main.c      **** *******************************************************************************/
+  29:.\main.c      **** 
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 2
+
+
+  30:.\main.c      **** #include <device.h>
+  31:.\main.c      **** #include <stdio.h>
+  32:.\main.c      **** #include <stdlib.h>
+  33:.\main.c      **** #include "FunctionGenerator.h"
+  34:.\main.c      **** #include "Serial.h"
+  35:.\main.c      **** 
+  36:.\main.c      **** #if defined (__GNUC__)
+  37:.\main.c      ****     /* Add an explicit reference to the floating point printf library */
+  38:.\main.c      ****     /* to allow the usage of floating point conversion specifiers. */
+  39:.\main.c      ****     /* This is not linked in by default with the newlib-nano library. */
+  40:.\main.c      ****     asm (".global _printf_float");
+  41:.\main.c      **** #endif
+  42:.\main.c      **** 
+  43:.\main.c      **** void trimString(char *str)
+  44:.\main.c      **** {
+  29              		.loc 1 44 0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 16
+  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  33 0000 90B5     		push	{r4, r7, lr}
+  34              		.cfi_def_cfa_offset 12
+  35              		.cfi_offset 4, -12
+  36              		.cfi_offset 7, -8
+  37              		.cfi_offset 14, -4
+  38 0002 85B0     		sub	sp, sp, #20
+  39              		.cfi_def_cfa_offset 32
+  40 0004 00AF     		add	r7, sp, #0
+  41              		.cfi_def_cfa_register 7
+  42 0006 7860     		str	r0, [r7, #4]
+  45:.\main.c      ****   int i;
+  46:.\main.c      ****   
+  47:.\main.c      ****   // trim leading whitespace
+  48:.\main.c      ****   for (i = 0; str[i] != '\0'; i++) {
+  43              		.loc 1 48 0
+  44 0008 0023     		movs	r3, #0
+  45 000a FB60     		str	r3, [r7, #12]
+  46 000c 10E0     		b	.L2
+  47              	.L5:
+  49:.\main.c      ****     if (!isspace(str[i])) {
+  48              		.loc 1 49 0
+  49 000e 284B     		ldr	r3, .L10
+  50 0010 1A68     		ldr	r2, [r3]
+  51 0012 FB68     		ldr	r3, [r7, #12]
+  52 0014 7968     		ldr	r1, [r7, #4]
+  53 0016 0B44     		add	r3, r3, r1
+  54 0018 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  55 001a 0133     		adds	r3, r3, #1
+  56 001c 1344     		add	r3, r3, r2
+  57 001e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  58 0020 03F00803 		and	r3, r3, #8
+  59 0024 002B     		cmp	r3, #0
+  60 0026 00D1     		bne	.L3
+  50:.\main.c      ****       break;
+  61              		.loc 1 50 0
+  62 0028 08E0     		b	.L4
+  63              	.L3:
+  48:.\main.c      ****     if (!isspace(str[i])) {
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 3
+
+
+  64              		.loc 1 48 0 discriminator 2
+  65 002a FB68     		ldr	r3, [r7, #12]
+  66 002c 0133     		adds	r3, r3, #1
+  67 002e FB60     		str	r3, [r7, #12]
+  68              	.L2:
+  48:.\main.c      ****     if (!isspace(str[i])) {
+  69              		.loc 1 48 0 is_stmt 0 discriminator 1
+  70 0030 FB68     		ldr	r3, [r7, #12]
+  71 0032 7A68     		ldr	r2, [r7, #4]
+  72 0034 1344     		add	r3, r3, r2
+  73 0036 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  74 0038 002B     		cmp	r3, #0
+  75 003a E8D1     		bne	.L5
+  76              	.L4:
+  51:.\main.c      ****     }
+  52:.\main.c      ****   }
+  53:.\main.c      ****   
+  54:.\main.c      ****   // copy string w/o leading whitespace
+  55:.\main.c      ****   // (don't read beyond the end of the input buffer)
+  56:.\main.c      ****   memmove(str, str + i, strlen(str) + 1 - i);
+  77              		.loc 1 56 0 is_stmt 1
+  78 003c FB68     		ldr	r3, [r7, #12]
+  79 003e 7A68     		ldr	r2, [r7, #4]
+  80 0040 D418     		adds	r4, r2, r3
+  81 0042 7868     		ldr	r0, [r7, #4]
+  82 0044 FFF7FEFF 		bl	strlen
+  83 0048 0246     		mov	r2, r0
+  84 004a FB68     		ldr	r3, [r7, #12]
+  85 004c D31A     		subs	r3, r2, r3
+  86 004e 0133     		adds	r3, r3, #1
+  87 0050 7868     		ldr	r0, [r7, #4]
+  88 0052 2146     		mov	r1, r4
+  89 0054 1A46     		mov	r2, r3
+  90 0056 FFF7FEFF 		bl	memmove
+  57:.\main.c      ****   
+  58:.\main.c      ****   // trim trailing whitespace
+  59:.\main.c      ****   i = strlen(str) - 1; // index of last character
+  91              		.loc 1 59 0
+  92 005a 7868     		ldr	r0, [r7, #4]
+  93 005c FFF7FEFF 		bl	strlen
+  94 0060 0346     		mov	r3, r0
+  95 0062 013B     		subs	r3, r3, #1
+  96 0064 FB60     		str	r3, [r7, #12]
+  60:.\main.c      ****   
+  61:.\main.c      ****   // Edge case: string is empty
+  62:.\main.c      ****   if (i == -1) {
+  97              		.loc 1 62 0
+  98 0066 FB68     		ldr	r3, [r7, #12]
+  99 0068 B3F1FF3F 		cmp	r3, #-1
+ 100 006c 03D1     		bne	.L6
+  63:.\main.c      ****     str[0] = '\0';
+ 101              		.loc 1 63 0
+ 102 006e 7B68     		ldr	r3, [r7, #4]
+ 103 0070 0022     		movs	r2, #0
+ 104 0072 1A70     		strb	r2, [r3]
+  64:.\main.c      ****     return;
+ 105              		.loc 1 64 0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 4
+
+
+ 106 0074 19E0     		b	.L1
+ 107              	.L6:
+  65:.\main.c      ****   }
+  66:.\main.c      ****   
+  67:.\main.c      ****   do {
+  68:.\main.c      ****     if (!isspace(str[i])) {
+ 108              		.loc 1 68 0
+ 109 0076 0E4B     		ldr	r3, .L10
+ 110 0078 1A68     		ldr	r2, [r3]
+ 111 007a FB68     		ldr	r3, [r7, #12]
+ 112 007c 7968     		ldr	r1, [r7, #4]
+ 113 007e 0B44     		add	r3, r3, r1
+ 114 0080 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 115 0082 0133     		adds	r3, r3, #1
+ 116 0084 1344     		add	r3, r3, r2
+ 117 0086 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 118 0088 03F00803 		and	r3, r3, #8
+ 119 008c 002B     		cmp	r3, #0
+ 120 008e 00D1     		bne	.L8
+  69:.\main.c      ****       break;
+ 121              		.loc 1 69 0
+ 122 0090 05E0     		b	.L9
+ 123              	.L8:
+  70:.\main.c      ****     }
+  71:.\main.c      ****     i--;
+ 124              		.loc 1 71 0
+ 125 0092 FB68     		ldr	r3, [r7, #12]
+ 126 0094 013B     		subs	r3, r3, #1
+ 127 0096 FB60     		str	r3, [r7, #12]
+  72:.\main.c      ****   } while (i >= 0);
+ 128              		.loc 1 72 0
+ 129 0098 FB68     		ldr	r3, [r7, #12]
+ 130 009a 002B     		cmp	r3, #0
+ 131 009c EBDA     		bge	.L6
+ 132              	.L9:
+  73:.\main.c      ****   
+  74:.\main.c      ****   str[i + 1] = '\0';
+ 133              		.loc 1 74 0
+ 134 009e FB68     		ldr	r3, [r7, #12]
+ 135 00a0 0133     		adds	r3, r3, #1
+ 136 00a2 7A68     		ldr	r2, [r7, #4]
+ 137 00a4 1344     		add	r3, r3, r2
+ 138 00a6 0022     		movs	r2, #0
+ 139 00a8 1A70     		strb	r2, [r3]
+ 140              	.L1:
+  75:.\main.c      **** }
+ 141              		.loc 1 75 0
+ 142 00aa 1437     		adds	r7, r7, #20
+ 143              		.cfi_def_cfa_offset 12
+ 144 00ac BD46     		mov	sp, r7
+ 145              		.cfi_def_cfa_register 13
+ 146              		@ sp needed
+ 147 00ae 90BD     		pop	{r4, r7, pc}
+ 148              	.L11:
+ 149              		.align	2
+ 150              	.L10:
+ 151 00b0 00000000 		.word	__ctype_ptr__
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 5
+
+
+ 152              		.cfi_endproc
+ 153              	.LFE63:
+ 154              		.size	trimString, .-trimString
+ 155              		.section	.rodata
+ 156              		.align	2
+ 157              	.LC0:
+ 158 0000 46313D00 		.ascii	"F1=\000"
+ 159              		.align	2
+ 160              	.LC1:
+ 161 0004 25642025 		.ascii	"%d %s %d\000"
+ 161      73202564 
+ 161      00
+ 162 000d 000000   		.align	2
+ 163              	.LC2:
+ 164 0010 73717561 		.ascii	"square\000"
+ 164      726500
+ 165 0017 00       		.align	2
+ 166              	.LC3:
+ 167 0018 666E203D 		.ascii	"fn = %d, mode = %s, newFreq = %d\015\012\000"
+ 167      2025642C 
+ 167      206D6F64 
+ 167      65203D20 
+ 167      25732C20 
+ 168 003b 00       		.align	2
+ 169              	.LC4:
+ 170 003c 73696E65 		.ascii	"sine\000"
+ 170      00
+ 171 0041 000000   		.align	2
+ 172              	.LC5:
+ 173 0044 74726961 		.ascii	"triangle\000"
+ 173      6E676C65 
+ 173      00
+ 174 004d 000000   		.align	2
+ 175              	.LC6:
+ 176 0050 73617774 		.ascii	"sawtooth\000"
+ 176      6F6F7468 
+ 176      00
+ 177 0059 000000   		.align	2
+ 178              	.LC7:
+ 179 005c 646300   		.ascii	"dc\000"
+ 180 005f 00       		.align	2
+ 181              	.LC8:
+ 182 0060 496E7661 		.ascii	"Invalid mode: %s\015\012\000"
+ 182      6C696420 
+ 182      6D6F6465 
+ 182      3A202573 
+ 182      0D0A00
+ 183 0073 00       		.align	2
+ 184              	.LC9:
+ 185 0074 6F666600 		.ascii	"off\000"
+ 186              		.align	2
+ 187              	.LC10:
+ 188 0078 53746F70 		.ascii	"Stopped WaveDAC %d\015\012\000"
+ 188      70656420 
+ 188      57617665 
+ 188      44414320 
+ 188      25640D0A 
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 6
+
+
+ 189 008d 000000   		.align	2
+ 190              	.LC11:
+ 191 0090 496E7661 		.ascii	"Invalid command: %s\015\012\000"
+ 191      6C696420 
+ 191      636F6D6D 
+ 191      616E643A 
+ 191      2025730D 
+ 192 00a6 0000     		.section	.text.main,"ax",%progbits
+ 193              		.align	2
+ 194              		.global	main
+ 195              		.thumb
+ 196              		.thumb_func
+ 197              		.type	main, %function
+ 198              	main:
+ 199              	.LFB64:
+  76:.\main.c      **** 
+  77:.\main.c      **** /*******************************************************************************
+  78:.\main.c      **** * Function Name: main
+  79:.\main.c      **** ********************************************************************************
+  80:.\main.c      **** *
+  81:.\main.c      **** * Summary:
+  82:.\main.c      **** *  Main function performs following functions:
+  83:.\main.c      **** *   1. Initialises the DMA to move data from ADC_SAR_1 work registers to the
+  84:.\main.c      **** *      PrISM pulse density registers.
+  85:.\main.c      **** *   2. Initialises the ISR connected to the DMA nrq terminal(DMA done).
+  86:.\main.c      **** *   3. Initialises the LCD.
+  87:.\main.c      **** *   4. Initialises the PrISM with 1Mhz clock.
+  88:.\main.c      **** *   5. Initialises the two SAR ADCs.
+  89:.\main.c      **** *   6. Displays the results of ADC_SAR_1 when DmaDone ISR rises.
+  90:.\main.c      **** *      The results are read from PrISM pulse density register.
+  91:.\main.c      **** *   7. Displays the results of ADC_SAR_2 when internal EOC ISR rises.
+  92:.\main.c      **** *
+  93:.\main.c      **** * Parameters:
+  94:.\main.c      **** *  None.
+  95:.\main.c      **** *
+  96:.\main.c      **** * Return:
+  97:.\main.c      **** *  None.
+  98:.\main.c      **** *
+  99:.\main.c      **** *******************************************************************************/
+ 100:.\main.c      **** 
+ 101:.\main.c      **** int main()
+ 102:.\main.c      **** {
+ 200              		.loc 1 102 0
+ 201              		.cfi_startproc
+ 202              		@ args = 0, pretend = 0, frame = 240
+ 203              		@ frame_needed = 1, uses_anonymous_args = 0
+ 204 0000 90B5     		push	{r4, r7, lr}
+ 205              		.cfi_def_cfa_offset 12
+ 206              		.cfi_offset 4, -12
+ 207              		.cfi_offset 7, -8
+ 208              		.cfi_offset 14, -4
+ 209 0002 BFB0     		sub	sp, sp, #252
+ 210              		.cfi_def_cfa_offset 264
+ 211 0004 02AF     		add	r7, sp, #8
+ 212              		.cfi_def_cfa 7, 256
+ 103:.\main.c      ****     char freq0Disp[16], freq1Disp[16];
+ 104:.\main.c      ****     char usbRx[USBUART_BUFFER_SIZE], usbTx[USBUART_BUFFER_SIZE];
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 7
+
+
+ 105:.\main.c      ****     
+ 106:.\main.c      ****     
+ 107:.\main.c      ****     /* Initializes the LCD. */
+ 108:.\main.c      ****     LCD_Start();
+ 213              		.loc 1 108 0
+ 214 0006 FFF7FEFF 		bl	LCD_Start
+ 109:.\main.c      ****     LCD_Position(1u,0u);
+ 215              		.loc 1 109 0
+ 216 000a 0120     		movs	r0, #1
+ 217 000c 0021     		movs	r1, #0
+ 218 000e FFF7FEFF 		bl	LCD_Position
+ 110:.\main.c      ****     LCD_Position(0u,0u);
+ 219              		.loc 1 110 0
+ 220 0012 0020     		movs	r0, #0
+ 221 0014 0021     		movs	r1, #0
+ 222 0016 FFF7FEFF 		bl	LCD_Position
+ 111:.\main.c      ****     LCD_PrintString("F1=");
+ 223              		.loc 1 111 0
+ 224 001a 9548     		ldr	r0, .L29
+ 225 001c FFF7FEFF 		bl	LCD_PrintString
+ 112:.\main.c      ****     
+ 113:.\main.c      ****     WaveDAC_0_Clock_Start();
+ 226              		.loc 1 113 0
+ 227 0020 FFF7FEFF 		bl	WaveDAC_0_Clock_Start
+ 114:.\main.c      ****     WaveDAC_1_Clock_Start();
+ 228              		.loc 1 114 0
+ 229 0024 FFF7FEFF 		bl	WaveDAC_1_Clock_Start
+ 115:.\main.c      ****     
+ 116:.\main.c      ****     // Needed for WaveDACs to operate concurrently
+ 117:.\main.c      ****     // I think this might be a bug with PSoC
+ 118:.\main.c      ****     WaveDAC_0_Start();
+ 230              		.loc 1 118 0
+ 231 0028 FFF7FEFF 		bl	WaveDAC_0_Start
+ 119:.\main.c      ****     WaveDAC_1_Start(); 
+ 232              		.loc 1 119 0
+ 233 002c FFF7FEFF 		bl	WaveDAC_1_Start
+ 120:.\main.c      ****     WaveDAC_0_Stop();
+ 234              		.loc 1 120 0
+ 235 0030 FFF7FEFF 		bl	WaveDAC_0_Stop
+ 121:.\main.c      ****     WaveDAC_1_Stop();
+ 236              		.loc 1 121 0
+ 237 0034 FFF7FEFF 		bl	WaveDAC_1_Stop
+ 122:.\main.c      **** 
+ 123:.\main.c      ****     USBUART_Start(USBFS_DEVICE, USBUART_5V_OPERATION);
+ 238              		.loc 1 123 0
+ 239 0038 0020     		movs	r0, #0
+ 240 003a 0121     		movs	r1, #1
+ 241 003c FFF7FEFF 		bl	USBUART_Start
+ 124:.\main.c      ****     USBUART_CDC_Init();
+ 242              		.loc 1 124 0
+ 243 0040 FFF7FEFF 		bl	USBUART_CDC_Init
+ 125:.\main.c      ****     
+ 126:.\main.c      ****     CyGlobalIntEnable;
+ 244              		.loc 1 126 0
+ 245              	@ 126 ".\main.c" 1
+ 246 0044 62B6     		CPSIE   i
+ 247              	@ 0 "" 2
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 8
+
+
+ 248              		.thumb
+ 249              	.L28:
+ 127:.\main.c      **** 
+ 128:.\main.c      ****     while (1) {
+ 129:.\main.c      ****         if (USBUART_IsConfigurationChanged()) {
+ 250              		.loc 1 129 0
+ 251 0046 FFF7FEFF 		bl	USBUART_IsConfigurationChanged
+ 252 004a 0346     		mov	r3, r0
+ 253 004c 002B     		cmp	r3, #0
+ 254 004e 06D0     		beq	.L13
+ 130:.\main.c      ****             if (USBUART_GetConfiguration()) {
+ 255              		.loc 1 130 0
+ 256 0050 FFF7FEFF 		bl	USBUART_GetConfiguration
+ 257 0054 0346     		mov	r3, r0
+ 258 0056 002B     		cmp	r3, #0
+ 259 0058 01D0     		beq	.L13
+ 131:.\main.c      ****                 USBUART_CDC_Init();
+ 260              		.loc 1 131 0
+ 261 005a FFF7FEFF 		bl	USBUART_CDC_Init
+ 262              	.L13:
+ 132:.\main.c      ****             }
+ 133:.\main.c      ****         }
+ 134:.\main.c      ****         
+ 135:.\main.c      ****         if (USBUART_GetConfiguration()) {
+ 263              		.loc 1 135 0
+ 264 005e FFF7FEFF 		bl	USBUART_GetConfiguration
+ 265 0062 0346     		mov	r3, r0
+ 266 0064 002B     		cmp	r3, #0
+ 267 0066 00F00281 		beq	.L14
+ 136:.\main.c      ****             if (USBUART_DataIsReady()) {
+ 268              		.loc 1 136 0
+ 269 006a FFF7FEFF 		bl	USBUART_DataIsReady
+ 270 006e 0346     		mov	r3, r0
+ 271 0070 002B     		cmp	r3, #0
+ 272 0072 00F0FC80 		beq	.L14
+ 273              	.LBB2:
+ 137:.\main.c      ****                 int numArgs;
+ 138:.\main.c      ****                 int desiredFreq, newFreq, fnGenerator;
+ 139:.\main.c      ****                 char mode[USBUART_BUFFER_SIZE] = {0};
+ 274              		.loc 1 139 0
+ 275 0076 3B46     		mov	r3, r7
+ 276 0078 4022     		movs	r2, #64
+ 277 007a 1846     		mov	r0, r3
+ 278 007c 0021     		movs	r1, #0
+ 279 007e FFF7FEFF 		bl	memset
+ 140:.\main.c      ****                 
+ 141:.\main.c      ****                 Serial_GetString(usbRx);
+ 280              		.loc 1 141 0
+ 281 0082 07F18803 		add	r3, r7, #136
+ 282 0086 1846     		mov	r0, r3
+ 283 0088 FFF7FEFF 		bl	Serial_GetString
+ 142:.\main.c      ****                 trimString(usbRx);
+ 284              		.loc 1 142 0
+ 285 008c 07F18803 		add	r3, r7, #136
+ 286 0090 1846     		mov	r0, r3
+ 287 0092 FFF7FEFF 		bl	trimString
+ 143:.\main.c      ****                 numArgs = sscanf(usbRx, "%d %s %d", &fnGenerator, mode, &desiredFreq);
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 9
+
+
+ 288              		.loc 1 143 0
+ 289 0096 07F18801 		add	r1, r7, #136
+ 290 009a 07F14002 		add	r2, r7, #64
+ 291 009e 3C46     		mov	r4, r7
+ 292 00a0 07F14403 		add	r3, r7, #68
+ 293 00a4 0093     		str	r3, [sp]
+ 294 00a6 0846     		mov	r0, r1
+ 295 00a8 7249     		ldr	r1, .L29+4
+ 296 00aa 2346     		mov	r3, r4
+ 297 00ac FFF7FEFF 		bl	sscanf
+ 298 00b0 C7F8EC00 		str	r0, [r7, #236]
+ 144:.\main.c      ****                 if (numArgs == 3) {
+ 299              		.loc 1 144 0
+ 300 00b4 D7F8EC30 		ldr	r3, [r7, #236]
+ 301 00b8 032B     		cmp	r3, #3
+ 302 00ba 40F09F80 		bne	.L15
+ 145:.\main.c      ****                     if (!strcmp(mode, "square")) { 
+ 303              		.loc 1 145 0
+ 304 00be 3B46     		mov	r3, r7
+ 305 00c0 1846     		mov	r0, r3
+ 306 00c2 6D49     		ldr	r1, .L29+8
+ 307 00c4 FFF7FEFF 		bl	strcmp
+ 308 00c8 0346     		mov	r3, r0
+ 309 00ca 002B     		cmp	r3, #0
+ 310 00cc 15D1     		bne	.L16
+ 146:.\main.c      ****                         newFreq = changeFrequency(desiredFreq, SQUARE, fnGenerator);
+ 311              		.loc 1 146 0
+ 312 00ce 7A6C     		ldr	r2, [r7, #68]
+ 313 00d0 3B6C     		ldr	r3, [r7, #64]
+ 314 00d2 1046     		mov	r0, r2
+ 315 00d4 0021     		movs	r1, #0
+ 316 00d6 1A46     		mov	r2, r3
+ 317 00d8 FFF7FEFF 		bl	changeFrequency
+ 318 00dc C7F8E800 		str	r0, [r7, #232]
+ 147:.\main.c      ****                         sprintf(usbTx, "fn = %d, mode = %s, newFreq = %d\r\n", fnGenerator, mode, n
+ 319              		.loc 1 147 0
+ 320 00e0 3A6C     		ldr	r2, [r7, #64]
+ 321 00e2 07F14801 		add	r1, r7, #72
+ 322 00e6 3C46     		mov	r4, r7
+ 323 00e8 D7F8E830 		ldr	r3, [r7, #232]
+ 324 00ec 0093     		str	r3, [sp]
+ 325 00ee 0846     		mov	r0, r1
+ 326 00f0 6249     		ldr	r1, .L29+12
+ 327 00f2 2346     		mov	r3, r4
+ 328 00f4 FFF7FEFF 		bl	sprintf
+ 329 00f8 B4E0     		b	.L22
+ 330              	.L16:
+ 148:.\main.c      ****                     } else if (!strcmp(mode, "sine")) { 
+ 331              		.loc 1 148 0
+ 332 00fa 3B46     		mov	r3, r7
+ 333 00fc 1846     		mov	r0, r3
+ 334 00fe 6049     		ldr	r1, .L29+16
+ 335 0100 FFF7FEFF 		bl	strcmp
+ 336 0104 0346     		mov	r3, r0
+ 337 0106 002B     		cmp	r3, #0
+ 338 0108 15D1     		bne	.L18
+ 149:.\main.c      ****                         newFreq = changeFrequency(desiredFreq, SINE, fnGenerator);
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 10
+
+
+ 339              		.loc 1 149 0
+ 340 010a 7A6C     		ldr	r2, [r7, #68]
+ 341 010c 3B6C     		ldr	r3, [r7, #64]
+ 342 010e 1046     		mov	r0, r2
+ 343 0110 0121     		movs	r1, #1
+ 344 0112 1A46     		mov	r2, r3
+ 345 0114 FFF7FEFF 		bl	changeFrequency
+ 346 0118 C7F8E800 		str	r0, [r7, #232]
+ 150:.\main.c      ****                         sprintf(usbTx, "fn = %d, mode = %s, newFreq = %d\r\n", fnGenerator, mode, n
+ 347              		.loc 1 150 0
+ 348 011c 3A6C     		ldr	r2, [r7, #64]
+ 349 011e 07F14801 		add	r1, r7, #72
+ 350 0122 3C46     		mov	r4, r7
+ 351 0124 D7F8E830 		ldr	r3, [r7, #232]
+ 352 0128 0093     		str	r3, [sp]
+ 353 012a 0846     		mov	r0, r1
+ 354 012c 5349     		ldr	r1, .L29+12
+ 355 012e 2346     		mov	r3, r4
+ 356 0130 FFF7FEFF 		bl	sprintf
+ 357 0134 96E0     		b	.L22
+ 358              	.L18:
+ 151:.\main.c      ****                     } else if (!strcmp(mode, "triangle")) { 
+ 359              		.loc 1 151 0
+ 360 0136 3B46     		mov	r3, r7
+ 361 0138 1846     		mov	r0, r3
+ 362 013a 5249     		ldr	r1, .L29+20
+ 363 013c FFF7FEFF 		bl	strcmp
+ 364 0140 0346     		mov	r3, r0
+ 365 0142 002B     		cmp	r3, #0
+ 366 0144 15D1     		bne	.L19
+ 152:.\main.c      ****                         newFreq = changeFrequency(desiredFreq, TRIANGLE, fnGenerator);
+ 367              		.loc 1 152 0
+ 368 0146 7A6C     		ldr	r2, [r7, #68]
+ 369 0148 3B6C     		ldr	r3, [r7, #64]
+ 370 014a 1046     		mov	r0, r2
+ 371 014c 0221     		movs	r1, #2
+ 372 014e 1A46     		mov	r2, r3
+ 373 0150 FFF7FEFF 		bl	changeFrequency
+ 374 0154 C7F8E800 		str	r0, [r7, #232]
+ 153:.\main.c      ****                         sprintf(usbTx, "fn = %d, mode = %s, newFreq = %d\r\n", fnGenerator, mode, n
+ 375              		.loc 1 153 0
+ 376 0158 3A6C     		ldr	r2, [r7, #64]
+ 377 015a 07F14801 		add	r1, r7, #72
+ 378 015e 3C46     		mov	r4, r7
+ 379 0160 D7F8E830 		ldr	r3, [r7, #232]
+ 380 0164 0093     		str	r3, [sp]
+ 381 0166 0846     		mov	r0, r1
+ 382 0168 4449     		ldr	r1, .L29+12
+ 383 016a 2346     		mov	r3, r4
+ 384 016c FFF7FEFF 		bl	sprintf
+ 385 0170 78E0     		b	.L22
+ 386              	.L19:
+ 154:.\main.c      ****                     } else if (!strcmp(mode, "sawtooth")) { 
+ 387              		.loc 1 154 0
+ 388 0172 3B46     		mov	r3, r7
+ 389 0174 1846     		mov	r0, r3
+ 390 0176 4449     		ldr	r1, .L29+24
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 11
+
+
+ 391 0178 FFF7FEFF 		bl	strcmp
+ 392 017c 0346     		mov	r3, r0
+ 393 017e 002B     		cmp	r3, #0
+ 394 0180 15D1     		bne	.L20
+ 155:.\main.c      ****                         newFreq = changeFrequency(desiredFreq, SAWTOOTH, fnGenerator);
+ 395              		.loc 1 155 0
+ 396 0182 7A6C     		ldr	r2, [r7, #68]
+ 397 0184 3B6C     		ldr	r3, [r7, #64]
+ 398 0186 1046     		mov	r0, r2
+ 399 0188 0321     		movs	r1, #3
+ 400 018a 1A46     		mov	r2, r3
+ 401 018c FFF7FEFF 		bl	changeFrequency
+ 402 0190 C7F8E800 		str	r0, [r7, #232]
+ 156:.\main.c      ****                         sprintf(usbTx, "fn = %d, mode = %s, newFreq = %d\r\n", fnGenerator, mode, n
+ 403              		.loc 1 156 0
+ 404 0194 3A6C     		ldr	r2, [r7, #64]
+ 405 0196 07F14801 		add	r1, r7, #72
+ 406 019a 3C46     		mov	r4, r7
+ 407 019c D7F8E830 		ldr	r3, [r7, #232]
+ 408 01a0 0093     		str	r3, [sp]
+ 409 01a2 0846     		mov	r0, r1
+ 410 01a4 3549     		ldr	r1, .L29+12
+ 411 01a6 2346     		mov	r3, r4
+ 412 01a8 FFF7FEFF 		bl	sprintf
+ 413 01ac 5AE0     		b	.L22
+ 414              	.L20:
+ 157:.\main.c      ****                     } else if (!strcmp(mode, "dc")) { 
+ 415              		.loc 1 157 0
+ 416 01ae 3B46     		mov	r3, r7
+ 417 01b0 1846     		mov	r0, r3
+ 418 01b2 3649     		ldr	r1, .L29+28
+ 419 01b4 FFF7FEFF 		bl	strcmp
+ 420 01b8 0346     		mov	r3, r0
+ 421 01ba 002B     		cmp	r3, #0
+ 422 01bc 15D1     		bne	.L21
+ 158:.\main.c      ****                         newFreq = changeFrequency(desiredFreq, DC, fnGenerator);
+ 423              		.loc 1 158 0
+ 424 01be 7A6C     		ldr	r2, [r7, #68]
+ 425 01c0 3B6C     		ldr	r3, [r7, #64]
+ 426 01c2 1046     		mov	r0, r2
+ 427 01c4 0421     		movs	r1, #4
+ 428 01c6 1A46     		mov	r2, r3
+ 429 01c8 FFF7FEFF 		bl	changeFrequency
+ 430 01cc C7F8E800 		str	r0, [r7, #232]
+ 159:.\main.c      ****                         sprintf(usbTx, "fn = %d, mode = %s, newFreq = %d\r\n", fnGenerator, mode, n
+ 431              		.loc 1 159 0
+ 432 01d0 3A6C     		ldr	r2, [r7, #64]
+ 433 01d2 07F14801 		add	r1, r7, #72
+ 434 01d6 3C46     		mov	r4, r7
+ 435 01d8 D7F8E830 		ldr	r3, [r7, #232]
+ 436 01dc 0093     		str	r3, [sp]
+ 437 01de 0846     		mov	r0, r1
+ 438 01e0 2649     		ldr	r1, .L29+12
+ 439 01e2 2346     		mov	r3, r4
+ 440 01e4 FFF7FEFF 		bl	sprintf
+ 441 01e8 3CE0     		b	.L22
+ 442              	.L21:
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 12
+
+
+ 160:.\main.c      ****                     } else {
+ 161:.\main.c      ****                         sprintf(usbTx, "Invalid mode: %s\r\n", mode);
+ 443              		.loc 1 161 0
+ 444 01ea 07F14802 		add	r2, r7, #72
+ 445 01ee 3B46     		mov	r3, r7
+ 446 01f0 1046     		mov	r0, r2
+ 447 01f2 2749     		ldr	r1, .L29+32
+ 448 01f4 1A46     		mov	r2, r3
+ 449 01f6 FFF7FEFF 		bl	sprintf
+ 450 01fa 33E0     		b	.L22
+ 451              	.L15:
+ 162:.\main.c      ****                     }
+ 163:.\main.c      ****                     
+ 164:.\main.c      ****                     
+ 165:.\main.c      ****                 } else if (numArgs == 2) {
+ 452              		.loc 1 165 0
+ 453 01fc D7F8EC30 		ldr	r3, [r7, #236]
+ 454 0200 022B     		cmp	r3, #2
+ 455 0202 26D1     		bne	.L23
+ 166:.\main.c      ****                     if (!strcmp(mode, "off")) {
+ 456              		.loc 1 166 0
+ 457 0204 3B46     		mov	r3, r7
+ 458 0206 1846     		mov	r0, r3
+ 459 0208 2249     		ldr	r1, .L29+36
+ 460 020a FFF7FEFF 		bl	strcmp
+ 461 020e 0346     		mov	r3, r0
+ 462 0210 002B     		cmp	r3, #0
+ 463 0212 15D1     		bne	.L24
+ 167:.\main.c      ****                         if (fnGenerator == 0) {
+ 464              		.loc 1 167 0
+ 465 0214 3B6C     		ldr	r3, [r7, #64]
+ 466 0216 002B     		cmp	r3, #0
+ 467 0218 03D1     		bne	.L25
+ 168:.\main.c      ****                             stopWaveDac(WAVEDAC_LOW_0);
+ 468              		.loc 1 168 0
+ 469 021a 0020     		movs	r0, #0
+ 470 021c FFF7FEFF 		bl	stopWaveDac
+ 471 0220 05E0     		b	.L26
+ 472              	.L25:
+ 169:.\main.c      ****                         } else if (fnGenerator == 1) {
+ 473              		.loc 1 169 0
+ 474 0222 3B6C     		ldr	r3, [r7, #64]
+ 475 0224 012B     		cmp	r3, #1
+ 476 0226 02D1     		bne	.L26
+ 170:.\main.c      ****                             stopWaveDac(WAVEDAC_LOW_1);   
+ 477              		.loc 1 170 0
+ 478 0228 0220     		movs	r0, #2
+ 479 022a FFF7FEFF 		bl	stopWaveDac
+ 480              	.L26:
+ 171:.\main.c      ****                         }
+ 172:.\main.c      ****                         sprintf(usbTx, "Stopped WaveDAC %d\r\n", fnGenerator);
+ 481              		.loc 1 172 0
+ 482 022e 3B6C     		ldr	r3, [r7, #64]
+ 483 0230 07F14802 		add	r2, r7, #72
+ 484 0234 1046     		mov	r0, r2
+ 485 0236 1849     		ldr	r1, .L29+40
+ 486 0238 1A46     		mov	r2, r3
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 13
+
+
+ 487 023a FFF7FEFF 		bl	sprintf
+ 488 023e 11E0     		b	.L22
+ 489              	.L24:
+ 173:.\main.c      ****                     } else {
+ 174:.\main.c      ****                         sprintf(usbTx, "Invalid mode: %s\r\n", mode);
+ 490              		.loc 1 174 0
+ 491 0240 07F14802 		add	r2, r7, #72
+ 492 0244 3B46     		mov	r3, r7
+ 493 0246 1046     		mov	r0, r2
+ 494 0248 1149     		ldr	r1, .L29+32
+ 495 024a 1A46     		mov	r2, r3
+ 496 024c FFF7FEFF 		bl	sprintf
+ 497 0250 08E0     		b	.L22
+ 498              	.L23:
+ 175:.\main.c      ****                     }
+ 176:.\main.c      ****                 } else {
+ 177:.\main.c      ****                     sprintf(usbTx, "Invalid command: %s\r\n", usbRx);
+ 499              		.loc 1 177 0
+ 500 0252 07F14802 		add	r2, r7, #72
+ 501 0256 07F18803 		add	r3, r7, #136
+ 502 025a 1046     		mov	r0, r2
+ 503 025c 0F49     		ldr	r1, .L29+44
+ 504 025e 1A46     		mov	r2, r3
+ 505 0260 FFF7FEFF 		bl	sprintf
+ 506              	.L22:
+ 178:.\main.c      ****                 }
+ 179:.\main.c      ****                 
+ 180:.\main.c      ****                 Serial_PutString(usbTx);
+ 507              		.loc 1 180 0 discriminator 1
+ 508 0264 07F14803 		add	r3, r7, #72
+ 509 0268 1846     		mov	r0, r3
+ 510 026a FFF7FEFF 		bl	Serial_PutString
+ 511              	.L14:
+ 512              	.LBE2:
+ 181:.\main.c      ****             }
+ 182:.\main.c      ****         }
+ 183:.\main.c      ****     }
+ 513              		.loc 1 183 0 discriminator 3
+ 514 026e EAE6     		b	.L28
+ 515              	.L30:
+ 516              		.align	2
+ 517              	.L29:
+ 518 0270 00000000 		.word	.LC0
+ 519 0274 04000000 		.word	.LC1
+ 520 0278 10000000 		.word	.LC2
+ 521 027c 18000000 		.word	.LC3
+ 522 0280 3C000000 		.word	.LC4
+ 523 0284 44000000 		.word	.LC5
+ 524 0288 50000000 		.word	.LC6
+ 525 028c 5C000000 		.word	.LC7
+ 526 0290 60000000 		.word	.LC8
+ 527 0294 74000000 		.word	.LC9
+ 528 0298 78000000 		.word	.LC10
+ 529 029c 90000000 		.word	.LC11
+ 530              		.cfi_endproc
+ 531              	.LFE64:
+ 532              		.size	main, .-main
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 14
+
+
+ 533              		.text
+ 534              	.Letext0:
+ 535              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 536              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 537              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 538              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 539              		.section	.debug_info,"",%progbits
+ 540              	.Ldebug_info0:
+ 541 0000 BE010000 		.4byte	0x1be
+ 542 0004 0400     		.2byte	0x4
+ 543 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 544 000a 04       		.byte	0x4
+ 545 000b 01       		.uleb128 0x1
+ 546 000c 0A000000 		.4byte	.LASF28
+ 547 0010 01       		.byte	0x1
+ 548 0011 BD000000 		.4byte	.LASF29
+ 549 0015 2A010000 		.4byte	.LASF30
+ 550 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 551 001d 00000000 		.4byte	0
+ 552 0021 00000000 		.4byte	.Ldebug_line0
+ 553 0025 02       		.uleb128 0x2
+ 554 0026 01       		.byte	0x1
+ 555 0027 06       		.byte	0x6
+ 556 0028 A9000000 		.4byte	.LASF0
+ 557 002c 02       		.uleb128 0x2
+ 558 002d 01       		.byte	0x1
+ 559 002e 08       		.byte	0x8
+ 560 002f 10010000 		.4byte	.LASF1
+ 561 0033 02       		.uleb128 0x2
+ 562 0034 02       		.byte	0x2
+ 563 0035 05       		.byte	0x5
+ 564 0036 D0010000 		.4byte	.LASF2
+ 565 003a 02       		.uleb128 0x2
+ 566 003b 02       		.byte	0x2
+ 567 003c 07       		.byte	0x7
+ 568 003d E6000000 		.4byte	.LASF3
+ 569 0041 03       		.uleb128 0x3
+ 570 0042 00000000 		.4byte	.LASF9
+ 571 0046 02       		.byte	0x2
+ 572 0047 3F       		.byte	0x3f
+ 573 0048 4C000000 		.4byte	0x4c
+ 574 004c 02       		.uleb128 0x2
+ 575 004d 04       		.byte	0x4
+ 576 004e 05       		.byte	0x5
+ 577 004f DA010000 		.4byte	.LASF4
+ 578 0053 02       		.uleb128 0x2
+ 579 0054 04       		.byte	0x4
+ 580 0055 07       		.byte	0x7
+ 581 0056 C6000000 		.4byte	.LASF5
+ 582 005a 02       		.uleb128 0x2
+ 583 005b 08       		.byte	0x8
+ 584 005c 05       		.byte	0x5
+ 585 005d BD010000 		.4byte	.LASF6
+ 586 0061 02       		.uleb128 0x2
+ 587 0062 08       		.byte	0x8
+ 588 0063 07       		.byte	0x7
+ 589 0064 7A010000 		.4byte	.LASF7
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 15
+
+
+ 590 0068 04       		.uleb128 0x4
+ 591 0069 04       		.byte	0x4
+ 592 006a 05       		.byte	0x5
+ 593 006b 696E7400 		.ascii	"int\000"
+ 594 006f 02       		.uleb128 0x2
+ 595 0070 04       		.byte	0x4
+ 596 0071 07       		.byte	0x7
+ 597 0072 6D010000 		.4byte	.LASF8
+ 598 0076 03       		.uleb128 0x3
+ 599 0077 A0010000 		.4byte	.LASF10
+ 600 007b 03       		.byte	0x3
+ 601 007c 2C       		.byte	0x2c
+ 602 007d 41000000 		.4byte	0x41
+ 603 0081 02       		.uleb128 0x2
+ 604 0082 04       		.byte	0x4
+ 605 0083 04       		.byte	0x4
+ 606 0084 A3000000 		.4byte	.LASF11
+ 607 0088 02       		.uleb128 0x2
+ 608 0089 08       		.byte	0x8
+ 609 008a 04       		.byte	0x4
+ 610 008b 1E010000 		.4byte	.LASF12
+ 611 008f 02       		.uleb128 0x2
+ 612 0090 01       		.byte	0x1
+ 613 0091 08       		.byte	0x8
+ 614 0092 CB010000 		.4byte	.LASF13
+ 615 0096 02       		.uleb128 0x2
+ 616 0097 04       		.byte	0x4
+ 617 0098 07       		.byte	0x7
+ 618 0099 A8010000 		.4byte	.LASF14
+ 619 009d 05       		.uleb128 0x5
+ 620 009e 04       		.byte	0x4
+ 621 009f 8F000000 		.4byte	0x8f
+ 622 00a3 05       		.uleb128 0x5
+ 623 00a4 04       		.byte	0x4
+ 624 00a5 A9000000 		.4byte	0xa9
+ 625 00a9 06       		.uleb128 0x6
+ 626 00aa 8F000000 		.4byte	0x8f
+ 627 00ae 07       		.uleb128 0x7
+ 628 00af 98000000 		.4byte	.LASF15
+ 629 00b3 01       		.byte	0x1
+ 630 00b4 2B       		.byte	0x2b
+ 631 00b5 00000000 		.4byte	.LFB63
+ 632 00b9 B4000000 		.4byte	.LFE63-.LFB63
+ 633 00bd 01       		.uleb128 0x1
+ 634 00be 9C       		.byte	0x9c
+ 635 00bf DE000000 		.4byte	0xde
+ 636 00c3 08       		.uleb128 0x8
+ 637 00c4 73747200 		.ascii	"str\000"
+ 638 00c8 01       		.byte	0x1
+ 639 00c9 2B       		.byte	0x2b
+ 640 00ca 9D000000 		.4byte	0x9d
+ 641 00ce 02       		.uleb128 0x2
+ 642 00cf 91       		.byte	0x91
+ 643 00d0 64       		.sleb128 -28
+ 644 00d1 09       		.uleb128 0x9
+ 645 00d2 6900     		.ascii	"i\000"
+ 646 00d4 01       		.byte	0x1
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 16
+
+
+ 647 00d5 2D       		.byte	0x2d
+ 648 00d6 68000000 		.4byte	0x68
+ 649 00da 02       		.uleb128 0x2
+ 650 00db 91       		.byte	0x91
+ 651 00dc 6C       		.sleb128 -20
+ 652 00dd 00       		.byte	0
+ 653 00de 0A       		.uleb128 0xa
+ 654 00df 25010000 		.4byte	.LASF16
+ 655 00e3 01       		.byte	0x1
+ 656 00e4 65       		.byte	0x65
+ 657 00e5 68000000 		.4byte	0x68
+ 658 00e9 00000000 		.4byte	.LFB64
+ 659 00ed A0020000 		.4byte	.LFE64-.LFB64
+ 660 00f1 01       		.uleb128 0x1
+ 661 00f2 9C       		.byte	0x9c
+ 662 00f3 85010000 		.4byte	0x185
+ 663 00f7 0B       		.uleb128 0xb
+ 664 00f8 06010000 		.4byte	.LASF17
+ 665 00fc 01       		.byte	0x1
+ 666 00fd 67       		.byte	0x67
+ 667 00fe 85010000 		.4byte	0x185
+ 668 0102 02       		.uleb128 0x2
+ 669 0103 91       		.byte	0x91
+ 670 0104 58       		.sleb128 -40
+ 671 0105 0B       		.uleb128 0xb
+ 672 0106 96010000 		.4byte	.LASF18
+ 673 010a 01       		.byte	0x1
+ 674 010b 67       		.byte	0x67
+ 675 010c 85010000 		.4byte	0x185
+ 676 0110 02       		.uleb128 0x2
+ 677 0111 91       		.byte	0x91
+ 678 0112 48       		.sleb128 -56
+ 679 0113 0B       		.uleb128 0xb
+ 680 0114 E3010000 		.4byte	.LASF19
+ 681 0118 01       		.byte	0x1
+ 682 0119 68       		.byte	0x68
+ 683 011a 95010000 		.4byte	0x195
+ 684 011e 03       		.uleb128 0x3
+ 685 011f 91       		.byte	0x91
+ 686 0120 887F     		.sleb128 -120
+ 687 0122 0B       		.uleb128 0xb
+ 688 0123 F1010000 		.4byte	.LASF20
+ 689 0127 01       		.byte	0x1
+ 690 0128 68       		.byte	0x68
+ 691 0129 95010000 		.4byte	0x195
+ 692 012d 03       		.uleb128 0x3
+ 693 012e 91       		.byte	0x91
+ 694 012f C87E     		.sleb128 -184
+ 695 0131 0C       		.uleb128 0xc
+ 696 0132 76000000 		.4byte	.LBB2
+ 697 0136 F8010000 		.4byte	.LBE2-.LBB2
+ 698 013a 0B       		.uleb128 0xb
+ 699 013b E9010000 		.4byte	.LASF21
+ 700 013f 01       		.byte	0x1
+ 701 0140 89       		.byte	0x89
+ 702 0141 68000000 		.4byte	0x68
+ 703 0145 02       		.uleb128 0x2
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 17
+
+
+ 704 0146 91       		.byte	0x91
+ 705 0147 6C       		.sleb128 -20
+ 706 0148 0B       		.uleb128 0xb
+ 707 0149 F7010000 		.4byte	.LASF22
+ 708 014d 01       		.byte	0x1
+ 709 014e 8A       		.byte	0x8a
+ 710 014f 68000000 		.4byte	0x68
+ 711 0153 03       		.uleb128 0x3
+ 712 0154 91       		.byte	0x91
+ 713 0155 C47E     		.sleb128 -188
+ 714 0157 0B       		.uleb128 0xb
+ 715 0158 B5000000 		.4byte	.LASF23
+ 716 015c 01       		.byte	0x1
+ 717 015d 8A       		.byte	0x8a
+ 718 015e 68000000 		.4byte	0x68
+ 719 0162 02       		.uleb128 0x2
+ 720 0163 91       		.byte	0x91
+ 721 0164 68       		.sleb128 -24
+ 722 0165 0B       		.uleb128 0xb
+ 723 0166 B1010000 		.4byte	.LASF24
+ 724 016a 01       		.byte	0x1
+ 725 016b 8A       		.byte	0x8a
+ 726 016c 68000000 		.4byte	0x68
+ 727 0170 03       		.uleb128 0x3
+ 728 0171 91       		.byte	0x91
+ 729 0172 C07E     		.sleb128 -192
+ 730 0174 0B       		.uleb128 0xb
+ 731 0175 91010000 		.4byte	.LASF25
+ 732 0179 01       		.byte	0x1
+ 733 017a 8B       		.byte	0x8b
+ 734 017b 95010000 		.4byte	0x195
+ 735 017f 03       		.uleb128 0x3
+ 736 0180 91       		.byte	0x91
+ 737 0181 807E     		.sleb128 -256
+ 738 0183 00       		.byte	0
+ 739 0184 00       		.byte	0
+ 740 0185 0D       		.uleb128 0xd
+ 741 0186 8F000000 		.4byte	0x8f
+ 742 018a 95010000 		.4byte	0x195
+ 743 018e 0E       		.uleb128 0xe
+ 744 018f 96000000 		.4byte	0x96
+ 745 0193 0F       		.byte	0xf
+ 746 0194 00       		.byte	0
+ 747 0195 0D       		.uleb128 0xd
+ 748 0196 8F000000 		.4byte	0x8f
+ 749 019a A5010000 		.4byte	0x1a5
+ 750 019e 0E       		.uleb128 0xe
+ 751 019f 96000000 		.4byte	0x96
+ 752 01a3 3F       		.byte	0x3f
+ 753 01a4 00       		.byte	0
+ 754 01a5 0F       		.uleb128 0xf
+ 755 01a6 D8000000 		.4byte	.LASF26
+ 756 01aa 04       		.byte	0x4
+ 757 01ab 2D       		.byte	0x2d
+ 758 01ac A3000000 		.4byte	0xa3
+ 759 01b0 10       		.uleb128 0x10
+ 760 01b1 F9000000 		.4byte	.LASF27
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 18
+
+
+ 761 01b5 05       		.byte	0x5
+ 762 01b6 5506     		.2byte	0x655
+ 763 01b8 BC010000 		.4byte	0x1bc
+ 764 01bc 11       		.uleb128 0x11
+ 765 01bd 76000000 		.4byte	0x76
+ 766 01c1 00       		.byte	0
+ 767              		.section	.debug_abbrev,"",%progbits
+ 768              	.Ldebug_abbrev0:
+ 769 0000 01       		.uleb128 0x1
+ 770 0001 11       		.uleb128 0x11
+ 771 0002 01       		.byte	0x1
+ 772 0003 25       		.uleb128 0x25
+ 773 0004 0E       		.uleb128 0xe
+ 774 0005 13       		.uleb128 0x13
+ 775 0006 0B       		.uleb128 0xb
+ 776 0007 03       		.uleb128 0x3
+ 777 0008 0E       		.uleb128 0xe
+ 778 0009 1B       		.uleb128 0x1b
+ 779 000a 0E       		.uleb128 0xe
+ 780 000b 55       		.uleb128 0x55
+ 781 000c 17       		.uleb128 0x17
+ 782 000d 11       		.uleb128 0x11
+ 783 000e 01       		.uleb128 0x1
+ 784 000f 10       		.uleb128 0x10
+ 785 0010 17       		.uleb128 0x17
+ 786 0011 00       		.byte	0
+ 787 0012 00       		.byte	0
+ 788 0013 02       		.uleb128 0x2
+ 789 0014 24       		.uleb128 0x24
+ 790 0015 00       		.byte	0
+ 791 0016 0B       		.uleb128 0xb
+ 792 0017 0B       		.uleb128 0xb
+ 793 0018 3E       		.uleb128 0x3e
+ 794 0019 0B       		.uleb128 0xb
+ 795 001a 03       		.uleb128 0x3
+ 796 001b 0E       		.uleb128 0xe
+ 797 001c 00       		.byte	0
+ 798 001d 00       		.byte	0
+ 799 001e 03       		.uleb128 0x3
+ 800 001f 16       		.uleb128 0x16
+ 801 0020 00       		.byte	0
+ 802 0021 03       		.uleb128 0x3
+ 803 0022 0E       		.uleb128 0xe
+ 804 0023 3A       		.uleb128 0x3a
+ 805 0024 0B       		.uleb128 0xb
+ 806 0025 3B       		.uleb128 0x3b
+ 807 0026 0B       		.uleb128 0xb
+ 808 0027 49       		.uleb128 0x49
+ 809 0028 13       		.uleb128 0x13
+ 810 0029 00       		.byte	0
+ 811 002a 00       		.byte	0
+ 812 002b 04       		.uleb128 0x4
+ 813 002c 24       		.uleb128 0x24
+ 814 002d 00       		.byte	0
+ 815 002e 0B       		.uleb128 0xb
+ 816 002f 0B       		.uleb128 0xb
+ 817 0030 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 19
+
+
+ 818 0031 0B       		.uleb128 0xb
+ 819 0032 03       		.uleb128 0x3
+ 820 0033 08       		.uleb128 0x8
+ 821 0034 00       		.byte	0
+ 822 0035 00       		.byte	0
+ 823 0036 05       		.uleb128 0x5
+ 824 0037 0F       		.uleb128 0xf
+ 825 0038 00       		.byte	0
+ 826 0039 0B       		.uleb128 0xb
+ 827 003a 0B       		.uleb128 0xb
+ 828 003b 49       		.uleb128 0x49
+ 829 003c 13       		.uleb128 0x13
+ 830 003d 00       		.byte	0
+ 831 003e 00       		.byte	0
+ 832 003f 06       		.uleb128 0x6
+ 833 0040 26       		.uleb128 0x26
+ 834 0041 00       		.byte	0
+ 835 0042 49       		.uleb128 0x49
+ 836 0043 13       		.uleb128 0x13
+ 837 0044 00       		.byte	0
+ 838 0045 00       		.byte	0
+ 839 0046 07       		.uleb128 0x7
+ 840 0047 2E       		.uleb128 0x2e
+ 841 0048 01       		.byte	0x1
+ 842 0049 3F       		.uleb128 0x3f
+ 843 004a 19       		.uleb128 0x19
+ 844 004b 03       		.uleb128 0x3
+ 845 004c 0E       		.uleb128 0xe
+ 846 004d 3A       		.uleb128 0x3a
+ 847 004e 0B       		.uleb128 0xb
+ 848 004f 3B       		.uleb128 0x3b
+ 849 0050 0B       		.uleb128 0xb
+ 850 0051 27       		.uleb128 0x27
+ 851 0052 19       		.uleb128 0x19
+ 852 0053 11       		.uleb128 0x11
+ 853 0054 01       		.uleb128 0x1
+ 854 0055 12       		.uleb128 0x12
+ 855 0056 06       		.uleb128 0x6
+ 856 0057 40       		.uleb128 0x40
+ 857 0058 18       		.uleb128 0x18
+ 858 0059 9642     		.uleb128 0x2116
+ 859 005b 19       		.uleb128 0x19
+ 860 005c 01       		.uleb128 0x1
+ 861 005d 13       		.uleb128 0x13
+ 862 005e 00       		.byte	0
+ 863 005f 00       		.byte	0
+ 864 0060 08       		.uleb128 0x8
+ 865 0061 05       		.uleb128 0x5
+ 866 0062 00       		.byte	0
+ 867 0063 03       		.uleb128 0x3
+ 868 0064 08       		.uleb128 0x8
+ 869 0065 3A       		.uleb128 0x3a
+ 870 0066 0B       		.uleb128 0xb
+ 871 0067 3B       		.uleb128 0x3b
+ 872 0068 0B       		.uleb128 0xb
+ 873 0069 49       		.uleb128 0x49
+ 874 006a 13       		.uleb128 0x13
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 20
+
+
+ 875 006b 02       		.uleb128 0x2
+ 876 006c 18       		.uleb128 0x18
+ 877 006d 00       		.byte	0
+ 878 006e 00       		.byte	0
+ 879 006f 09       		.uleb128 0x9
+ 880 0070 34       		.uleb128 0x34
+ 881 0071 00       		.byte	0
+ 882 0072 03       		.uleb128 0x3
+ 883 0073 08       		.uleb128 0x8
+ 884 0074 3A       		.uleb128 0x3a
+ 885 0075 0B       		.uleb128 0xb
+ 886 0076 3B       		.uleb128 0x3b
+ 887 0077 0B       		.uleb128 0xb
+ 888 0078 49       		.uleb128 0x49
+ 889 0079 13       		.uleb128 0x13
+ 890 007a 02       		.uleb128 0x2
+ 891 007b 18       		.uleb128 0x18
+ 892 007c 00       		.byte	0
+ 893 007d 00       		.byte	0
+ 894 007e 0A       		.uleb128 0xa
+ 895 007f 2E       		.uleb128 0x2e
+ 896 0080 01       		.byte	0x1
+ 897 0081 3F       		.uleb128 0x3f
+ 898 0082 19       		.uleb128 0x19
+ 899 0083 03       		.uleb128 0x3
+ 900 0084 0E       		.uleb128 0xe
+ 901 0085 3A       		.uleb128 0x3a
+ 902 0086 0B       		.uleb128 0xb
+ 903 0087 3B       		.uleb128 0x3b
+ 904 0088 0B       		.uleb128 0xb
+ 905 0089 49       		.uleb128 0x49
+ 906 008a 13       		.uleb128 0x13
+ 907 008b 11       		.uleb128 0x11
+ 908 008c 01       		.uleb128 0x1
+ 909 008d 12       		.uleb128 0x12
+ 910 008e 06       		.uleb128 0x6
+ 911 008f 40       		.uleb128 0x40
+ 912 0090 18       		.uleb128 0x18
+ 913 0091 9642     		.uleb128 0x2116
+ 914 0093 19       		.uleb128 0x19
+ 915 0094 01       		.uleb128 0x1
+ 916 0095 13       		.uleb128 0x13
+ 917 0096 00       		.byte	0
+ 918 0097 00       		.byte	0
+ 919 0098 0B       		.uleb128 0xb
+ 920 0099 34       		.uleb128 0x34
+ 921 009a 00       		.byte	0
+ 922 009b 03       		.uleb128 0x3
+ 923 009c 0E       		.uleb128 0xe
+ 924 009d 3A       		.uleb128 0x3a
+ 925 009e 0B       		.uleb128 0xb
+ 926 009f 3B       		.uleb128 0x3b
+ 927 00a0 0B       		.uleb128 0xb
+ 928 00a1 49       		.uleb128 0x49
+ 929 00a2 13       		.uleb128 0x13
+ 930 00a3 02       		.uleb128 0x2
+ 931 00a4 18       		.uleb128 0x18
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 21
+
+
+ 932 00a5 00       		.byte	0
+ 933 00a6 00       		.byte	0
+ 934 00a7 0C       		.uleb128 0xc
+ 935 00a8 0B       		.uleb128 0xb
+ 936 00a9 01       		.byte	0x1
+ 937 00aa 11       		.uleb128 0x11
+ 938 00ab 01       		.uleb128 0x1
+ 939 00ac 12       		.uleb128 0x12
+ 940 00ad 06       		.uleb128 0x6
+ 941 00ae 00       		.byte	0
+ 942 00af 00       		.byte	0
+ 943 00b0 0D       		.uleb128 0xd
+ 944 00b1 01       		.uleb128 0x1
+ 945 00b2 01       		.byte	0x1
+ 946 00b3 49       		.uleb128 0x49
+ 947 00b4 13       		.uleb128 0x13
+ 948 00b5 01       		.uleb128 0x1
+ 949 00b6 13       		.uleb128 0x13
+ 950 00b7 00       		.byte	0
+ 951 00b8 00       		.byte	0
+ 952 00b9 0E       		.uleb128 0xe
+ 953 00ba 21       		.uleb128 0x21
+ 954 00bb 00       		.byte	0
+ 955 00bc 49       		.uleb128 0x49
+ 956 00bd 13       		.uleb128 0x13
+ 957 00be 2F       		.uleb128 0x2f
+ 958 00bf 0B       		.uleb128 0xb
+ 959 00c0 00       		.byte	0
+ 960 00c1 00       		.byte	0
+ 961 00c2 0F       		.uleb128 0xf
+ 962 00c3 34       		.uleb128 0x34
+ 963 00c4 00       		.byte	0
+ 964 00c5 03       		.uleb128 0x3
+ 965 00c6 0E       		.uleb128 0xe
+ 966 00c7 3A       		.uleb128 0x3a
+ 967 00c8 0B       		.uleb128 0xb
+ 968 00c9 3B       		.uleb128 0x3b
+ 969 00ca 0B       		.uleb128 0xb
+ 970 00cb 49       		.uleb128 0x49
+ 971 00cc 13       		.uleb128 0x13
+ 972 00cd 3F       		.uleb128 0x3f
+ 973 00ce 19       		.uleb128 0x19
+ 974 00cf 3C       		.uleb128 0x3c
+ 975 00d0 19       		.uleb128 0x19
+ 976 00d1 00       		.byte	0
+ 977 00d2 00       		.byte	0
+ 978 00d3 10       		.uleb128 0x10
+ 979 00d4 34       		.uleb128 0x34
+ 980 00d5 00       		.byte	0
+ 981 00d6 03       		.uleb128 0x3
+ 982 00d7 0E       		.uleb128 0xe
+ 983 00d8 3A       		.uleb128 0x3a
+ 984 00d9 0B       		.uleb128 0xb
+ 985 00da 3B       		.uleb128 0x3b
+ 986 00db 05       		.uleb128 0x5
+ 987 00dc 49       		.uleb128 0x49
+ 988 00dd 13       		.uleb128 0x13
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 22
+
+
+ 989 00de 3F       		.uleb128 0x3f
+ 990 00df 19       		.uleb128 0x19
+ 991 00e0 3C       		.uleb128 0x3c
+ 992 00e1 19       		.uleb128 0x19
+ 993 00e2 00       		.byte	0
+ 994 00e3 00       		.byte	0
+ 995 00e4 11       		.uleb128 0x11
+ 996 00e5 35       		.uleb128 0x35
+ 997 00e6 00       		.byte	0
+ 998 00e7 49       		.uleb128 0x49
+ 999 00e8 13       		.uleb128 0x13
+ 1000 00e9 00       		.byte	0
+ 1001 00ea 00       		.byte	0
+ 1002 00eb 00       		.byte	0
+ 1003              		.section	.debug_aranges,"",%progbits
+ 1004 0000 24000000 		.4byte	0x24
+ 1005 0004 0200     		.2byte	0x2
+ 1006 0006 00000000 		.4byte	.Ldebug_info0
+ 1007 000a 04       		.byte	0x4
+ 1008 000b 00       		.byte	0
+ 1009 000c 0000     		.2byte	0
+ 1010 000e 0000     		.2byte	0
+ 1011 0010 00000000 		.4byte	.LFB63
+ 1012 0014 B4000000 		.4byte	.LFE63-.LFB63
+ 1013 0018 00000000 		.4byte	.LFB64
+ 1014 001c A0020000 		.4byte	.LFE64-.LFB64
+ 1015 0020 00000000 		.4byte	0
+ 1016 0024 00000000 		.4byte	0
+ 1017              		.section	.debug_ranges,"",%progbits
+ 1018              	.Ldebug_ranges0:
+ 1019 0000 00000000 		.4byte	.LFB63
+ 1020 0004 B4000000 		.4byte	.LFE63
+ 1021 0008 00000000 		.4byte	.LFB64
+ 1022 000c A0020000 		.4byte	.LFE64
+ 1023 0010 00000000 		.4byte	0
+ 1024 0014 00000000 		.4byte	0
+ 1025              		.section	.debug_line,"",%progbits
+ 1026              	.Ldebug_line0:
+ 1027 0000 C0010000 		.section	.debug_str,"MS",%progbits,1
+ 1027      02004701 
+ 1027      00000201 
+ 1027      FB0E0D00 
+ 1027      01010101 
+ 1028              	.LASF9:
+ 1029 0000 5F5F696E 		.ascii	"__int32_t\000"
+ 1029      7433325F 
+ 1029      7400
+ 1030              	.LASF28:
+ 1031 000a 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1031      4320342E 
+ 1031      392E3320 
+ 1031      32303135 
+ 1031      30333033 
+ 1032 003d 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1032      20726576 
+ 1032      6973696F 
+ 1032      6E203232 
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 23
+
+
+ 1032      31323230 
+ 1033 0070 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1033      66756E63 
+ 1033      74696F6E 
+ 1033      2D736563 
+ 1033      74696F6E 
+ 1034              	.LASF15:
+ 1035 0098 7472696D 		.ascii	"trimString\000"
+ 1035      53747269 
+ 1035      6E6700
+ 1036              	.LASF11:
+ 1037 00a3 666C6F61 		.ascii	"float\000"
+ 1037      7400
+ 1038              	.LASF0:
+ 1039 00a9 7369676E 		.ascii	"signed char\000"
+ 1039      65642063 
+ 1039      68617200 
+ 1040              	.LASF23:
+ 1041 00b5 6E657746 		.ascii	"newFreq\000"
+ 1041      72657100 
+ 1042              	.LASF29:
+ 1043 00bd 2E5C6D61 		.ascii	".\\main.c\000"
+ 1043      696E2E63 
+ 1043      00
+ 1044              	.LASF5:
+ 1045 00c6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1045      20756E73 
+ 1045      69676E65 
+ 1045      6420696E 
+ 1045      7400
+ 1046              	.LASF26:
+ 1047 00d8 5F5F6374 		.ascii	"__ctype_ptr__\000"
+ 1047      7970655F 
+ 1047      7074725F 
+ 1047      5F00
+ 1048              	.LASF3:
+ 1049 00e6 73686F72 		.ascii	"short unsigned int\000"
+ 1049      7420756E 
+ 1049      7369676E 
+ 1049      65642069 
+ 1049      6E7400
+ 1050              	.LASF27:
+ 1051 00f9 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1051      52784275 
+ 1051      66666572 
+ 1051      00
+ 1052              	.LASF17:
+ 1053 0106 66726571 		.ascii	"freq0Disp\000"
+ 1053      30446973 
+ 1053      7000
+ 1054              	.LASF1:
+ 1055 0110 756E7369 		.ascii	"unsigned char\000"
+ 1055      676E6564 
+ 1055      20636861 
+ 1055      7200
+ 1056              	.LASF12:
+ 1057 011e 646F7562 		.ascii	"double\000"
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 24
+
+
+ 1057      6C6500
+ 1058              	.LASF16:
+ 1059 0125 6D61696E 		.ascii	"main\000"
+ 1059      00
+ 1060              	.LASF30:
+ 1061 012a 433A5C55 		.ascii	"C:\\Users\\jthem\\Documents\\PSoC Creator\\PWMExamp"
+ 1061      73657273 
+ 1061      5C6A7468 
+ 1061      656D5C44 
+ 1061      6F63756D 
+ 1062 0158 6C653031 		.ascii	"le01\\EasyBoard.cydsn\000"
+ 1062      5C456173 
+ 1062      79426F61 
+ 1062      72642E63 
+ 1062      7964736E 
+ 1063              	.LASF8:
+ 1064 016d 756E7369 		.ascii	"unsigned int\000"
+ 1064      676E6564 
+ 1064      20696E74 
+ 1064      00
+ 1065              	.LASF7:
+ 1066 017a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1066      206C6F6E 
+ 1066      6720756E 
+ 1066      7369676E 
+ 1066      65642069 
+ 1067              	.LASF25:
+ 1068 0191 6D6F6465 		.ascii	"mode\000"
+ 1068      00
+ 1069              	.LASF18:
+ 1070 0196 66726571 		.ascii	"freq1Disp\000"
+ 1070      31446973 
+ 1070      7000
+ 1071              	.LASF10:
+ 1072 01a0 696E7433 		.ascii	"int32_t\000"
+ 1072      325F7400 
+ 1073              	.LASF14:
+ 1074 01a8 73697A65 		.ascii	"sizetype\000"
+ 1074      74797065 
+ 1074      00
+ 1075              	.LASF24:
+ 1076 01b1 666E4765 		.ascii	"fnGenerator\000"
+ 1076      6E657261 
+ 1076      746F7200 
+ 1077              	.LASF6:
+ 1078 01bd 6C6F6E67 		.ascii	"long long int\000"
+ 1078      206C6F6E 
+ 1078      6720696E 
+ 1078      7400
+ 1079              	.LASF13:
+ 1080 01cb 63686172 		.ascii	"char\000"
+ 1080      00
+ 1081              	.LASF2:
+ 1082 01d0 73686F72 		.ascii	"short int\000"
+ 1082      7420696E 
+ 1082      7400
+ 1083              	.LASF4:
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cctygaP7.s 			page 25
+
+
+ 1084 01da 6C6F6E67 		.ascii	"long int\000"
+ 1084      20696E74 
+ 1084      00
+ 1085              	.LASF19:
+ 1086 01e3 75736252 		.ascii	"usbRx\000"
+ 1086      7800
+ 1087              	.LASF21:
+ 1088 01e9 6E756D41 		.ascii	"numArgs\000"
+ 1088      72677300 
+ 1089              	.LASF20:
+ 1090 01f1 75736254 		.ascii	"usbTx\000"
+ 1090      7800
+ 1091              	.LASF22:
+ 1092 01f7 64657369 		.ascii	"desiredFreq\000"
+ 1092      72656446 
+ 1092      72657100 
+ 1093              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
