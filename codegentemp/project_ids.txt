@@ -1,0 +1,9 @@
+C:\Users\jthem\Documents\PSoC Creator\PWMExample01\EasyBoard.cydsn\EasyBoard.cyprj|e26cd8f9-b24f-4168-9ef8-75fbfc1d50e4
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|2cdc673b-41fc-4a87-b370-f0379f4381c6
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|6db966b7-25b5-4943-a8a1-6d905341ba5c
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|21ea437a-b42c-47b5-a835-438718d3b05d
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|b7e47ce9-d57b-43ff-a05c-a2493a359b96
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|683b796a-c8ef-406f-bb25-8cb0b171f17d
+C:\Users\jthem\Documents\PSoC Creator\PWMExample01\WaveDAC8_Example01.cydsn\WaveDAC8_Example01.cyprj|5ccbf2a3-1f68-40c2-8b5a-a2b340f167d3
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev\psoc3\AnalogDevice\PSoC35AnalogDevice.cylib\PSoC35AnalogDevice.cyprj|f01707d2-3762-48b0-8117-de081c33747f
+C:\Users\jthem\Documents\PSoC Creator\PWMExample01\UART_Tx01.cydsn\UART_Tx01.cyprj|1a8d407e-b903-409a-a325-9938894f90f6
