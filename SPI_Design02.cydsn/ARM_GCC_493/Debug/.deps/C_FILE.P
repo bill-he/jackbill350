@@ -1,0 +1,88 @@
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/ARM_GCC_493/Debug/main.o : C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/Clock.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/CyDmac.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/CyFlash.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/CyLib.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/CySpc.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/LCD.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/LCD_LCDPort.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/LCD_LCDPort_aliases.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/SPIM.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/SPIM_PVT.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/SPIS.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/SPIS_PVT.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/core_cm3.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/core_cmFunc.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/core_cmInstr.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cyPm.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cydisabledsheets.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cypins.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_miso_pin.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_miso_pin_aliases.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_mosi_pin.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_mosi_pin_aliases.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_sclk_pin.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_sclk_pin_aliases.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_ss_pin.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_ss_pin_aliases.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/project.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_miso_pin.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_miso_pin_aliases.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_mosi_pin.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_mosi_pin_aliases.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_sclk_pin.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_sclk_pin_aliases.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_ss_pin.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_ss_pin_aliases.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/device.h C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/main.c 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/Clock.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/CyLib.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/CySpc.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/LCD.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/LCD_LCDPort.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/LCD_LCDPort_aliases.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/SPIM.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/SPIM_PVT.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/SPIS.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/SPIS_PVT.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/core_cmFunc.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/core_cmInstr.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cyPm.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cydevice.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cypins.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/cytypes.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_miso_pin.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_miso_pin_aliases.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_mosi_pin.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_mosi_pin_aliases.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_sclk_pin.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_sclk_pin_aliases.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_ss_pin.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/m_ss_pin_aliases.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/project.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_miso_pin.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_miso_pin_aliases.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_mosi_pin.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_mosi_pin_aliases.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_sclk_pin.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_sclk_pin_aliases.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_ss_pin.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/Generated_Source/PSoC5/s_ss_pin_aliases.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/device.h : 
+
+C:/Users/jthem/Documents/PSoC\ Creator/PWMExample01/SPI_Design02.cydsn/main.c : 
+

@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="EasyBoard\SPI_Design01\Source Files\main.c">
+<ExpandedNodeIds>
+<v>EasyBoard</v>
+<v>EasyBoard\EasyBoard</v>
+<v>EasyBoard\EasyBoard\TopDesign</v>
+<v>EasyBoard\EasyBoard\EasyBoard.cydwr</v>
+<v>EasyBoard\EasyBoard\Header Files</v>
+<v>EasyBoard\EasyBoard\Header Files\cyapicallbacks.h</v>
+<v>EasyBoard\EasyBoard\Header Files\device.h</v>
+<v>EasyBoard\EasyBoard\Header Files\FunctionGenerator.h</v>
+<v>EasyBoard\EasyBoard\Header Files\Serial.h</v>
+<v>EasyBoard\EasyBoard\Source Files</v>
+<v>EasyBoard\EasyBoard\Source Files\FunctionGenerator.c</v>
+<v>EasyBoard\EasyBoard\Source Files\main.c</v>
+<v>EasyBoard\EasyBoard\Source Files\Serial.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\LCD\LCD.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\LCD\LCD.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\LCD\LCD_PM.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort_aliases.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0\SPI_FNG0.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0\SPI_FNG0.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0\SPI_FNG0_INT.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0\SPI_FNG0_PM.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0\SPI_FNG0_PVT.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_CLK</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_CLK\SPI_FNG0_CLK.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_CLK\SPI_FNG0_CLK.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_MISO</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_MISO\SPI_FNG0_MISO.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_MISO\SPI_FNG0_MISO.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_MISO\SPI_FNG0_MISO_aliases.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_MOSI</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_MOSI\SPI_FNG0_MOSI.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_MOSI\SPI_FNG0_MOSI.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_MOSI\SPI_FNG0_MOSI_aliases.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_SCLK</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_SCLK\SPI_FNG0_SCLK.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_SCLK\SPI_FNG0_SCLK.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_SCLK\SPI_FNG0_SCLK_aliases.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_SS</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_SS\SPI_FNG0_SS.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_SS\SPI_FNG0_SS.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\SPI_FNG0_SS\SPI_FNG0_SS_aliases.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_audio.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_audio.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_boot.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_cdc.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_cdc.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_cdc.inf</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_cls.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_cydmac.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_descr.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_drv.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_episr.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_hid.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_hid.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_midi.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_midi.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_msc.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_msc.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_pm.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_pvt.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_std.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART\USBUART_vnd.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART_Dm</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART_Dm\USBUART_Dm.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART_Dm\USBUART_Dm.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART_Dm\USBUART_Dm_aliases.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART_Dp</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART_Dp\USBUART_Dp.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART_Dp\USBUART_Dp.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\USBUART_Dp\USBUART_Dp_aliases.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0\WaveDAC_0.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0\WaveDAC_0.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0\WaveDAC_0_PM.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_Clock</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_Clock\WaveDAC_0_Clock.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_Clock\WaveDAC_0_Clock.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_IDAC8</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_IDAC8\WaveDAC_0_IDAC8.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_IDAC8\WaveDAC_0_IDAC8.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_IDAC8\WaveDAC_0_IDAC8_PM.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_OUT</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_OUT\WaveDAC_0_OUT.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_OUT\WaveDAC_0_OUT.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_OUT\WaveDAC_0_OUT_aliases.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_Wave1_DMA</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_Wave1_DMA\WaveDAC_0_Wave1_DMA_dma.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_Wave1_DMA\WaveDAC_0_Wave1_DMA_dma.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_Wave2_DMA</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_Wave2_DMA\WaveDAC_0_Wave2_DMA_dma.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_0_Wave2_DMA\WaveDAC_0_Wave2_DMA_dma.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1\WaveDAC_1.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1\WaveDAC_1.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1\WaveDAC_1_PM.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_Clock</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_Clock\WaveDAC_1_Clock.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_Clock\WaveDAC_1_Clock.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_IDAC8</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_IDAC8\WaveDAC_1_IDAC8.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_IDAC8\WaveDAC_1_IDAC8.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_IDAC8\WaveDAC_1_IDAC8_PM.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_OUT</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_OUT\WaveDAC_1_OUT.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_OUT\WaveDAC_1_OUT.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_OUT\WaveDAC_1_OUT_aliases.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_Wave1_DMA</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_Wave1_DMA\WaveDAC_1_Wave1_DMA_dma.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_Wave1_DMA\WaveDAC_1_Wave1_DMA_dma.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_Wave2_DMA</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_Wave2_DMA\WaveDAC_1_Wave2_DMA_dma.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\WaveDAC_1_Wave2_DMA\WaveDAC_1_Wave2_DMA_dma.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cydevice.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cyfitter.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\cymetadata.c</v>
+<v>EasyBoard\EasyBoard\Generated_Source\PSoC5\project.h</v>
+<v>EasyBoard\SPI_Design01</v>
+<v>EasyBoard\SPI_Design01\TopDesign</v>
+<v>EasyBoard\SPI_Design01\SPI_Design01.cydwr</v>
+<v>EasyBoard\SPI_Design01\Header Files</v>
+<v>EasyBoard\SPI_Design01\Header Files\cyapicallbacks.h</v>
+<v>EasyBoard\SPI_Design01\Header Files\delay.h</v>
+<v>EasyBoard\SPI_Design01\Header Files\device.h</v>
+<v>EasyBoard\SPI_Design01\Source Files</v>
+<v>EasyBoard\SPI_Design01\Source Files\delay.asm</v>
+<v>EasyBoard\SPI_Design01\Source Files\main.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\Clock</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\Clock\Clock.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\Clock\Clock.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\CS</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\CS\CS.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\CS\CS.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\CS\CS_aliases.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\LCD</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\LCD\LCD.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\LCD\LCD.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\LCD\LCD_PM.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\LCD_LCDPort</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort_aliases.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\m_miso_pin</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\m_miso_pin\m_miso_pin.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\m_miso_pin\m_miso_pin.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\m_miso_pin\m_miso_pin_aliases.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\m_mosi_pin</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\m_mosi_pin\m_mosi_pin.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\m_mosi_pin\m_mosi_pin.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\m_mosi_pin\m_mosi_pin_aliases.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\m_sclk_pin</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\m_sclk_pin\m_sclk_pin.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\m_sclk_pin\m_sclk_pin.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\m_sclk_pin\m_sclk_pin_aliases.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_miso_pin</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_miso_pin\s_miso_pin.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_miso_pin\s_miso_pin.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_miso_pin\s_miso_pin_aliases.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_mosi_pin</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_mosi_pin\s_mosi_pin.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_mosi_pin\s_mosi_pin.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_mosi_pin\s_mosi_pin_aliases.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_sclk_pin</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_sclk_pin\s_sclk_pin.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_sclk_pin\s_sclk_pin.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_sclk_pin\s_sclk_pin_aliases.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_ss_pin</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_ss_pin\s_ss_pin.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_ss_pin\s_ss_pin.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\s_ss_pin\s_ss_pin_aliases.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\SPIM</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\SPIM\SPIM.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\SPIM\SPIM.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\SPIM\SPIM_INT.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\SPIM\SPIM_PM.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\SPIM\SPIM_PVT.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\SPIS</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\SPIS\SPIS.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\SPIS\SPIS.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\SPIS\SPIS_BOOT.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\SPIS\SPIS_INT.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\SPIS\SPIS_PM.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\SPIS\SPIS_PVT.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cydevice.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cyfitter.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cymetadata.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\project.h</v>
+<v>EasyBoard\SPIM_Example05\TopDesign</v>
+<v>EasyBoard\SPIM_Example05\SPIM_Example05.cydwr</v>
+<v>EasyBoard\SPIM_Example05\Header Files</v>
+<v>EasyBoard\SPIM_Example05\Header Files\cyapicallbacks.h</v>
+<v>EasyBoard\SPIM_Example05\Source Files</v>
+<v>EasyBoard\SPIM_Example05\Source Files\main.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\Clock</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\Clock\Clock.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\Clock\Clock.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\DMA_RX</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\DMA_RX\DMA_RX_dma.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\DMA_RX\DMA_RX_dma.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\DMA_TX</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\DMA_TX\DMA_TX_dma.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\DMA_TX\DMA_TX_dma.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\LCD</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\LCD\LCD.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\LCD\LCD.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\LCD\LCD_PM.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\LCD_LCDPort</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort_aliases.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\miso</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\miso\miso.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\miso\miso.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\miso\miso_aliases.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\mosi</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\mosi\mosi.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\mosi\mosi.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\mosi\mosi_aliases.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\sclk</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\sclk\sclk.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\sclk\sclk.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\sclk\sclk_aliases.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\SPIM</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\SPIM\SPIM.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\SPIM\SPIM.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\SPIM\SPIM_INT.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\SPIM\SPIM_PM.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\SPIM\SPIM_PVT.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\ss</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\ss\ss.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\ss\ss.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\ss\ss_aliases.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cydevice.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cyfitter.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\cymetadata.c</v>
+<v>EasyBoard\SPIM_Example05\Generated_Source\PSoC5\project.h</v>
+<v>EasyBoard\SPIM_Example05\SPIM_Example.pdf</v>
+<v>EasyBoard\TestSPIPot\TopDesign</v>
+<v>EasyBoard\TestSPIPot\TestSPIPot.cydwr</v>
+<v>EasyBoard\TestSPIPot\Header Files</v>
+<v>EasyBoard\TestSPIPot\Header Files\cyapicallbacks.h</v>
+<v>EasyBoard\TestSPIPot\Source Files</v>
+<v>EasyBoard\TestSPIPot\Source Files\main.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\LCD\LCD.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\LCD\LCD.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\LCD\LCD_PM.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort_aliases.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\LED\LED.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\LED\LED.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\LED\LED_aliases.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI\SPI.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI\SPI.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI\SPI_INT.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI\SPI_PM.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI\SPI_PVT.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_CLK\SPI_CLK.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_CLK\SPI_CLK.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_CLK\SPI_CLK_aliases.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_Clock\SPI_Clock.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_Clock\SPI_Clock.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_CS\SPI_CS.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_CS\SPI_CS.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_CS\SPI_CS_aliases.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_MISO\SPI_MISO.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_MISO\SPI_MISO.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_MISO\SPI_MISO_aliases.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_MOSI\SPI_MOSI.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_MOSI\SPI_MOSI.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\SPI_MOSI\SPI_MOSI_aliases.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cydevice.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cyfitter.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\cymetadata.c</v>
+<v>EasyBoard\TestSPIPot\Generated_Source\PSoC5\project.h</v>
+<v>EasyBoard\WaveDAC8_Example01\TopDesign</v>
+<v>EasyBoard\WaveDAC8_Example01\WaveDAC8_Example01.cydwr</v>
+<v>EasyBoard\WaveDAC8_Example01\Header Files</v>
+<v>EasyBoard\WaveDAC8_Example01\Header Files\cyapicallbacks.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Source Files</v>
+<v>EasyBoard\WaveDAC8_Example01\Source Files\main.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\P00_Vout</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\P00_Vout\P00_Vout.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\P00_Vout\P00_Vout.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\P00_Vout\P00_Vout_aliases.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1\WaveDAC8_1.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1\WaveDAC8_1.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1\WaveDAC8_1_PM.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_BuffAmp</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_BuffAmp\WaveDAC8_1_BuffAmp.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_BuffAmp\WaveDAC8_1_BuffAmp.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_BuffAmp\WaveDAC8_1_BuffAmp_PM.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_DacClk</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_DacClk\WaveDAC8_1_DacClk.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_DacClk\WaveDAC8_1_DacClk.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_VDAC8</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_VDAC8\WaveDAC8_1_VDAC8.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_VDAC8\WaveDAC8_1_VDAC8.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_VDAC8\WaveDAC8_1_VDAC8_PM.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_Wave1_DMA</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_Wave1_DMA\WaveDAC8_1_Wave1_DMA_dma.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_Wave1_DMA\WaveDAC8_1_Wave1_DMA_dma.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_Wave2_DMA</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_Wave2_DMA\WaveDAC8_1_Wave2_DMA_dma.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\WaveDAC8_1_Wave2_DMA\WaveDAC8_1_Wave2_DMA_dma.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cydevice.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cyfitter.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\cymetadata.c</v>
+<v>EasyBoard\WaveDAC8_Example01\Generated_Source\PSoC5\project.h</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>EasyBoard\SPI_Design01\TopDesign</v>
+<v>EasyBoard\SPI_Design01\SPI_Design01.cydwr</v>
+<v>EasyBoard\SPI_Design01\Header Files</v>
+<v>EasyBoard\SPI_Design01\Header Files\cyapicallbacks.h</v>
+<v>EasyBoard\SPI_Design01\Header Files\delay.h</v>
+<v>EasyBoard\SPI_Design01\Header Files\device.h</v>
+<v>EasyBoard\SPI_Design01\Source Files</v>
+<v>EasyBoard\SPI_Design01\Source Files\delay.asm</v>
+<v>EasyBoard\SPI_Design01\Source Files\main.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\Clock</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\Clock\Clock.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\Clock\Clock.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\CS</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\CS\CS.c</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\CS\CS.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\CS\CS_aliases.h</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>EasyBoard\SPI_Design01\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="EasyBoard\EasyBoard">
+<ExpandedNodeIds>
+<v>EasyBoard</v>
+<v>EasyBoard\EasyBoard</v>
+<v>EasyBoard\EasyBoard\TopDesign</v>
+<v>EasyBoard\EasyBoard\TopDesign\TopDesign.cysch</v>
+<v>EasyBoard\SPI_Design01</v>
+<v>EasyBoard\SPI_Design01\TopDesign</v>
+<v>EasyBoard\SPI_Design01\TopDesign\TopDesign.cysch</v>
+<v>EasyBoard\SPIM_Example05</v>
+<v>EasyBoard\SPIM_Example05\TopDesign</v>
+<v>EasyBoard\SPIM_Example05\TopDesign\TopDesign.cysch</v>
+<v>EasyBoard\TestSPIPot</v>
+<v>EasyBoard\TestSPIPot\TopDesign</v>
+<v>EasyBoard\TestSPIPot\TopDesign\TopDesign.cysch</v>
+<v>EasyBoard\WaveDAC8_Example01</v>
+<v>EasyBoard\WaveDAC8_Example01\TopDesign</v>
+<v>EasyBoard\WaveDAC8_Example01\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>EasyBoard</v>
+<v>EasyBoard\EasyBoard</v>
+<v>EasyBoard\EasyBoard\TopDesign</v>
+<v>EasyBoard\EasyBoard\TopDesign\TopDesign.cysch</v>
+<v>EasyBoard\SPI_Design01</v>
+<v>EasyBoard\SPI_Design01\TopDesign</v>
+<v>EasyBoard\SPI_Design01\TopDesign\TopDesign.cysch</v>
+<v>EasyBoard\SPIM_Example05</v>
+<v>EasyBoard\SPIM_Example05\TopDesign</v>
+<v>EasyBoard\SPIM_Example05\TopDesign\TopDesign.cysch</v>
+<v>EasyBoard\TestSPIPot</v>
+<v>EasyBoard\TestSPIPot\TopDesign</v>
+<v>EasyBoard\TestSPIPot\TopDesign\TopDesign.cysch</v>
+<v>EasyBoard\WaveDAC8_Example01</v>
+<v>EasyBoard\WaveDAC8_Example01\TopDesign</v>
+<v>EasyBoard\WaveDAC8_Example01\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="EasyBoard">
+<ExpandedNodeIds>
+<v>EasyBoard</v>
+<v>EasyBoard\EasyBoard</v>
+<v>EasyBoard\EasyBoard\CortexM3</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\FunctionGenerator.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\Serial.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_FNG0.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_FNG0_CLK.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_FNG0_INT.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_FNG0_MISO.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_FNG0_MOSI.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_FNG0_PM.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_FNG0_SCLK.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_FNG0_SS.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_audio.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_boot.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_cdc.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_cls.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_descr.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_Dm.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_Dp.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_drv.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_episr.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_hid.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_midi.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_msc.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_pm.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_std.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_vnd.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_0.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_0_Clock.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_0_IDAC8.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_0_IDAC8_PM.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_0_OUT.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_0_PM.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_0_Wave1_DMA_dma.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_0_Wave2_DMA_dma.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_1.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_1_Clock.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_1_IDAC8.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_1_IDAC8_PM.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_1_OUT.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_1_PM.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_1_Wave1_DMA_dma.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC_1_Wave2_DMA_dma.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\EasyBoard.elf</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\EasyBoard.hex</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\EasyBoard.map</v>
+<v>EasyBoard\EasyBoard\EasyBoard.gpdsc</v>
+<v>EasyBoard\EasyBoard\EasyBoard.rpt</v>
+<v>EasyBoard\EasyBoard\EasyBoard_timing.html</v>
+<v>EasyBoard\SPI_Design01</v>
+<v>EasyBoard\SPI_Design01\CortexM3</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CS.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\m_miso_pin.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\m_mosi_pin.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\m_sclk_pin.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\s_miso_pin.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\s_mosi_pin.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\s_sclk_pin.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\s_ss_pin.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\SPIM.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\SPIM_INT.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\SPIM_PM.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\SPIS.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\SPIS_BOOT.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\SPIS_INT.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\SPIS_PM.lst</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\SPI_Design01.elf</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\SPI_Design01.hex</v>
+<v>EasyBoard\SPI_Design01\CortexM3\ARM_GCC_493\Debug\SPI_Design01.map</v>
+<v>EasyBoard\SPI_Design01\SPI_Design01.gpdsc</v>
+<v>EasyBoard\SPI_Design01\SPI_Design01.rpt</v>
+<v>EasyBoard\SPI_Design01\SPI_Design01_timing.html</v>
+<v>EasyBoard\SPIM_Example05</v>
+<v>EasyBoard\SPIM_Example05\CortexM3</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\DMA_RX_dma.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\DMA_TX_dma.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\miso.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\mosi.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\sclk.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\SPIM.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\SPIM_INT.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\SPIM_PM.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\Listing Files\ss.lst</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\SPIM_Example05.elf</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\SPIM_Example05.hex</v>
+<v>EasyBoard\SPIM_Example05\CortexM3\ARM_GCC_493\Debug\SPIM_Example05.map</v>
+<v>EasyBoard\SPIM_Example05\SPIM_Example05.gpdsc</v>
+<v>EasyBoard\SPIM_Example05\SPIM_Example05.rpt</v>
+<v>EasyBoard\SPIM_Example05\SPIM_Example05_timing.html</v>
+<v>EasyBoard\TestSPIPot</v>
+<v>EasyBoard\TestSPIPot\CortexM3</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\LED.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_CLK.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_Clock.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_CS.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_INT.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_MISO.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_MOSI.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\Listing Files\SPI_PM.lst</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\TestSPIPot.elf</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\TestSPIPot.hex</v>
+<v>EasyBoard\TestSPIPot\CortexM3\ARM_GCC_493\Debug\TestSPIPot.map</v>
+<v>EasyBoard\TestSPIPot\TestSPIPot.gpdsc</v>
+<v>EasyBoard\TestSPIPot\TestSPIPot.rpt</v>
+<v>EasyBoard\TestSPIPot\TestSPIPot_timing.html</v>
+<v>EasyBoard\WaveDAC8_Example01</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\P00_Vout.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC8_1.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC8_1_BuffAmp.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC8_1_BuffAmp_PM.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC8_1_DacClk.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC8_1_PM.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC8_1_VDAC8.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC8_1_VDAC8_PM.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC8_1_Wave1_DMA_dma.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\WaveDAC8_1_Wave2_DMA_dma.lst</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\WaveDAC8_Example01.elf</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\WaveDAC8_Example01.hex</v>
+<v>EasyBoard\WaveDAC8_Example01\CortexM3\ARM_GCC_493\Debug\WaveDAC8_Example01.map</v>
+<v>EasyBoard\WaveDAC8_Example01\WaveDAC8_Example01.gpdsc</v>
+<v>EasyBoard\WaveDAC8_Example01\WaveDAC8_Example01.rpt</v>
+<v>EasyBoard\WaveDAC8_Example01\WaveDAC8_Example01_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>EasyBoard</v>
+<v>EasyBoard\EasyBoard</v>
+<v>EasyBoard\EasyBoard\CortexM3</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\FunctionGenerator.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
+<v>EasyBoard\EasyBoard\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>EasyBoard</v>
+<v>EasyBoard\EasyBoard</v>
+<v>EasyBoard\EasyBoard\PSoC 5 Architecture TRM</v>
+<v>EasyBoard\EasyBoard\CY8C58LP Family Datasheet</v>
+<v>EasyBoard\EasyBoard\System Reference Guides</v>
+<v>EasyBoard\EasyBoard\System Reference Guides\cy_boot_v5_30</v>
+<v>EasyBoard\EasyBoard\CharLCD_v2_20.pdf</v>
+<v>EasyBoard\EasyBoard\cy_clock_v2_20</v>
+<v>EasyBoard\EasyBoard\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>EasyBoard\EasyBoard\cy_constant_v1_0</v>
+<v>EasyBoard\EasyBoard\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>EasyBoard\EasyBoard\cy_pins_v2_20</v>
+<v>EasyBoard\EasyBoard\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>EasyBoard\EasyBoard\SPI_Master_v2_50.pdf</v>
+<v>EasyBoard\EasyBoard\USBFS_v3_0.pdf</v>
+<v>EasyBoard\EasyBoard\WaveDAC8_v2_10</v>
+<v>EasyBoard\EasyBoard\WaveDAC8_v2_10\WaveDAC8_v2_10.pdf</v>
+<v>EasyBoard\SPI_Design01</v>
+<v>EasyBoard\SPI_Design01\PSoC 5 Architecture TRM</v>
+<v>EasyBoard\SPI_Design01\CY8C58LP Family Datasheet</v>
+<v>EasyBoard\SPI_Design01\System Reference Guides</v>
+<v>EasyBoard\SPI_Design01\System Reference Guides\cy_boot_v5_30</v>
+<v>EasyBoard\SPI_Design01\CharLCD_v2_20.pdf</v>
+<v>EasyBoard\SPI_Design01\cy_clock_v2_20.pdf</v>
+<v>EasyBoard\SPI_Design01\cy_pins_v2_20</v>
+<v>EasyBoard\SPI_Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>EasyBoard\SPI_Design01\SPI_Master_v2_50.pdf</v>
+<v>EasyBoard\SPI_Design01\SPI_Slave_v2_70.pdf</v>
+<v>EasyBoard\SPIM_Example05</v>
+<v>EasyBoard\SPIM_Example05\PSoC 5 Architecture TRM</v>
+<v>EasyBoard\SPIM_Example05\CY8C58LP Family Datasheet</v>
+<v>EasyBoard\SPIM_Example05\System Reference Guides</v>
+<v>EasyBoard\SPIM_Example05\System Reference Guides\cy_boot_v5_30</v>
+<v>EasyBoard\SPIM_Example05\CharLCD_v2_20.pdf</v>
+<v>EasyBoard\SPIM_Example05\cy_clock_v2_20.pdf</v>
+<v>EasyBoard\SPIM_Example05\cy_dma_v1_70</v>
+<v>EasyBoard\SPIM_Example05\cy_dma_v1_70\cy_dma_v1_70.pdf</v>
+<v>EasyBoard\SPIM_Example05\cy_pins_v2_20</v>
+<v>EasyBoard\SPIM_Example05\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>EasyBoard\SPIM_Example05\SPI_Master_v2_50.pdf</v>
+<v>EasyBoard\TestSPIPot</v>
+<v>EasyBoard\TestSPIPot\PSoC 5 Architecture TRM</v>
+<v>EasyBoard\TestSPIPot\CY8C58LP Family Datasheet</v>
+<v>EasyBoard\TestSPIPot\System Reference Guides</v>
+<v>EasyBoard\TestSPIPot\System Reference Guides\cy_boot_v5_30</v>
+<v>EasyBoard\TestSPIPot\CharLCD_v2_20.pdf</v>
+<v>EasyBoard\TestSPIPot\cy_clock_v2_20.pdf</v>
+<v>EasyBoard\TestSPIPot\cy_pins_v2_20</v>
+<v>EasyBoard\TestSPIPot\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>EasyBoard\TestSPIPot\SPI_Master_v2_50.pdf</v>
+<v>EasyBoard\WaveDAC8_Example01</v>
+<v>EasyBoard\WaveDAC8_Example01\PSoC 5 Architecture TRM</v>
+<v>EasyBoard\WaveDAC8_Example01\CY8C58LP Family Datasheet</v>
+<v>EasyBoard\WaveDAC8_Example01\System Reference Guides</v>
+<v>EasyBoard\WaveDAC8_Example01\System Reference Guides\cy_boot_v5_30</v>
+<v>EasyBoard\WaveDAC8_Example01\cy_pins_v2_20.pdf</v>
+<v>EasyBoard\WaveDAC8_Example01\Gnd_v1_0.pdf</v>
+<v>EasyBoard\WaveDAC8_Example01\WaveDAC8_v2_10.pdf</v>
+<v>EasyBoard\WaveDAC8_Example01\ZeroTerminal.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>EasyBoard</v>
+<v>EasyBoard\EasyBoard</v>
+<v>EasyBoard\EasyBoard\PSoC 5 Architecture TRM</v>
+<v>EasyBoard\EasyBoard\CY8C58LP Family Datasheet</v>
+<v>EasyBoard\EasyBoard\System Reference Guides</v>
+<v>EasyBoard\EasyBoard\System Reference Guides\cy_boot_v5_30</v>
+<v>EasyBoard\EasyBoard\CharLCD_v2_20.pdf</v>
+<v>EasyBoard\EasyBoard\cy_clock_v2_20</v>
+<v>EasyBoard\EasyBoard\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>EasyBoard\EasyBoard\cy_constant_v1_0</v>
+<v>EasyBoard\EasyBoard\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>EasyBoard\EasyBoard\cy_pins_v2_20</v>
+<v>EasyBoard\EasyBoard\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>EasyBoard\EasyBoard\SPI_Master_v2_50.pdf</v>
+<v>EasyBoard\EasyBoard\USBFS_v3_0.pdf</v>
+<v>EasyBoard\EasyBoard\WaveDAC8_v2_10</v>
+<v>EasyBoard\EasyBoard\WaveDAC8_v2_10\WaveDAC8_v2_10.pdf</v>
+<v>EasyBoard\SPI_Design01</v>
+<v>EasyBoard\SPI_Design01\PSoC 5 Architecture TRM</v>
+<v>EasyBoard\SPI_Design01\CY8C58LP Family Datasheet</v>
+<v>EasyBoard\SPI_Design01\System Reference Guides</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\TestSPIPot.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\TestSPIPot.cydsn\TestSPIPot.cydwr" />
+<name v=".\TestSPIPot.cydsn\Generated_Source\PSoC5\SPI.c" />
+<name v=".\TestSPIPot.cydsn\Generated_Source\PSoC5\SPI.h" />
+<name v=".\TestSPIPot.cydsn\main.c" />
+<name v=".\EasyBoard.cydsn\TopDesign\TopDesign.cysch" />
+</OpenDocs>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

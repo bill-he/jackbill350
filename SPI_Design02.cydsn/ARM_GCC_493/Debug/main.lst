@@ -1,0 +1,1413 @@
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.startup.main,"ax",%progbits
+  19              		.align	1
+  20              		.global	main
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	main, %function
+  24              	main:
+  25              	.LFB63:
+  26              		.file 1 ".\\main.c"
+   1:.\main.c      **** /*******************************************************************************
+   2:.\main.c      **** * File Name: main.c
+   3:.\main.c      **** *
+   4:.\main.c      **** * Version: 1.0
+   5:.\main.c      **** *
+   6:.\main.c      **** * Description:
+   7:.\main.c      **** *  This is source code for example project of the SPI
+   8:.\main.c      **** *  (Master, Slave) components.
+   9:.\main.c      **** *  Parameters used:
+  10:.\main.c      **** *   Mode                0(CPHA ==0, CPOL ==0)                
+  11:.\main.c      **** *   Data lines          MOSI+MISO
+  12:.\main.c      **** *   Shift direction     MSB First
+  13:.\main.c      **** *   DataBits:           8 
+  14:.\main.c      **** *   Bit Rate            1Mbit/s
+  15:.\main.c      **** *   Clock source        External 
+  16:.\main.c      **** *
+  17:.\main.c      **** *  SPI communication test using software buffer. 8 bytes are transmitted
+  18:.\main.c      **** *  between SPI Master and SPI Slave.
+  19:.\main.c      **** *  Received data are displayed on LCD. 
+  20:.\main.c      **** *
+  21:.\main.c      **** ********************************************************************************
+  22:.\main.c      **** * Copyright 2012, Cypress Semiconductor Corporation. All rights reserved.
+  23:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation and is protected
+  24:.\main.c      **** * by and subject to worldwide patent and copyright laws and treaties.
+  25:.\main.c      **** * Therefore, you may use this software only as provided in the license agreement
+  26:.\main.c      **** * accompanying the software package from which you obtained this software.
+  27:.\main.c      **** * CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  28:.\main.c      **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
+  29:.\main.c      **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  30:.\main.c      **** *******************************************************************************/
+  31:.\main.c      **** 
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 2
+
+
+  32:.\main.c      **** #include <device.h>
+  33:.\main.c      **** 
+  34:.\main.c      **** 
+  35:.\main.c      **** /*******************************************************************************
+  36:.\main.c      **** * Function Name: main
+  37:.\main.c      **** ********************************************************************************
+  38:.\main.c      **** *
+  39:.\main.c      **** * Summary:
+  40:.\main.c      **** *  Main function performs following functions:
+  41:.\main.c      **** *   1. Declares cycle counter variable.
+  42:.\main.c      **** *   2. Enables interrupts.
+  43:.\main.c      **** *   3. Starts all used components.
+  44:.\main.c      **** *   3. Writes values to be sent into the SPI Slave's and Master's input buffers.
+  45:.\main.c      **** *   4. Waits for the Slave's SPI Done state generation.
+  46:.\main.c      **** *   5. Displays SPI Master and Slave received data.
+  47:.\main.c      **** *
+  48:.\main.c      **** * Parameters:
+  49:.\main.c      **** *  None.
+  50:.\main.c      **** *
+  51:.\main.c      **** * Return:
+  52:.\main.c      **** *  None.
+  53:.\main.c      **** *
+  54:.\main.c      **** *******************************************************************************/
+  55:.\main.c      **** int main()
+  56:.\main.c      **** {
+  27              		.loc 1 56 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  57:.\main.c      ****     uint8 i = 0u;
+  58:.\main.c      ****     
+  59:.\main.c      ****     /* Software buffers use internal interrupt functionality to interact with
+  60:.\main.c      ****     * hardware buffers. Thus global interrupt enable command should be called 
+  61:.\main.c      ****     */
+  62:.\main.c      ****     CyGlobalIntEnable;
+  36              		.loc 1 62 0
+  37              	@ 62 ".\main.c" 1
+  38 0002 62B6     		CPSIE   i
+  39              	@ 0 "" 2
+  63:.\main.c      ****     
+  64:.\main.c      ****     /* We need to start Character LCD, SPI Master and Slave components */
+  65:.\main.c      ****     LCD_Start();
+  40              		.loc 1 65 0
+  41              		.thumb
+  42 0004 FFF7FEFF 		bl	LCD_Start
+  43              	.LVL1:
+  66:.\main.c      ****     SPIM_Start();
+  44              		.loc 1 66 0
+  45 0008 FFF7FEFF 		bl	SPIM_Start
+  46              	.LVL2:
+  67:.\main.c      ****     SPIS_Start();
+  47              		.loc 1 67 0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 3
+
+
+  48 000c FFF7FEFF 		bl	SPIS_Start
+  49              	.LVL3:
+  68:.\main.c      ****     
+  69:.\main.c      ****     /* SPI communication is provided in Mode 0. So, the first byte
+  70:.\main.c      ****     * should be written directly to the SPI Slave 
+  71:.\main.c      ****     */
+  72:.\main.c      ****     SPIS_WriteTxDataZero(0x11u);
+  50              		.loc 1 72 0
+  51 0010 1120     		movs	r0, #17
+  52 0012 FFF7FEFF 		bl	SPIS_WriteTxDataZero
+  53              	.LVL4:
+  73:.\main.c      ****     
+  74:.\main.c      ****     /* Other 7 bytes are written to the SPIS Tx software buffer */
+  75:.\main.c      ****     SPIS_WriteTxData(0x22u);
+  54              		.loc 1 75 0
+  55 0016 2220     		movs	r0, #34
+  56 0018 FFF7FEFF 		bl	SPIS_WriteTxData
+  57              	.LVL5:
+  76:.\main.c      ****     SPIS_WriteTxData(0x33u);
+  58              		.loc 1 76 0
+  59 001c 3320     		movs	r0, #51
+  60 001e FFF7FEFF 		bl	SPIS_WriteTxData
+  61              	.LVL6:
+  77:.\main.c      ****     SPIS_WriteTxData(0x44u);
+  62              		.loc 1 77 0
+  63 0022 4420     		movs	r0, #68
+  64 0024 FFF7FEFF 		bl	SPIS_WriteTxData
+  65              	.LVL7:
+  78:.\main.c      ****     SPIS_WriteTxData(0x55u);
+  66              		.loc 1 78 0
+  67 0028 5520     		movs	r0, #85
+  68 002a FFF7FEFF 		bl	SPIS_WriteTxData
+  69              	.LVL8:
+  79:.\main.c      ****     SPIS_WriteTxData(0x66u);
+  70              		.loc 1 79 0
+  71 002e 6620     		movs	r0, #102
+  72 0030 FFF7FEFF 		bl	SPIS_WriteTxData
+  73              	.LVL9:
+  80:.\main.c      ****     SPIS_WriteTxData(0x77u);
+  74              		.loc 1 80 0
+  75 0034 7720     		movs	r0, #119
+  76 0036 FFF7FEFF 		bl	SPIS_WriteTxData
+  77              	.LVL10:
+  81:.\main.c      ****     SPIS_WriteTxData(0x88u);
+  78              		.loc 1 81 0
+  79 003a 8820     		movs	r0, #136
+  80 003c FFF7FEFF 		bl	SPIS_WriteTxData
+  81              	.LVL11:
+  82:.\main.c      **** 
+  83:.\main.c      ****     /* writing data to the SPIM software buffer */
+  84:.\main.c      ****     SPIM_WriteTxData(0x99u); /* initiates data transmission */
+  82              		.loc 1 84 0
+  83 0040 9920     		movs	r0, #153
+  84 0042 FFF7FEFF 		bl	SPIM_WriteTxData
+  85              	.LVL12:
+  85:.\main.c      ****     SPIM_WriteTxData(0xAAu);
+  86              		.loc 1 85 0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 4
+
+
+  87 0046 AA20     		movs	r0, #170
+  88 0048 FFF7FEFF 		bl	SPIM_WriteTxData
+  89              	.LVL13:
+  86:.\main.c      ****     SPIM_WriteTxData(0xBBu);
+  90              		.loc 1 86 0
+  91 004c BB20     		movs	r0, #187
+  92 004e FFF7FEFF 		bl	SPIM_WriteTxData
+  93              	.LVL14:
+  87:.\main.c      ****     SPIM_WriteTxData(0xCCu);
+  94              		.loc 1 87 0
+  95 0052 CC20     		movs	r0, #204
+  96 0054 FFF7FEFF 		bl	SPIM_WriteTxData
+  97              	.LVL15:
+  88:.\main.c      ****     SPIM_WriteTxData(0xDDu);
+  98              		.loc 1 88 0
+  99 0058 DD20     		movs	r0, #221
+ 100 005a FFF7FEFF 		bl	SPIM_WriteTxData
+ 101              	.LVL16:
+  89:.\main.c      ****     SPIM_WriteTxData(0xEEu);
+ 102              		.loc 1 89 0
+ 103 005e EE20     		movs	r0, #238
+ 104 0060 FFF7FEFF 		bl	SPIM_WriteTxData
+ 105              	.LVL17:
+  90:.\main.c      ****     SPIM_WriteTxData(0xFFu);
+ 106              		.loc 1 90 0
+ 107 0064 FF20     		movs	r0, #255
+ 108 0066 FFF7FEFF 		bl	SPIM_WriteTxData
+ 109              	.LVL18:
+  91:.\main.c      ****     SPIM_WriteTxData(0x12u);
+ 110              		.loc 1 91 0
+ 111 006a 1220     		movs	r0, #18
+ 112 006c FFF7FEFF 		bl	SPIM_WriteTxData
+ 113              	.LVL19:
+ 114              	.L2:
+  92:.\main.c      **** 
+  93:.\main.c      ****     /* We need to know the moment when SPI communication is complete
+  94:.\main.c      ****     * to display received data. SPIS_SPI_DONE status should be polled. 
+  95:.\main.c      ****     */
+  96:.\main.c      ****     while(!(SPIS_ReadTxStatus() & SPIS_STS_SPI_DONE));
+ 115              		.loc 1 96 0 discriminator 1
+ 116 0070 FFF7FEFF 		bl	SPIS_ReadTxStatus
+ 117              	.LVL20:
+ 118 0074 C307     		lsls	r3, r0, #31
+ 119 0076 FBD5     		bpl	.L2
+  97:.\main.c      ****     
+  98:.\main.c      ****     /* SPI communication is complete so we can display received data */
+  99:.\main.c      ****     
+ 100:.\main.c      ****     LCD_Position(0u,0u);
+ 120              		.loc 1 100 0
+ 121 0078 0020     		movs	r0, #0
+ 122 007a 0146     		mov	r1, r0
+ 123 007c FFF7FEFF 		bl	LCD_Position
+ 124              	.LVL21:
+ 101:.\main.c      ****     LCD_PrintString("SPIM Rx data:");
+ 125              		.loc 1 101 0
+ 126 0080 1548     		ldr	r0, .L11
+ 127 0082 FFF7FEFF 		bl	LCD_PrintString
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 5
+
+
+ 128              	.LVL22:
+ 102:.\main.c      ****     
+ 103:.\main.c      ****     LCD_Position(1u,0u);
+ 129              		.loc 1 103 0
+ 130 0086 0120     		movs	r0, #1
+ 131 0088 0021     		movs	r1, #0
+ 132 008a FFF7FEFF 		bl	LCD_Position
+ 133              	.LVL23:
+ 134 008e 0824     		movs	r4, #8
+ 135              	.LVL24:
+ 136              	.L3:
+ 104:.\main.c      ****     for(i=0u; i<8u; i++)
+ 105:.\main.c      ****     {
+ 106:.\main.c      ****         /* Read from SPIM Rx software buffer */
+ 107:.\main.c      ****         LCD_PrintHexUint8(SPIM_ReadRxData());        
+ 137              		.loc 1 107 0 discriminator 3
+ 138 0090 FFF7FEFF 		bl	SPIM_ReadRxData
+ 139              	.LVL25:
+ 140 0094 013C     		subs	r4, r4, #1
+ 141              	.LVL26:
+ 142 0096 FFF7FEFF 		bl	LCD_PrintInt8
+ 143              	.LVL27:
+ 104:.\main.c      ****     for(i=0u; i<8u; i++)
+ 144              		.loc 1 104 0 discriminator 3
+ 145 009a 14F0FF04 		ands	r4, r4, #255
+ 146 009e F7D1     		bne	.L3
+ 108:.\main.c      ****     }
+ 109:.\main.c      ****     
+ 110:.\main.c      ****     CyDelay(4000u);
+ 147              		.loc 1 110 0
+ 148 00a0 4FF47A60 		mov	r0, #4000
+ 149 00a4 FFF7FEFF 		bl	CyDelay
+ 150              	.LVL28:
+ 111:.\main.c      ****     LCD_ClearDisplay();
+ 151              		.loc 1 111 0
+ 152 00a8 0120     		movs	r0, #1
+ 153 00aa FFF7FEFF 		bl	LCD_WriteControl
+ 154              	.LVL29:
+ 112:.\main.c      ****     
+ 113:.\main.c      ****     LCD_Position(0u,0u);
+ 155              		.loc 1 113 0
+ 156 00ae 2146     		mov	r1, r4
+ 157 00b0 2046     		mov	r0, r4
+ 158 00b2 FFF7FEFF 		bl	LCD_Position
+ 159              	.LVL30:
+ 114:.\main.c      ****     LCD_PrintString("SPIS Rx data:");
+ 160              		.loc 1 114 0
+ 161 00b6 0948     		ldr	r0, .L11+4
+ 162 00b8 FFF7FEFF 		bl	LCD_PrintString
+ 163              	.LVL31:
+ 115:.\main.c      ****     
+ 116:.\main.c      ****     LCD_Position(1u,0u);
+ 164              		.loc 1 116 0
+ 165 00bc 2146     		mov	r1, r4
+ 166 00be 0120     		movs	r0, #1
+ 167 00c0 FFF7FEFF 		bl	LCD_Position
+ 168              	.LVL32:
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 6
+
+
+ 169 00c4 0824     		movs	r4, #8
+ 170              	.LVL33:
+ 171              	.L4:
+ 117:.\main.c      ****     for(i=0u; i<8u; i++)
+ 118:.\main.c      ****     {
+ 119:.\main.c      ****         /* Read from SPIS Rx software buffer */
+ 120:.\main.c      ****         LCD_PrintHexUint8(SPIS_ReadRxData());        
+ 172              		.loc 1 120 0 discriminator 3
+ 173 00c6 FFF7FEFF 		bl	SPIS_ReadRxData
+ 174              	.LVL34:
+ 175 00ca 013C     		subs	r4, r4, #1
+ 176              	.LVL35:
+ 177 00cc FFF7FEFF 		bl	LCD_PrintInt8
+ 178              	.LVL36:
+ 117:.\main.c      ****     for(i=0u; i<8u; i++)
+ 179              		.loc 1 117 0 discriminator 3
+ 180 00d0 14F0FF04 		ands	r4, r4, #255
+ 181 00d4 F7D1     		bne	.L4
+ 182              	.L5:
+ 121:.\main.c      ****     }
+ 122:.\main.c      ****     
+ 123:.\main.c      ****     while(1u){;}
+ 183              		.loc 1 123 0 discriminator 1
+ 184 00d6 FEE7     		b	.L5
+ 185              	.L12:
+ 186              		.align	2
+ 187              	.L11:
+ 188 00d8 00000000 		.word	.LC0
+ 189 00dc 0E000000 		.word	.LC1
+ 190              		.cfi_endproc
+ 191              	.LFE63:
+ 192              		.size	main, .-main
+ 193              		.section	.rodata.str1.1,"aMS",%progbits,1
+ 194              	.LC0:
+ 195 0000 5350494D 		.ascii	"SPIM Rx data:\000"
+ 195      20527820 
+ 195      64617461 
+ 195      3A00
+ 196              	.LC1:
+ 197 000e 53504953 		.ascii	"SPIS Rx data:\000"
+ 197      20527820 
+ 197      64617461 
+ 197      3A00
+ 198              		.text
+ 199              	.Letext0:
+ 200              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 201              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 202              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 203              		.file 5 "Generated_Source\\PSoC5/LCD.h"
+ 204              		.file 6 "Generated_Source\\PSoC5/SPIM.h"
+ 205              		.file 7 "Generated_Source\\PSoC5/SPIS.h"
+ 206              		.file 8 "Generated_Source\\PSoC5/CyLib.h"
+ 207              		.file 9 "Generated_Source\\PSoC5/core_cm3.h"
+ 208              		.section	.debug_info,"",%progbits
+ 209              	.Ldebug_info0:
+ 210 0000 03040000 		.4byte	0x403
+ 211 0004 0400     		.2byte	0x4
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 7
+
+
+ 212 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 213 000a 04       		.byte	0x4
+ 214 000b 01       		.uleb128 0x1
+ 215 000c D5010000 		.4byte	.LASF32
+ 216 0010 01       		.byte	0x1
+ 217 0011 BF000000 		.4byte	.LASF33
+ 218 0015 57000000 		.4byte	.LASF34
+ 219 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 220 001d 00000000 		.4byte	0
+ 221 0021 00000000 		.4byte	.Ldebug_line0
+ 222 0025 02       		.uleb128 0x2
+ 223 0026 01       		.byte	0x1
+ 224 0027 06       		.byte	0x6
+ 225 0028 6C020000 		.4byte	.LASF0
+ 226 002c 02       		.uleb128 0x2
+ 227 002d 01       		.byte	0x1
+ 228 002e 08       		.byte	0x8
+ 229 002f DE000000 		.4byte	.LASF1
+ 230 0033 02       		.uleb128 0x2
+ 231 0034 02       		.byte	0x2
+ 232 0035 05       		.byte	0x5
+ 233 0036 CB010000 		.4byte	.LASF2
+ 234 003a 02       		.uleb128 0x2
+ 235 003b 02       		.byte	0x2
+ 236 003c 07       		.byte	0x7
+ 237 003d 04010000 		.4byte	.LASF3
+ 238 0041 03       		.uleb128 0x3
+ 239 0042 31000000 		.4byte	.LASF9
+ 240 0046 02       		.byte	0x2
+ 241 0047 3F       		.byte	0x3f
+ 242 0048 4C000000 		.4byte	0x4c
+ 243 004c 02       		.uleb128 0x2
+ 244 004d 04       		.byte	0x4
+ 245 004e 05       		.byte	0x5
+ 246 004f 63020000 		.4byte	.LASF4
+ 247 0053 02       		.uleb128 0x2
+ 248 0054 04       		.byte	0x4
+ 249 0055 07       		.byte	0x7
+ 250 0056 F2000000 		.4byte	.LASF5
+ 251 005a 02       		.uleb128 0x2
+ 252 005b 08       		.byte	0x8
+ 253 005c 05       		.byte	0x5
+ 254 005d A7010000 		.4byte	.LASF6
+ 255 0061 02       		.uleb128 0x2
+ 256 0062 08       		.byte	0x8
+ 257 0063 07       		.byte	0x7
+ 258 0064 64010000 		.4byte	.LASF7
+ 259 0068 04       		.uleb128 0x4
+ 260 0069 04       		.byte	0x4
+ 261 006a 05       		.byte	0x5
+ 262 006b 696E7400 		.ascii	"int\000"
+ 263 006f 02       		.uleb128 0x2
+ 264 0070 04       		.byte	0x4
+ 265 0071 07       		.byte	0x7
+ 266 0072 57010000 		.4byte	.LASF8
+ 267 0076 03       		.uleb128 0x3
+ 268 0077 96010000 		.4byte	.LASF10
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 8
+
+
+ 269 007b 03       		.byte	0x3
+ 270 007c 2C       		.byte	0x2c
+ 271 007d 41000000 		.4byte	0x41
+ 272 0081 05       		.uleb128 0x5
+ 273 0082 D8000000 		.4byte	.LASF11
+ 274 0086 04       		.byte	0x4
+ 275 0087 3801     		.2byte	0x138
+ 276 0089 2C000000 		.4byte	0x2c
+ 277 008d 05       		.uleb128 0x5
+ 278 008e 50010000 		.4byte	.LASF12
+ 279 0092 04       		.byte	0x4
+ 280 0093 3A01     		.2byte	0x13a
+ 281 0095 53000000 		.4byte	0x53
+ 282 0099 02       		.uleb128 0x2
+ 283 009a 04       		.byte	0x4
+ 284 009b 04       		.byte	0x4
+ 285 009c C8000000 		.4byte	.LASF13
+ 286 00a0 02       		.uleb128 0x2
+ 287 00a1 08       		.byte	0x8
+ 288 00a2 04       		.byte	0x4
+ 289 00a3 34010000 		.4byte	.LASF14
+ 290 00a7 05       		.uleb128 0x5
+ 291 00a8 EC000000 		.4byte	.LASF15
+ 292 00ac 04       		.byte	0x4
+ 293 00ad 4901     		.2byte	0x149
+ 294 00af B3000000 		.4byte	0xb3
+ 295 00b3 02       		.uleb128 0x2
+ 296 00b4 01       		.byte	0x1
+ 297 00b5 08       		.byte	0x8
+ 298 00b6 B5010000 		.4byte	.LASF16
+ 299 00ba 02       		.uleb128 0x2
+ 300 00bb 04       		.byte	0x4
+ 301 00bc 07       		.byte	0x7
+ 302 00bd 9E010000 		.4byte	.LASF17
+ 303 00c1 06       		.uleb128 0x6
+ 304 00c2 3B010000 		.4byte	.LASF35
+ 305 00c6 01       		.byte	0x1
+ 306 00c7 37       		.byte	0x37
+ 307 00c8 68000000 		.4byte	0x68
+ 308 00cc 00000000 		.4byte	.LFB63
+ 309 00d0 E0000000 		.4byte	.LFE63-.LFB63
+ 310 00d4 01       		.uleb128 0x1
+ 311 00d5 9C       		.byte	0x9c
+ 312 00d6 27030000 		.4byte	0x327
+ 313 00da 07       		.uleb128 0x7
+ 314 00db 6900     		.ascii	"i\000"
+ 315 00dd 01       		.byte	0x1
+ 316 00de 39       		.byte	0x39
+ 317 00df 81000000 		.4byte	0x81
+ 318 00e3 00000000 		.4byte	.LLST0
+ 319 00e7 08       		.uleb128 0x8
+ 320 00e8 08000000 		.4byte	.LVL1
+ 321 00ec 38030000 		.4byte	0x338
+ 322 00f0 08       		.uleb128 0x8
+ 323 00f1 0C000000 		.4byte	.LVL2
+ 324 00f5 3F030000 		.4byte	0x33f
+ 325 00f9 08       		.uleb128 0x8
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 9
+
+
+ 326 00fa 10000000 		.4byte	.LVL3
+ 327 00fe 46030000 		.4byte	0x346
+ 328 0102 09       		.uleb128 0x9
+ 329 0103 16000000 		.4byte	.LVL4
+ 330 0107 4D030000 		.4byte	0x34d
+ 331 010b 15010000 		.4byte	0x115
+ 332 010f 0A       		.uleb128 0xa
+ 333 0110 01       		.uleb128 0x1
+ 334 0111 50       		.byte	0x50
+ 335 0112 01       		.uleb128 0x1
+ 336 0113 41       		.byte	0x41
+ 337 0114 00       		.byte	0
+ 338 0115 09       		.uleb128 0x9
+ 339 0116 1C000000 		.4byte	.LVL5
+ 340 011a 5E030000 		.4byte	0x35e
+ 341 011e 29010000 		.4byte	0x129
+ 342 0122 0A       		.uleb128 0xa
+ 343 0123 01       		.uleb128 0x1
+ 344 0124 50       		.byte	0x50
+ 345 0125 02       		.uleb128 0x2
+ 346 0126 08       		.byte	0x8
+ 347 0127 22       		.byte	0x22
+ 348 0128 00       		.byte	0
+ 349 0129 09       		.uleb128 0x9
+ 350 012a 22000000 		.4byte	.LVL6
+ 351 012e 5E030000 		.4byte	0x35e
+ 352 0132 3D010000 		.4byte	0x13d
+ 353 0136 0A       		.uleb128 0xa
+ 354 0137 01       		.uleb128 0x1
+ 355 0138 50       		.byte	0x50
+ 356 0139 02       		.uleb128 0x2
+ 357 013a 08       		.byte	0x8
+ 358 013b 33       		.byte	0x33
+ 359 013c 00       		.byte	0
+ 360 013d 09       		.uleb128 0x9
+ 361 013e 28000000 		.4byte	.LVL7
+ 362 0142 5E030000 		.4byte	0x35e
+ 363 0146 51010000 		.4byte	0x151
+ 364 014a 0A       		.uleb128 0xa
+ 365 014b 01       		.uleb128 0x1
+ 366 014c 50       		.byte	0x50
+ 367 014d 02       		.uleb128 0x2
+ 368 014e 08       		.byte	0x8
+ 369 014f 44       		.byte	0x44
+ 370 0150 00       		.byte	0
+ 371 0151 09       		.uleb128 0x9
+ 372 0152 2E000000 		.4byte	.LVL8
+ 373 0156 5E030000 		.4byte	0x35e
+ 374 015a 65010000 		.4byte	0x165
+ 375 015e 0A       		.uleb128 0xa
+ 376 015f 01       		.uleb128 0x1
+ 377 0160 50       		.byte	0x50
+ 378 0161 02       		.uleb128 0x2
+ 379 0162 08       		.byte	0x8
+ 380 0163 55       		.byte	0x55
+ 381 0164 00       		.byte	0
+ 382 0165 09       		.uleb128 0x9
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 10
+
+
+ 383 0166 34000000 		.4byte	.LVL9
+ 384 016a 5E030000 		.4byte	0x35e
+ 385 016e 79010000 		.4byte	0x179
+ 386 0172 0A       		.uleb128 0xa
+ 387 0173 01       		.uleb128 0x1
+ 388 0174 50       		.byte	0x50
+ 389 0175 02       		.uleb128 0x2
+ 390 0176 08       		.byte	0x8
+ 391 0177 66       		.byte	0x66
+ 392 0178 00       		.byte	0
+ 393 0179 09       		.uleb128 0x9
+ 394 017a 3A000000 		.4byte	.LVL10
+ 395 017e 5E030000 		.4byte	0x35e
+ 396 0182 8D010000 		.4byte	0x18d
+ 397 0186 0A       		.uleb128 0xa
+ 398 0187 01       		.uleb128 0x1
+ 399 0188 50       		.byte	0x50
+ 400 0189 02       		.uleb128 0x2
+ 401 018a 08       		.byte	0x8
+ 402 018b 77       		.byte	0x77
+ 403 018c 00       		.byte	0
+ 404 018d 09       		.uleb128 0x9
+ 405 018e 40000000 		.4byte	.LVL11
+ 406 0192 5E030000 		.4byte	0x35e
+ 407 0196 A1010000 		.4byte	0x1a1
+ 408 019a 0A       		.uleb128 0xa
+ 409 019b 01       		.uleb128 0x1
+ 410 019c 50       		.byte	0x50
+ 411 019d 02       		.uleb128 0x2
+ 412 019e 09       		.byte	0x9
+ 413 019f 88       		.byte	0x88
+ 414 01a0 00       		.byte	0
+ 415 01a1 09       		.uleb128 0x9
+ 416 01a2 46000000 		.4byte	.LVL12
+ 417 01a6 6F030000 		.4byte	0x36f
+ 418 01aa B5010000 		.4byte	0x1b5
+ 419 01ae 0A       		.uleb128 0xa
+ 420 01af 01       		.uleb128 0x1
+ 421 01b0 50       		.byte	0x50
+ 422 01b1 02       		.uleb128 0x2
+ 423 01b2 09       		.byte	0x9
+ 424 01b3 99       		.byte	0x99
+ 425 01b4 00       		.byte	0
+ 426 01b5 09       		.uleb128 0x9
+ 427 01b6 4C000000 		.4byte	.LVL13
+ 428 01ba 6F030000 		.4byte	0x36f
+ 429 01be C9010000 		.4byte	0x1c9
+ 430 01c2 0A       		.uleb128 0xa
+ 431 01c3 01       		.uleb128 0x1
+ 432 01c4 50       		.byte	0x50
+ 433 01c5 02       		.uleb128 0x2
+ 434 01c6 09       		.byte	0x9
+ 435 01c7 AA       		.byte	0xaa
+ 436 01c8 00       		.byte	0
+ 437 01c9 09       		.uleb128 0x9
+ 438 01ca 52000000 		.4byte	.LVL14
+ 439 01ce 6F030000 		.4byte	0x36f
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 11
+
+
+ 440 01d2 DD010000 		.4byte	0x1dd
+ 441 01d6 0A       		.uleb128 0xa
+ 442 01d7 01       		.uleb128 0x1
+ 443 01d8 50       		.byte	0x50
+ 444 01d9 02       		.uleb128 0x2
+ 445 01da 09       		.byte	0x9
+ 446 01db BB       		.byte	0xbb
+ 447 01dc 00       		.byte	0
+ 448 01dd 09       		.uleb128 0x9
+ 449 01de 58000000 		.4byte	.LVL15
+ 450 01e2 6F030000 		.4byte	0x36f
+ 451 01e6 F1010000 		.4byte	0x1f1
+ 452 01ea 0A       		.uleb128 0xa
+ 453 01eb 01       		.uleb128 0x1
+ 454 01ec 50       		.byte	0x50
+ 455 01ed 02       		.uleb128 0x2
+ 456 01ee 09       		.byte	0x9
+ 457 01ef CC       		.byte	0xcc
+ 458 01f0 00       		.byte	0
+ 459 01f1 09       		.uleb128 0x9
+ 460 01f2 5E000000 		.4byte	.LVL16
+ 461 01f6 6F030000 		.4byte	0x36f
+ 462 01fa 05020000 		.4byte	0x205
+ 463 01fe 0A       		.uleb128 0xa
+ 464 01ff 01       		.uleb128 0x1
+ 465 0200 50       		.byte	0x50
+ 466 0201 02       		.uleb128 0x2
+ 467 0202 09       		.byte	0x9
+ 468 0203 DD       		.byte	0xdd
+ 469 0204 00       		.byte	0
+ 470 0205 09       		.uleb128 0x9
+ 471 0206 64000000 		.4byte	.LVL17
+ 472 020a 6F030000 		.4byte	0x36f
+ 473 020e 19020000 		.4byte	0x219
+ 474 0212 0A       		.uleb128 0xa
+ 475 0213 01       		.uleb128 0x1
+ 476 0214 50       		.byte	0x50
+ 477 0215 02       		.uleb128 0x2
+ 478 0216 09       		.byte	0x9
+ 479 0217 EE       		.byte	0xee
+ 480 0218 00       		.byte	0
+ 481 0219 09       		.uleb128 0x9
+ 482 021a 6A000000 		.4byte	.LVL18
+ 483 021e 6F030000 		.4byte	0x36f
+ 484 0222 2D020000 		.4byte	0x22d
+ 485 0226 0A       		.uleb128 0xa
+ 486 0227 01       		.uleb128 0x1
+ 487 0228 50       		.byte	0x50
+ 488 0229 02       		.uleb128 0x2
+ 489 022a 09       		.byte	0x9
+ 490 022b FF       		.byte	0xff
+ 491 022c 00       		.byte	0
+ 492 022d 09       		.uleb128 0x9
+ 493 022e 70000000 		.4byte	.LVL19
+ 494 0232 6F030000 		.4byte	0x36f
+ 495 0236 40020000 		.4byte	0x240
+ 496 023a 0A       		.uleb128 0xa
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 12
+
+
+ 497 023b 01       		.uleb128 0x1
+ 498 023c 50       		.byte	0x50
+ 499 023d 01       		.uleb128 0x1
+ 500 023e 42       		.byte	0x42
+ 501 023f 00       		.byte	0
+ 502 0240 08       		.uleb128 0x8
+ 503 0241 74000000 		.4byte	.LVL20
+ 504 0245 80030000 		.4byte	0x380
+ 505 0249 09       		.uleb128 0x9
+ 506 024a 80000000 		.4byte	.LVL21
+ 507 024e 8B030000 		.4byte	0x38b
+ 508 0252 61020000 		.4byte	0x261
+ 509 0256 0A       		.uleb128 0xa
+ 510 0257 01       		.uleb128 0x1
+ 511 0258 51       		.byte	0x51
+ 512 0259 01       		.uleb128 0x1
+ 513 025a 30       		.byte	0x30
+ 514 025b 0A       		.uleb128 0xa
+ 515 025c 01       		.uleb128 0x1
+ 516 025d 50       		.byte	0x50
+ 517 025e 01       		.uleb128 0x1
+ 518 025f 30       		.byte	0x30
+ 519 0260 00       		.byte	0
+ 520 0261 09       		.uleb128 0x9
+ 521 0262 86000000 		.4byte	.LVL22
+ 522 0266 A1030000 		.4byte	0x3a1
+ 523 026a 78020000 		.4byte	0x278
+ 524 026e 0A       		.uleb128 0xa
+ 525 026f 01       		.uleb128 0x1
+ 526 0270 50       		.byte	0x50
+ 527 0271 05       		.uleb128 0x5
+ 528 0272 03       		.byte	0x3
+ 529 0273 00000000 		.4byte	.LC0
+ 530 0277 00       		.byte	0
+ 531 0278 09       		.uleb128 0x9
+ 532 0279 8E000000 		.4byte	.LVL23
+ 533 027d 8B030000 		.4byte	0x38b
+ 534 0281 90020000 		.4byte	0x290
+ 535 0285 0A       		.uleb128 0xa
+ 536 0286 01       		.uleb128 0x1
+ 537 0287 51       		.byte	0x51
+ 538 0288 01       		.uleb128 0x1
+ 539 0289 30       		.byte	0x30
+ 540 028a 0A       		.uleb128 0xa
+ 541 028b 01       		.uleb128 0x1
+ 542 028c 50       		.byte	0x50
+ 543 028d 01       		.uleb128 0x1
+ 544 028e 31       		.byte	0x31
+ 545 028f 00       		.byte	0
+ 546 0290 08       		.uleb128 0x8
+ 547 0291 94000000 		.4byte	.LVL25
+ 548 0295 BD030000 		.4byte	0x3bd
+ 549 0299 08       		.uleb128 0x8
+ 550 029a 9A000000 		.4byte	.LVL27
+ 551 029e C8030000 		.4byte	0x3c8
+ 552 02a2 09       		.uleb128 0x9
+ 553 02a3 A8000000 		.4byte	.LVL28
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 13
+
+
+ 554 02a7 D9030000 		.4byte	0x3d9
+ 555 02ab B7020000 		.4byte	0x2b7
+ 556 02af 0A       		.uleb128 0xa
+ 557 02b0 01       		.uleb128 0x1
+ 558 02b1 50       		.byte	0x50
+ 559 02b2 03       		.uleb128 0x3
+ 560 02b3 0A       		.byte	0xa
+ 561 02b4 A00F     		.2byte	0xfa0
+ 562 02b6 00       		.byte	0
+ 563 02b7 09       		.uleb128 0x9
+ 564 02b8 AE000000 		.4byte	.LVL29
+ 565 02bc EA030000 		.4byte	0x3ea
+ 566 02c0 CA020000 		.4byte	0x2ca
+ 567 02c4 0A       		.uleb128 0xa
+ 568 02c5 01       		.uleb128 0x1
+ 569 02c6 50       		.byte	0x50
+ 570 02c7 01       		.uleb128 0x1
+ 571 02c8 31       		.byte	0x31
+ 572 02c9 00       		.byte	0
+ 573 02ca 09       		.uleb128 0x9
+ 574 02cb B6000000 		.4byte	.LVL30
+ 575 02cf 8B030000 		.4byte	0x38b
+ 576 02d3 E4020000 		.4byte	0x2e4
+ 577 02d7 0A       		.uleb128 0xa
+ 578 02d8 01       		.uleb128 0x1
+ 579 02d9 51       		.byte	0x51
+ 580 02da 02       		.uleb128 0x2
+ 581 02db 74       		.byte	0x74
+ 582 02dc 00       		.sleb128 0
+ 583 02dd 0A       		.uleb128 0xa
+ 584 02de 01       		.uleb128 0x1
+ 585 02df 50       		.byte	0x50
+ 586 02e0 02       		.uleb128 0x2
+ 587 02e1 74       		.byte	0x74
+ 588 02e2 00       		.sleb128 0
+ 589 02e3 00       		.byte	0
+ 590 02e4 09       		.uleb128 0x9
+ 591 02e5 BC000000 		.4byte	.LVL31
+ 592 02e9 A1030000 		.4byte	0x3a1
+ 593 02ed FB020000 		.4byte	0x2fb
+ 594 02f1 0A       		.uleb128 0xa
+ 595 02f2 01       		.uleb128 0x1
+ 596 02f3 50       		.byte	0x50
+ 597 02f4 05       		.uleb128 0x5
+ 598 02f5 03       		.byte	0x3
+ 599 02f6 0E000000 		.4byte	.LC1
+ 600 02fa 00       		.byte	0
+ 601 02fb 09       		.uleb128 0x9
+ 602 02fc C4000000 		.4byte	.LVL32
+ 603 0300 8B030000 		.4byte	0x38b
+ 604 0304 14030000 		.4byte	0x314
+ 605 0308 0A       		.uleb128 0xa
+ 606 0309 01       		.uleb128 0x1
+ 607 030a 51       		.byte	0x51
+ 608 030b 02       		.uleb128 0x2
+ 609 030c 74       		.byte	0x74
+ 610 030d 00       		.sleb128 0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 14
+
+
+ 611 030e 0A       		.uleb128 0xa
+ 612 030f 01       		.uleb128 0x1
+ 613 0310 50       		.byte	0x50
+ 614 0311 01       		.uleb128 0x1
+ 615 0312 31       		.byte	0x31
+ 616 0313 00       		.byte	0
+ 617 0314 08       		.uleb128 0x8
+ 618 0315 CA000000 		.4byte	.LVL34
+ 619 0319 FB030000 		.4byte	0x3fb
+ 620 031d 08       		.uleb128 0x8
+ 621 031e D0000000 		.4byte	.LVL36
+ 622 0322 C8030000 		.4byte	0x3c8
+ 623 0326 00       		.byte	0
+ 624 0327 0B       		.uleb128 0xb
+ 625 0328 17010000 		.4byte	.LASF36
+ 626 032c 09       		.byte	0x9
+ 627 032d 5506     		.2byte	0x655
+ 628 032f 33030000 		.4byte	0x333
+ 629 0333 0C       		.uleb128 0xc
+ 630 0334 76000000 		.4byte	0x76
+ 631 0338 0D       		.uleb128 0xd
+ 632 0339 CE000000 		.4byte	.LASF18
+ 633 033d 05       		.byte	0x5
+ 634 033e 38       		.byte	0x38
+ 635 033f 0D       		.uleb128 0xd
+ 636 0340 4C000000 		.4byte	.LASF19
+ 637 0344 06       		.byte	0x6
+ 638 0345 53       		.byte	0x53
+ 639 0346 0D       		.uleb128 0xd
+ 640 0347 26000000 		.4byte	.LASF20
+ 641 034b 07       		.byte	0x7
+ 642 034c 4B       		.byte	0x4b
+ 643 034d 0E       		.uleb128 0xe
+ 644 034e 11000000 		.4byte	.LASF21
+ 645 0352 07       		.byte	0x7
+ 646 0353 58       		.byte	0x58
+ 647 0354 5E030000 		.4byte	0x35e
+ 648 0358 0F       		.uleb128 0xf
+ 649 0359 81000000 		.4byte	0x81
+ 650 035d 00       		.byte	0
+ 651 035e 0E       		.uleb128 0xe
+ 652 035f 3B000000 		.4byte	.LASF22
+ 653 0363 07       		.byte	0x7
+ 654 0364 55       		.byte	0x55
+ 655 0365 6F030000 		.4byte	0x36f
+ 656 0369 0F       		.uleb128 0xf
+ 657 036a 81000000 		.4byte	0x81
+ 658 036e 00       		.byte	0
+ 659 036f 0E       		.uleb128 0xe
+ 660 0370 00000000 		.4byte	.LASF23
+ 661 0374 06       		.byte	0x6
+ 662 0375 64       		.byte	0x64
+ 663 0376 80030000 		.4byte	0x380
+ 664 037a 0F       		.uleb128 0xf
+ 665 037b 81000000 		.4byte	0x81
+ 666 037f 00       		.byte	0
+ 667 0380 10       		.uleb128 0x10
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 15
+
+
+ 668 0381 AD000000 		.4byte	.LASF26
+ 669 0385 07       		.byte	0x7
+ 670 0386 53       		.byte	0x53
+ 671 0387 81000000 		.4byte	0x81
+ 672 038b 0E       		.uleb128 0xe
+ 673 038c 89010000 		.4byte	.LASF24
+ 674 0390 05       		.byte	0x5
+ 675 0391 3D       		.byte	0x3d
+ 676 0392 A1030000 		.4byte	0x3a1
+ 677 0396 0F       		.uleb128 0xf
+ 678 0397 81000000 		.4byte	0x81
+ 679 039b 0F       		.uleb128 0xf
+ 680 039c 81000000 		.4byte	0x81
+ 681 03a0 00       		.byte	0
+ 682 03a1 0E       		.uleb128 0xe
+ 683 03a2 40010000 		.4byte	.LASF25
+ 684 03a6 05       		.byte	0x5
+ 685 03a7 3C       		.byte	0x3c
+ 686 03a8 B2030000 		.4byte	0x3b2
+ 687 03ac 0F       		.uleb128 0xf
+ 688 03ad B2030000 		.4byte	0x3b2
+ 689 03b1 00       		.byte	0
+ 690 03b2 11       		.uleb128 0x11
+ 691 03b3 04       		.byte	0x4
+ 692 03b4 B8030000 		.4byte	0x3b8
+ 693 03b8 12       		.uleb128 0x12
+ 694 03b9 A7000000 		.4byte	0xa7
+ 695 03bd 10       		.uleb128 0x10
+ 696 03be 24010000 		.4byte	.LASF27
+ 697 03c2 06       		.byte	0x6
+ 698 03c3 66       		.byte	0x66
+ 699 03c4 81000000 		.4byte	0x81
+ 700 03c8 0E       		.uleb128 0xe
+ 701 03c9 7B010000 		.4byte	.LASF28
+ 702 03cd 05       		.byte	0x5
+ 703 03ce 5D       		.byte	0x5d
+ 704 03cf D9030000 		.4byte	0x3d9
+ 705 03d3 0F       		.uleb128 0xf
+ 706 03d4 81000000 		.4byte	0x81
+ 707 03d8 00       		.byte	0
+ 708 03d9 0E       		.uleb128 0xe
+ 709 03da 78020000 		.4byte	.LASF29
+ 710 03de 08       		.byte	0x8
+ 711 03df 77       		.byte	0x77
+ 712 03e0 EA030000 		.4byte	0x3ea
+ 713 03e4 0F       		.uleb128 0xf
+ 714 03e5 8D000000 		.4byte	0x8d
+ 715 03e9 00       		.byte	0
+ 716 03ea 0E       		.uleb128 0xe
+ 717 03eb BA010000 		.4byte	.LASF30
+ 718 03ef 05       		.byte	0x5
+ 719 03f0 3A       		.byte	0x3a
+ 720 03f1 FB030000 		.4byte	0x3fb
+ 721 03f5 0F       		.uleb128 0xf
+ 722 03f6 81000000 		.4byte	0x81
+ 723 03fa 00       		.byte	0
+ 724 03fb 10       		.uleb128 0x10
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 16
+
+
+ 725 03fc 9D000000 		.4byte	.LASF31
+ 726 0400 07       		.byte	0x7
+ 727 0401 5C       		.byte	0x5c
+ 728 0402 81000000 		.4byte	0x81
+ 729 0406 00       		.byte	0
+ 730              		.section	.debug_abbrev,"",%progbits
+ 731              	.Ldebug_abbrev0:
+ 732 0000 01       		.uleb128 0x1
+ 733 0001 11       		.uleb128 0x11
+ 734 0002 01       		.byte	0x1
+ 735 0003 25       		.uleb128 0x25
+ 736 0004 0E       		.uleb128 0xe
+ 737 0005 13       		.uleb128 0x13
+ 738 0006 0B       		.uleb128 0xb
+ 739 0007 03       		.uleb128 0x3
+ 740 0008 0E       		.uleb128 0xe
+ 741 0009 1B       		.uleb128 0x1b
+ 742 000a 0E       		.uleb128 0xe
+ 743 000b 55       		.uleb128 0x55
+ 744 000c 17       		.uleb128 0x17
+ 745 000d 11       		.uleb128 0x11
+ 746 000e 01       		.uleb128 0x1
+ 747 000f 10       		.uleb128 0x10
+ 748 0010 17       		.uleb128 0x17
+ 749 0011 00       		.byte	0
+ 750 0012 00       		.byte	0
+ 751 0013 02       		.uleb128 0x2
+ 752 0014 24       		.uleb128 0x24
+ 753 0015 00       		.byte	0
+ 754 0016 0B       		.uleb128 0xb
+ 755 0017 0B       		.uleb128 0xb
+ 756 0018 3E       		.uleb128 0x3e
+ 757 0019 0B       		.uleb128 0xb
+ 758 001a 03       		.uleb128 0x3
+ 759 001b 0E       		.uleb128 0xe
+ 760 001c 00       		.byte	0
+ 761 001d 00       		.byte	0
+ 762 001e 03       		.uleb128 0x3
+ 763 001f 16       		.uleb128 0x16
+ 764 0020 00       		.byte	0
+ 765 0021 03       		.uleb128 0x3
+ 766 0022 0E       		.uleb128 0xe
+ 767 0023 3A       		.uleb128 0x3a
+ 768 0024 0B       		.uleb128 0xb
+ 769 0025 3B       		.uleb128 0x3b
+ 770 0026 0B       		.uleb128 0xb
+ 771 0027 49       		.uleb128 0x49
+ 772 0028 13       		.uleb128 0x13
+ 773 0029 00       		.byte	0
+ 774 002a 00       		.byte	0
+ 775 002b 04       		.uleb128 0x4
+ 776 002c 24       		.uleb128 0x24
+ 777 002d 00       		.byte	0
+ 778 002e 0B       		.uleb128 0xb
+ 779 002f 0B       		.uleb128 0xb
+ 780 0030 3E       		.uleb128 0x3e
+ 781 0031 0B       		.uleb128 0xb
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 17
+
+
+ 782 0032 03       		.uleb128 0x3
+ 783 0033 08       		.uleb128 0x8
+ 784 0034 00       		.byte	0
+ 785 0035 00       		.byte	0
+ 786 0036 05       		.uleb128 0x5
+ 787 0037 16       		.uleb128 0x16
+ 788 0038 00       		.byte	0
+ 789 0039 03       		.uleb128 0x3
+ 790 003a 0E       		.uleb128 0xe
+ 791 003b 3A       		.uleb128 0x3a
+ 792 003c 0B       		.uleb128 0xb
+ 793 003d 3B       		.uleb128 0x3b
+ 794 003e 05       		.uleb128 0x5
+ 795 003f 49       		.uleb128 0x49
+ 796 0040 13       		.uleb128 0x13
+ 797 0041 00       		.byte	0
+ 798 0042 00       		.byte	0
+ 799 0043 06       		.uleb128 0x6
+ 800 0044 2E       		.uleb128 0x2e
+ 801 0045 01       		.byte	0x1
+ 802 0046 3F       		.uleb128 0x3f
+ 803 0047 19       		.uleb128 0x19
+ 804 0048 03       		.uleb128 0x3
+ 805 0049 0E       		.uleb128 0xe
+ 806 004a 3A       		.uleb128 0x3a
+ 807 004b 0B       		.uleb128 0xb
+ 808 004c 3B       		.uleb128 0x3b
+ 809 004d 0B       		.uleb128 0xb
+ 810 004e 49       		.uleb128 0x49
+ 811 004f 13       		.uleb128 0x13
+ 812 0050 11       		.uleb128 0x11
+ 813 0051 01       		.uleb128 0x1
+ 814 0052 12       		.uleb128 0x12
+ 815 0053 06       		.uleb128 0x6
+ 816 0054 40       		.uleb128 0x40
+ 817 0055 18       		.uleb128 0x18
+ 818 0056 9742     		.uleb128 0x2117
+ 819 0058 19       		.uleb128 0x19
+ 820 0059 01       		.uleb128 0x1
+ 821 005a 13       		.uleb128 0x13
+ 822 005b 00       		.byte	0
+ 823 005c 00       		.byte	0
+ 824 005d 07       		.uleb128 0x7
+ 825 005e 34       		.uleb128 0x34
+ 826 005f 00       		.byte	0
+ 827 0060 03       		.uleb128 0x3
+ 828 0061 08       		.uleb128 0x8
+ 829 0062 3A       		.uleb128 0x3a
+ 830 0063 0B       		.uleb128 0xb
+ 831 0064 3B       		.uleb128 0x3b
+ 832 0065 0B       		.uleb128 0xb
+ 833 0066 49       		.uleb128 0x49
+ 834 0067 13       		.uleb128 0x13
+ 835 0068 02       		.uleb128 0x2
+ 836 0069 17       		.uleb128 0x17
+ 837 006a 00       		.byte	0
+ 838 006b 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 18
+
+
+ 839 006c 08       		.uleb128 0x8
+ 840 006d 898201   		.uleb128 0x4109
+ 841 0070 00       		.byte	0
+ 842 0071 11       		.uleb128 0x11
+ 843 0072 01       		.uleb128 0x1
+ 844 0073 31       		.uleb128 0x31
+ 845 0074 13       		.uleb128 0x13
+ 846 0075 00       		.byte	0
+ 847 0076 00       		.byte	0
+ 848 0077 09       		.uleb128 0x9
+ 849 0078 898201   		.uleb128 0x4109
+ 850 007b 01       		.byte	0x1
+ 851 007c 11       		.uleb128 0x11
+ 852 007d 01       		.uleb128 0x1
+ 853 007e 31       		.uleb128 0x31
+ 854 007f 13       		.uleb128 0x13
+ 855 0080 01       		.uleb128 0x1
+ 856 0081 13       		.uleb128 0x13
+ 857 0082 00       		.byte	0
+ 858 0083 00       		.byte	0
+ 859 0084 0A       		.uleb128 0xa
+ 860 0085 8A8201   		.uleb128 0x410a
+ 861 0088 00       		.byte	0
+ 862 0089 02       		.uleb128 0x2
+ 863 008a 18       		.uleb128 0x18
+ 864 008b 9142     		.uleb128 0x2111
+ 865 008d 18       		.uleb128 0x18
+ 866 008e 00       		.byte	0
+ 867 008f 00       		.byte	0
+ 868 0090 0B       		.uleb128 0xb
+ 869 0091 34       		.uleb128 0x34
+ 870 0092 00       		.byte	0
+ 871 0093 03       		.uleb128 0x3
+ 872 0094 0E       		.uleb128 0xe
+ 873 0095 3A       		.uleb128 0x3a
+ 874 0096 0B       		.uleb128 0xb
+ 875 0097 3B       		.uleb128 0x3b
+ 876 0098 05       		.uleb128 0x5
+ 877 0099 49       		.uleb128 0x49
+ 878 009a 13       		.uleb128 0x13
+ 879 009b 3F       		.uleb128 0x3f
+ 880 009c 19       		.uleb128 0x19
+ 881 009d 3C       		.uleb128 0x3c
+ 882 009e 19       		.uleb128 0x19
+ 883 009f 00       		.byte	0
+ 884 00a0 00       		.byte	0
+ 885 00a1 0C       		.uleb128 0xc
+ 886 00a2 35       		.uleb128 0x35
+ 887 00a3 00       		.byte	0
+ 888 00a4 49       		.uleb128 0x49
+ 889 00a5 13       		.uleb128 0x13
+ 890 00a6 00       		.byte	0
+ 891 00a7 00       		.byte	0
+ 892 00a8 0D       		.uleb128 0xd
+ 893 00a9 2E       		.uleb128 0x2e
+ 894 00aa 00       		.byte	0
+ 895 00ab 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 19
+
+
+ 896 00ac 19       		.uleb128 0x19
+ 897 00ad 03       		.uleb128 0x3
+ 898 00ae 0E       		.uleb128 0xe
+ 899 00af 3A       		.uleb128 0x3a
+ 900 00b0 0B       		.uleb128 0xb
+ 901 00b1 3B       		.uleb128 0x3b
+ 902 00b2 0B       		.uleb128 0xb
+ 903 00b3 27       		.uleb128 0x27
+ 904 00b4 19       		.uleb128 0x19
+ 905 00b5 3C       		.uleb128 0x3c
+ 906 00b6 19       		.uleb128 0x19
+ 907 00b7 00       		.byte	0
+ 908 00b8 00       		.byte	0
+ 909 00b9 0E       		.uleb128 0xe
+ 910 00ba 2E       		.uleb128 0x2e
+ 911 00bb 01       		.byte	0x1
+ 912 00bc 3F       		.uleb128 0x3f
+ 913 00bd 19       		.uleb128 0x19
+ 914 00be 03       		.uleb128 0x3
+ 915 00bf 0E       		.uleb128 0xe
+ 916 00c0 3A       		.uleb128 0x3a
+ 917 00c1 0B       		.uleb128 0xb
+ 918 00c2 3B       		.uleb128 0x3b
+ 919 00c3 0B       		.uleb128 0xb
+ 920 00c4 27       		.uleb128 0x27
+ 921 00c5 19       		.uleb128 0x19
+ 922 00c6 3C       		.uleb128 0x3c
+ 923 00c7 19       		.uleb128 0x19
+ 924 00c8 01       		.uleb128 0x1
+ 925 00c9 13       		.uleb128 0x13
+ 926 00ca 00       		.byte	0
+ 927 00cb 00       		.byte	0
+ 928 00cc 0F       		.uleb128 0xf
+ 929 00cd 05       		.uleb128 0x5
+ 930 00ce 00       		.byte	0
+ 931 00cf 49       		.uleb128 0x49
+ 932 00d0 13       		.uleb128 0x13
+ 933 00d1 00       		.byte	0
+ 934 00d2 00       		.byte	0
+ 935 00d3 10       		.uleb128 0x10
+ 936 00d4 2E       		.uleb128 0x2e
+ 937 00d5 00       		.byte	0
+ 938 00d6 3F       		.uleb128 0x3f
+ 939 00d7 19       		.uleb128 0x19
+ 940 00d8 03       		.uleb128 0x3
+ 941 00d9 0E       		.uleb128 0xe
+ 942 00da 3A       		.uleb128 0x3a
+ 943 00db 0B       		.uleb128 0xb
+ 944 00dc 3B       		.uleb128 0x3b
+ 945 00dd 0B       		.uleb128 0xb
+ 946 00de 27       		.uleb128 0x27
+ 947 00df 19       		.uleb128 0x19
+ 948 00e0 49       		.uleb128 0x49
+ 949 00e1 13       		.uleb128 0x13
+ 950 00e2 3C       		.uleb128 0x3c
+ 951 00e3 19       		.uleb128 0x19
+ 952 00e4 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 20
+
+
+ 953 00e5 00       		.byte	0
+ 954 00e6 11       		.uleb128 0x11
+ 955 00e7 0F       		.uleb128 0xf
+ 956 00e8 00       		.byte	0
+ 957 00e9 0B       		.uleb128 0xb
+ 958 00ea 0B       		.uleb128 0xb
+ 959 00eb 49       		.uleb128 0x49
+ 960 00ec 13       		.uleb128 0x13
+ 961 00ed 00       		.byte	0
+ 962 00ee 00       		.byte	0
+ 963 00ef 12       		.uleb128 0x12
+ 964 00f0 26       		.uleb128 0x26
+ 965 00f1 00       		.byte	0
+ 966 00f2 49       		.uleb128 0x49
+ 967 00f3 13       		.uleb128 0x13
+ 968 00f4 00       		.byte	0
+ 969 00f5 00       		.byte	0
+ 970 00f6 00       		.byte	0
+ 971              		.section	.debug_loc,"",%progbits
+ 972              	.Ldebug_loc0:
+ 973              	.LLST0:
+ 974 0000 00000000 		.4byte	.LVL0
+ 975 0004 90000000 		.4byte	.LVL24
+ 976 0008 0200     		.2byte	0x2
+ 977 000a 30       		.byte	0x30
+ 978 000b 9F       		.byte	0x9f
+ 979 000c 90000000 		.4byte	.LVL24
+ 980 0010 96000000 		.4byte	.LVL26
+ 981 0014 0500     		.2byte	0x5
+ 982 0016 38       		.byte	0x38
+ 983 0017 74       		.byte	0x74
+ 984 0018 00       		.sleb128 0
+ 985 0019 1C       		.byte	0x1c
+ 986 001a 9F       		.byte	0x9f
+ 987 001b C4000000 		.4byte	.LVL32
+ 988 001f C6000000 		.4byte	.LVL33
+ 989 0023 0200     		.2byte	0x2
+ 990 0025 30       		.byte	0x30
+ 991 0026 9F       		.byte	0x9f
+ 992 0027 C6000000 		.4byte	.LVL33
+ 993 002b CC000000 		.4byte	.LVL35
+ 994 002f 0500     		.2byte	0x5
+ 995 0031 38       		.byte	0x38
+ 996 0032 74       		.byte	0x74
+ 997 0033 00       		.sleb128 0
+ 998 0034 1C       		.byte	0x1c
+ 999 0035 9F       		.byte	0x9f
+ 1000 0036 00000000 		.4byte	0
+ 1001 003a 00000000 		.4byte	0
+ 1002              		.section	.debug_aranges,"",%progbits
+ 1003 0000 1C000000 		.4byte	0x1c
+ 1004 0004 0200     		.2byte	0x2
+ 1005 0006 00000000 		.4byte	.Ldebug_info0
+ 1006 000a 04       		.byte	0x4
+ 1007 000b 00       		.byte	0
+ 1008 000c 0000     		.2byte	0
+ 1009 000e 0000     		.2byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 21
+
+
+ 1010 0010 00000000 		.4byte	.LFB63
+ 1011 0014 E0000000 		.4byte	.LFE63-.LFB63
+ 1012 0018 00000000 		.4byte	0
+ 1013 001c 00000000 		.4byte	0
+ 1014              		.section	.debug_ranges,"",%progbits
+ 1015              	.Ldebug_ranges0:
+ 1016 0000 00000000 		.4byte	.LFB63
+ 1017 0004 E0000000 		.4byte	.LFE63
+ 1018 0008 00000000 		.4byte	0
+ 1019 000c 00000000 		.4byte	0
+ 1020              		.section	.debug_line,"",%progbits
+ 1021              	.Ldebug_line0:
+ 1022 0000 C0010000 		.section	.debug_str,"MS",%progbits,1
+ 1022      02007101 
+ 1022      00000201 
+ 1022      FB0E0D00 
+ 1022      01010101 
+ 1023              	.LASF23:
+ 1024 0000 5350494D 		.ascii	"SPIM_WriteTxData\000"
+ 1024      5F577269 
+ 1024      74655478 
+ 1024      44617461 
+ 1024      00
+ 1025              	.LASF21:
+ 1026 0011 53504953 		.ascii	"SPIS_WriteTxDataZero\000"
+ 1026      5F577269 
+ 1026      74655478 
+ 1026      44617461 
+ 1026      5A65726F 
+ 1027              	.LASF20:
+ 1028 0026 53504953 		.ascii	"SPIS_Start\000"
+ 1028      5F537461 
+ 1028      727400
+ 1029              	.LASF9:
+ 1030 0031 5F5F696E 		.ascii	"__int32_t\000"
+ 1030      7433325F 
+ 1030      7400
+ 1031              	.LASF22:
+ 1032 003b 53504953 		.ascii	"SPIS_WriteTxData\000"
+ 1032      5F577269 
+ 1032      74655478 
+ 1032      44617461 
+ 1032      00
+ 1033              	.LASF19:
+ 1034 004c 5350494D 		.ascii	"SPIM_Start\000"
+ 1034      5F537461 
+ 1034      727400
+ 1035              	.LASF34:
+ 1036 0057 433A5C55 		.ascii	"C:\\Users\\jthem\\Documents\\PSoC Creator\\PWMExamp"
+ 1036      73657273 
+ 1036      5C6A7468 
+ 1036      656D5C44 
+ 1036      6F63756D 
+ 1037 0085 6C653031 		.ascii	"le01\\SPI_Design02.cydsn\000"
+ 1037      5C535049 
+ 1037      5F446573 
+ 1037      69676E30 
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 22
+
+
+ 1037      322E6379 
+ 1038              	.LASF31:
+ 1039 009d 53504953 		.ascii	"SPIS_ReadRxData\000"
+ 1039      5F526561 
+ 1039      64527844 
+ 1039      61746100 
+ 1040              	.LASF26:
+ 1041 00ad 53504953 		.ascii	"SPIS_ReadTxStatus\000"
+ 1041      5F526561 
+ 1041      64547853 
+ 1041      74617475 
+ 1041      7300
+ 1042              	.LASF33:
+ 1043 00bf 2E5C6D61 		.ascii	".\\main.c\000"
+ 1043      696E2E63 
+ 1043      00
+ 1044              	.LASF13:
+ 1045 00c8 666C6F61 		.ascii	"float\000"
+ 1045      7400
+ 1046              	.LASF18:
+ 1047 00ce 4C43445F 		.ascii	"LCD_Start\000"
+ 1047      53746172 
+ 1047      7400
+ 1048              	.LASF11:
+ 1049 00d8 75696E74 		.ascii	"uint8\000"
+ 1049      3800
+ 1050              	.LASF1:
+ 1051 00de 756E7369 		.ascii	"unsigned char\000"
+ 1051      676E6564 
+ 1051      20636861 
+ 1051      7200
+ 1052              	.LASF15:
+ 1053 00ec 63686172 		.ascii	"char8\000"
+ 1053      3800
+ 1054              	.LASF5:
+ 1055 00f2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1055      20756E73 
+ 1055      69676E65 
+ 1055      6420696E 
+ 1055      7400
+ 1056              	.LASF3:
+ 1057 0104 73686F72 		.ascii	"short unsigned int\000"
+ 1057      7420756E 
+ 1057      7369676E 
+ 1057      65642069 
+ 1057      6E7400
+ 1058              	.LASF36:
+ 1059 0117 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1059      52784275 
+ 1059      66666572 
+ 1059      00
+ 1060              	.LASF27:
+ 1061 0124 5350494D 		.ascii	"SPIM_ReadRxData\000"
+ 1061      5F526561 
+ 1061      64527844 
+ 1061      61746100 
+ 1062              	.LASF14:
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 23
+
+
+ 1063 0134 646F7562 		.ascii	"double\000"
+ 1063      6C6500
+ 1064              	.LASF35:
+ 1065 013b 6D61696E 		.ascii	"main\000"
+ 1065      00
+ 1066              	.LASF25:
+ 1067 0140 4C43445F 		.ascii	"LCD_PrintString\000"
+ 1067      5072696E 
+ 1067      74537472 
+ 1067      696E6700 
+ 1068              	.LASF12:
+ 1069 0150 75696E74 		.ascii	"uint32\000"
+ 1069      333200
+ 1070              	.LASF8:
+ 1071 0157 756E7369 		.ascii	"unsigned int\000"
+ 1071      676E6564 
+ 1071      20696E74 
+ 1071      00
+ 1072              	.LASF7:
+ 1073 0164 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1073      206C6F6E 
+ 1073      6720756E 
+ 1073      7369676E 
+ 1073      65642069 
+ 1074              	.LASF28:
+ 1075 017b 4C43445F 		.ascii	"LCD_PrintInt8\000"
+ 1075      5072696E 
+ 1075      74496E74 
+ 1075      3800
+ 1076              	.LASF24:
+ 1077 0189 4C43445F 		.ascii	"LCD_Position\000"
+ 1077      506F7369 
+ 1077      74696F6E 
+ 1077      00
+ 1078              	.LASF10:
+ 1079 0196 696E7433 		.ascii	"int32_t\000"
+ 1079      325F7400 
+ 1080              	.LASF17:
+ 1081 019e 73697A65 		.ascii	"sizetype\000"
+ 1081      74797065 
+ 1081      00
+ 1082              	.LASF6:
+ 1083 01a7 6C6F6E67 		.ascii	"long long int\000"
+ 1083      206C6F6E 
+ 1083      6720696E 
+ 1083      7400
+ 1084              	.LASF16:
+ 1085 01b5 63686172 		.ascii	"char\000"
+ 1085      00
+ 1086              	.LASF30:
+ 1087 01ba 4C43445F 		.ascii	"LCD_WriteControl\000"
+ 1087      57726974 
+ 1087      65436F6E 
+ 1087      74726F6C 
+ 1087      00
+ 1088              	.LASF2:
+ 1089 01cb 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc7lAzui.s 			page 24
+
+
+ 1089      7420696E 
+ 1089      7400
+ 1090              	.LASF32:
+ 1091 01d5 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1091      4320342E 
+ 1091      392E3320 
+ 1091      32303135 
+ 1091      30333033 
+ 1092 0208 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1092      20726576 
+ 1092      6973696F 
+ 1092      6E203232 
+ 1092      31323230 
+ 1093 023b 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 1093      66756E63 
+ 1093      74696F6E 
+ 1093      2D736563 
+ 1093      74696F6E 
+ 1094              	.LASF4:
+ 1095 0263 6C6F6E67 		.ascii	"long int\000"
+ 1095      20696E74 
+ 1095      00
+ 1096              	.LASF0:
+ 1097 026c 7369676E 		.ascii	"signed char\000"
+ 1097      65642063 
+ 1097      68617200 
+ 1098              	.LASF29:
+ 1099 0278 43794465 		.ascii	"CyDelay\000"
+ 1099      6C617900 
+ 1100              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

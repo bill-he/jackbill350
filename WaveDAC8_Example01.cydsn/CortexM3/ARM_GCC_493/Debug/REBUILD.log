@@ -1,0 +1,51 @@
+--------------- Rebuild Started: 04/03/2016 18:02:26 Project: WaveDAC8_Example01, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\main.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\cyfitter_cfg.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\cymetadata.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\P00_Vout.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_DacClk.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_Wave1_DMA_dma.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_Wave2_DMA_dma.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_VDAC8.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_VDAC8_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_BuffAmp.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_BuffAmp_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\Cm3Start.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\CyBootAsmGnu.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\CyDmac.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\CyFlash.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\CyLib.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\cyPm.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\CySpc.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\cyutils.o"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\WaveDAC8_Example01.hex"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\WaveDAC8_Example01.elf"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\WaveDAC8_Example01.map"
+Deleting file ".\WaveDAC8_Example01.cycdx"
+Deleting file ".\WaveDAC8_Example01.svd"
+Deleting file ".\WaveDAC8_Example01.rpt"
+Deleting file ".\WaveDAC8_Example01_timing.html"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\.deps\C_FILE.P"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\.deps\ARM_C_FILE.P"
+Deleting file ".\CortexM3\ARM_GCC_493\Debug\.deps\GNU_ARM_ASM_FILE.P"
+cydsfit.exe -.appdatapath "C:\Users\jthem\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p "C:\Users\jthem\Documents\PSoC Creator\PWMExample01\WaveDAC8_Example01.cydsn\WaveDAC8_Example01.cyprj" -d CY8C5868AXI-LP035 -s "C:\Users\jthem\Documents\PSoC Creator\PWMExample01\WaveDAC8_Example01.cydsn\Generated_Source\PSoC5" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+HDL Generation ...
+Synthesis ...
+Place and Route ...
+Tech mapping ...
+Analog Placement ...
+Log: apr.M0058: The analog placement iterative improvement is 35% done. (App=cydsfit)
+Log: apr.M0058: The analog placement iterative improvement is 88% done. (App=cydsfit)
+Analog Routing ...
+Analog Code Generation ...
+Digital Placement ...
+Digital Routing ...
+Bitstream Generation ...
+Static timing analysis ...
+API Generation ...
+Dependency Generation ...
+Clean Temporary Files ...
+--------------- Rebuild Canceled: 04/03/2016 18:03:23 ---------------

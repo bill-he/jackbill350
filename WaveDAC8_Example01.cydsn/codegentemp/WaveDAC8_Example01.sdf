@@ -1,0 +1,22 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2016-04-03T22:03:04Z")
+ (DESIGN "WaveDAC8_Example01")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 3.3 CP2")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "WaveDAC8_Example01")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT ClockBlock.clk_bus_glb \\WaveDAC8_1\:Wave1_DMA\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.clk_bus_glb \\WaveDAC8_1\:Wave2_DMA\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.dclk_0 \\WaveDAC8_1\:VDAC8\:viDAC8\\.strobe_udb (9.359:9.359:9.359))
+    (INTERCONNECT ClockBlock.dclk_0 \\WaveDAC8_1\:Wave1_DMA\\.dmareq (5.720:5.720:5.720))
+   )
+  )
+ )
+)

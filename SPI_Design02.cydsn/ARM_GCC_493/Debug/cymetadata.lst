@@ -1,0 +1,4011 @@
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"cymetadata.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	cy_metadata
+  19              		.global	cy_meta_flashprotect
+  20              		.global	cy_meta_wonvl
+  21              		.global	cy_meta_custnvl
+  22              		.global	cy_meta_configecc
+  23              		.section	.cyconfigecc,"a",%progbits
+  24              		.type	cy_meta_configecc, %object
+  25              		.size	cy_meta_configecc, 3328
+  26              	cy_meta_configecc:
+  27 0000 41       		.byte	65
+  28 0001 19       		.byte	25
+  29 0002 00       		.byte	0
+  30 0003 00       		.byte	0
+  31 0004 00       		.byte	0
+  32 0005 00       		.byte	0
+  33 0006 00       		.byte	0
+  34 0007 00       		.byte	0
+  35 0008 FF       		.byte	-1
+  36 0009 00       		.byte	0
+  37 000a 00       		.byte	0
+  38 000b 00       		.byte	0
+  39 000c 00       		.byte	0
+  40 000d 00       		.byte	0
+  41 000e 00       		.byte	0
+  42 000f 00       		.byte	0
+  43 0010 00       		.byte	0
+  44 0011 00       		.byte	0
+  45 0012 00       		.byte	0
+  46 0013 00       		.byte	0
+  47 0014 00       		.byte	0
+  48 0015 04       		.byte	4
+  49 0016 00       		.byte	0
+  50 0017 00       		.byte	0
+  51 0018 00       		.byte	0
+  52 0019 00       		.byte	0
+  53 001a 00       		.byte	0
+  54 001b 00       		.byte	0
+  55 001c 00       		.byte	0
+  56 001d 00       		.byte	0
+  57 001e 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 2
+
+
+  58 001f 00       		.byte	0
+  59 0020 00       		.byte	0
+  60 0021 00       		.byte	0
+  61 0022 00       		.byte	0
+  62 0023 00       		.byte	0
+  63 0024 00       		.byte	0
+  64 0025 00       		.byte	0
+  65 0026 00       		.byte	0
+  66 0027 00       		.byte	0
+  67 0028 00       		.byte	0
+  68 0029 00       		.byte	0
+  69 002a 02       		.byte	2
+  70 002b 04       		.byte	4
+  71 002c 02       		.byte	2
+  72 002d 01       		.byte	1
+  73 002e 00       		.byte	0
+  74 002f 00       		.byte	0
+  75 0030 00       		.byte	0
+  76 0031 00       		.byte	0
+  77 0032 00       		.byte	0
+  78 0033 00       		.byte	0
+  79 0034 00       		.byte	0
+  80 0035 00       		.byte	0
+  81 0036 00       		.byte	0
+  82 0037 03       		.byte	3
+  83 0038 01       		.byte	1
+  84 0039 00       		.byte	0
+  85 003a 00       		.byte	0
+  86 003b 00       		.byte	0
+  87 003c 00       		.byte	0
+  88 003d 00       		.byte	0
+  89 003e 02       		.byte	2
+  90 003f 00       		.byte	0
+  91 0040 02       		.byte	2
+  92 0041 04       		.byte	4
+  93 0042 01       		.byte	1
+  94 0043 01       		.byte	1
+  95 0044 00       		.byte	0
+  96 0045 00       		.byte	0
+  97 0046 00       		.byte	0
+  98 0047 02       		.byte	2
+  99 0048 00       		.byte	0
+ 100 0049 00       		.byte	0
+ 101 004a 00       		.byte	0
+ 102 004b 00       		.byte	0
+ 103 004c 00       		.byte	0
+ 104 004d 00       		.byte	0
+ 105 004e 05       		.byte	5
+ 106 004f 05       		.byte	5
+ 107 0050 06       		.byte	6
+ 108 0051 03       		.byte	3
+ 109 0052 60       		.byte	96
+ 110 0053 00       		.byte	0
+ 111 0054 01       		.byte	1
+ 112 0055 CB       		.byte	-53
+ 113 0056 EF       		.byte	-17
+ 114 0057 0D       		.byte	13
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 3
+
+
+ 115 0058 1F       		.byte	31
+ 116 0059 FF       		.byte	-1
+ 117 005a FF       		.byte	-1
+ 118 005b FF       		.byte	-1
+ 119 005c 22       		.byte	34
+ 120 005d 00       		.byte	0
+ 121 005e F0       		.byte	-16
+ 122 005f 0C       		.byte	12
+ 123 0060 8C       		.byte	-116
+ 124 0061 10       		.byte	16
+ 125 0062 00       		.byte	0
+ 126 0063 00       		.byte	0
+ 127 0064 41       		.byte	65
+ 128 0065 00       		.byte	0
+ 129 0066 04       		.byte	4
+ 130 0067 00       		.byte	0
+ 131 0068 04       		.byte	4
+ 132 0069 04       		.byte	4
+ 133 006a 24       		.byte	36
+ 134 006b 04       		.byte	4
+ 135 006c 00       		.byte	0
+ 136 006d 08       		.byte	8
+ 137 006e 00       		.byte	0
+ 138 006f 01       		.byte	1
+ 139 0070 00       		.byte	0
+ 140 0071 00       		.byte	0
+ 141 0072 00       		.byte	0
+ 142 0073 00       		.byte	0
+ 143 0074 00       		.byte	0
+ 144 0075 00       		.byte	0
+ 145 0076 00       		.byte	0
+ 146 0077 00       		.byte	0
+ 147 0078 40       		.byte	64
+ 148 0079 01       		.byte	1
+ 149 007a C0       		.byte	-64
+ 150 007b 01       		.byte	1
+ 151 007c 00       		.byte	0
+ 152 007d 00       		.byte	0
+ 153 007e 00       		.byte	0
+ 154 007f 00       		.byte	0
+ 155 0080 00       		.byte	0
+ 156 0081 00       		.byte	0
+ 157 0082 00       		.byte	0
+ 158 0083 00       		.byte	0
+ 159 0084 00       		.byte	0
+ 160 0085 00       		.byte	0
+ 161 0086 00       		.byte	0
+ 162 0087 00       		.byte	0
+ 163 0088 00       		.byte	0
+ 164 0089 00       		.byte	0
+ 165 008a 00       		.byte	0
+ 166 008b 00       		.byte	0
+ 167 008c 00       		.byte	0
+ 168 008d 00       		.byte	0
+ 169 008e 00       		.byte	0
+ 170 008f 00       		.byte	0
+ 171 0090 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 4
+
+
+ 172 0091 03       		.byte	3
+ 173 0092 00       		.byte	0
+ 174 0093 04       		.byte	4
+ 175 0094 00       		.byte	0
+ 176 0095 05       		.byte	5
+ 177 0096 00       		.byte	0
+ 178 0097 0A       		.byte	10
+ 179 0098 01       		.byte	1
+ 180 0099 00       		.byte	0
+ 181 009a 00       		.byte	0
+ 182 009b 00       		.byte	0
+ 183 009c 00       		.byte	0
+ 184 009d 00       		.byte	0
+ 185 009e 00       		.byte	0
+ 186 009f 00       		.byte	0
+ 187 00a0 00       		.byte	0
+ 188 00a1 0E       		.byte	14
+ 189 00a2 00       		.byte	0
+ 190 00a3 00       		.byte	0
+ 191 00a4 01       		.byte	1
+ 192 00a5 04       		.byte	4
+ 193 00a6 00       		.byte	0
+ 194 00a7 09       		.byte	9
+ 195 00a8 00       		.byte	0
+ 196 00a9 00       		.byte	0
+ 197 00aa 00       		.byte	0
+ 198 00ab 00       		.byte	0
+ 199 00ac 00       		.byte	0
+ 200 00ad 00       		.byte	0
+ 201 00ae 00       		.byte	0
+ 202 00af 00       		.byte	0
+ 203 00b0 00       		.byte	0
+ 204 00b1 00       		.byte	0
+ 205 00b2 00       		.byte	0
+ 206 00b3 00       		.byte	0
+ 207 00b4 00       		.byte	0
+ 208 00b5 00       		.byte	0
+ 209 00b6 00       		.byte	0
+ 210 00b7 00       		.byte	0
+ 211 00b8 00       		.byte	0
+ 212 00b9 00       		.byte	0
+ 213 00ba 00       		.byte	0
+ 214 00bb 00       		.byte	0
+ 215 00bc 01       		.byte	1
+ 216 00bd 00       		.byte	0
+ 217 00be 00       		.byte	0
+ 218 00bf 00       		.byte	0
+ 219 00c0 00       		.byte	0
+ 220 00c1 00       		.byte	0
+ 221 00c2 00       		.byte	0
+ 222 00c3 00       		.byte	0
+ 223 00c4 00       		.byte	0
+ 224 00c5 00       		.byte	0
+ 225 00c6 01       		.byte	1
+ 226 00c7 0F       		.byte	15
+ 227 00c8 00       		.byte	0
+ 228 00c9 80       		.byte	-128
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 5
+
+
+ 229 00ca 00       		.byte	0
+ 230 00cb 00       		.byte	0
+ 231 00cc 00       		.byte	0
+ 232 00cd 00       		.byte	0
+ 233 00ce 40       		.byte	64
+ 234 00cf 00       		.byte	0
+ 235 00d0 00       		.byte	0
+ 236 00d1 00       		.byte	0
+ 237 00d2 00       		.byte	0
+ 238 00d3 00       		.byte	0
+ 239 00d4 00       		.byte	0
+ 240 00d5 00       		.byte	0
+ 241 00d6 00       		.byte	0
+ 242 00d7 00       		.byte	0
+ 243 00d8 00       		.byte	0
+ 244 00d9 00       		.byte	0
+ 245 00da 00       		.byte	0
+ 246 00db 00       		.byte	0
+ 247 00dc 00       		.byte	0
+ 248 00dd 00       		.byte	0
+ 249 00de 00       		.byte	0
+ 250 00df 00       		.byte	0
+ 251 00e0 00       		.byte	0
+ 252 00e1 00       		.byte	0
+ 253 00e2 00       		.byte	0
+ 254 00e3 00       		.byte	0
+ 255 00e4 00       		.byte	0
+ 256 00e5 00       		.byte	0
+ 257 00e6 08       		.byte	8
+ 258 00e7 00       		.byte	0
+ 259 00e8 04       		.byte	4
+ 260 00e9 04       		.byte	4
+ 261 00ea 00       		.byte	0
+ 262 00eb 04       		.byte	4
+ 263 00ec 00       		.byte	0
+ 264 00ed 00       		.byte	0
+ 265 00ee 00       		.byte	0
+ 266 00ef 01       		.byte	1
+ 267 00f0 00       		.byte	0
+ 268 00f1 00       		.byte	0
+ 269 00f2 00       		.byte	0
+ 270 00f3 00       		.byte	0
+ 271 00f4 00       		.byte	0
+ 272 00f5 00       		.byte	0
+ 273 00f6 00       		.byte	0
+ 274 00f7 00       		.byte	0
+ 275 00f8 00       		.byte	0
+ 276 00f9 00       		.byte	0
+ 277 00fa 00       		.byte	0
+ 278 00fb 00       		.byte	0
+ 279 00fc 00       		.byte	0
+ 280 00fd 00       		.byte	0
+ 281 00fe 00       		.byte	0
+ 282 00ff 00       		.byte	0
+ 283 0100 00       		.byte	0
+ 284 0101 00       		.byte	0
+ 285 0102 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 6
+
+
+ 286 0103 00       		.byte	0
+ 287 0104 00       		.byte	0
+ 288 0105 00       		.byte	0
+ 289 0106 00       		.byte	0
+ 290 0107 00       		.byte	0
+ 291 0108 00       		.byte	0
+ 292 0109 00       		.byte	0
+ 293 010a 00       		.byte	0
+ 294 010b 00       		.byte	0
+ 295 010c 00       		.byte	0
+ 296 010d 00       		.byte	0
+ 297 010e 00       		.byte	0
+ 298 010f 00       		.byte	0
+ 299 0110 07       		.byte	7
+ 300 0111 06       		.byte	6
+ 301 0112 38       		.byte	56
+ 302 0113 18       		.byte	24
+ 303 0114 00       		.byte	0
+ 304 0115 0A       		.byte	10
+ 305 0116 04       		.byte	4
+ 306 0117 14       		.byte	20
+ 307 0118 04       		.byte	4
+ 308 0119 00       		.byte	0
+ 309 011a 00       		.byte	0
+ 310 011b 00       		.byte	0
+ 311 011c 00       		.byte	0
+ 312 011d 00       		.byte	0
+ 313 011e 00       		.byte	0
+ 314 011f 00       		.byte	0
+ 315 0120 04       		.byte	4
+ 316 0121 04       		.byte	4
+ 317 0122 00       		.byte	0
+ 318 0123 1A       		.byte	26
+ 319 0124 0A       		.byte	10
+ 320 0125 12       		.byte	18
+ 321 0126 10       		.byte	16
+ 322 0127 0C       		.byte	12
+ 323 0128 01       		.byte	1
+ 324 0129 00       		.byte	0
+ 325 012a 00       		.byte	0
+ 326 012b 00       		.byte	0
+ 327 012c 60       		.byte	96
+ 328 012d 00       		.byte	0
+ 329 012e 00       		.byte	0
+ 330 012f 00       		.byte	0
+ 331 0130 04       		.byte	4
+ 332 0131 01       		.byte	1
+ 333 0132 00       		.byte	0
+ 334 0133 00       		.byte	0
+ 335 0134 56       		.byte	86
+ 336 0135 00       		.byte	0
+ 337 0136 09       		.byte	9
+ 338 0137 00       		.byte	0
+ 339 0138 04       		.byte	4
+ 340 0139 00       		.byte	0
+ 341 013a 00       		.byte	0
+ 342 013b 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 7
+
+
+ 343 013c 04       		.byte	4
+ 344 013d 00       		.byte	0
+ 345 013e 00       		.byte	0
+ 346 013f 00       		.byte	0
+ 347 0140 00       		.byte	0
+ 348 0141 1E       		.byte	30
+ 349 0142 00       		.byte	0
+ 350 0143 00       		.byte	0
+ 351 0144 7F       		.byte	127
+ 352 0145 00       		.byte	0
+ 353 0146 00       		.byte	0
+ 354 0147 01       		.byte	1
+ 355 0148 20       		.byte	32
+ 356 0149 00       		.byte	0
+ 357 014a 00       		.byte	0
+ 358 014b 02       		.byte	2
+ 359 014c 00       		.byte	0
+ 360 014d 00       		.byte	0
+ 361 014e 00       		.byte	0
+ 362 014f 40       		.byte	64
+ 363 0150 00       		.byte	0
+ 364 0151 00       		.byte	0
+ 365 0152 00       		.byte	0
+ 366 0153 00       		.byte	0
+ 367 0154 00       		.byte	0
+ 368 0155 00       		.byte	0
+ 369 0156 00       		.byte	0
+ 370 0157 00       		.byte	0
+ 371 0158 00       		.byte	0
+ 372 0159 00       		.byte	0
+ 373 015a 00       		.byte	0
+ 374 015b 00       		.byte	0
+ 375 015c 00       		.byte	0
+ 376 015d 00       		.byte	0
+ 377 015e 00       		.byte	0
+ 378 015f 00       		.byte	0
+ 379 0160 00       		.byte	0
+ 380 0161 00       		.byte	0
+ 381 0162 00       		.byte	0
+ 382 0163 00       		.byte	0
+ 383 0164 20       		.byte	32
+ 384 0165 00       		.byte	0
+ 385 0166 04       		.byte	4
+ 386 0167 00       		.byte	0
+ 387 0168 04       		.byte	4
+ 388 0169 04       		.byte	4
+ 389 016a 00       		.byte	0
+ 390 016b 04       		.byte	4
+ 391 016c 00       		.byte	0
+ 392 016d 00       		.byte	0
+ 393 016e 00       		.byte	0
+ 394 016f 01       		.byte	1
+ 395 0170 00       		.byte	0
+ 396 0171 00       		.byte	0
+ 397 0172 00       		.byte	0
+ 398 0173 00       		.byte	0
+ 399 0174 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 8
+
+
+ 400 0175 00       		.byte	0
+ 401 0176 00       		.byte	0
+ 402 0177 00       		.byte	0
+ 403 0178 00       		.byte	0
+ 404 0179 00       		.byte	0
+ 405 017a 00       		.byte	0
+ 406 017b 00       		.byte	0
+ 407 017c 00       		.byte	0
+ 408 017d 00       		.byte	0
+ 409 017e 00       		.byte	0
+ 410 017f 00       		.byte	0
+ 411 0180 00       		.byte	0
+ 412 0181 00       		.byte	0
+ 413 0182 00       		.byte	0
+ 414 0183 00       		.byte	0
+ 415 0184 00       		.byte	0
+ 416 0185 00       		.byte	0
+ 417 0186 00       		.byte	0
+ 418 0187 00       		.byte	0
+ 419 0188 00       		.byte	0
+ 420 0189 00       		.byte	0
+ 421 018a 00       		.byte	0
+ 422 018b 00       		.byte	0
+ 423 018c 00       		.byte	0
+ 424 018d 00       		.byte	0
+ 425 018e 00       		.byte	0
+ 426 018f 00       		.byte	0
+ 427 0190 00       		.byte	0
+ 428 0191 00       		.byte	0
+ 429 0192 00       		.byte	0
+ 430 0193 00       		.byte	0
+ 431 0194 00       		.byte	0
+ 432 0195 00       		.byte	0
+ 433 0196 00       		.byte	0
+ 434 0197 01       		.byte	1
+ 435 0198 00       		.byte	0
+ 436 0199 00       		.byte	0
+ 437 019a 00       		.byte	0
+ 438 019b 00       		.byte	0
+ 439 019c 00       		.byte	0
+ 440 019d 00       		.byte	0
+ 441 019e 00       		.byte	0
+ 442 019f 00       		.byte	0
+ 443 01a0 00       		.byte	0
+ 444 01a1 00       		.byte	0
+ 445 01a2 01       		.byte	1
+ 446 01a3 00       		.byte	0
+ 447 01a4 00       		.byte	0
+ 448 01a5 00       		.byte	0
+ 449 01a6 02       		.byte	2
+ 450 01a7 00       		.byte	0
+ 451 01a8 00       		.byte	0
+ 452 01a9 00       		.byte	0
+ 453 01aa 01       		.byte	1
+ 454 01ab 00       		.byte	0
+ 455 01ac 00       		.byte	0
+ 456 01ad 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 9
+
+
+ 457 01ae 00       		.byte	0
+ 458 01af 00       		.byte	0
+ 459 01b0 01       		.byte	1
+ 460 01b1 00       		.byte	0
+ 461 01b2 00       		.byte	0
+ 462 01b3 00       		.byte	0
+ 463 01b4 01       		.byte	1
+ 464 01b5 01       		.byte	1
+ 465 01b6 00       		.byte	0
+ 466 01b7 00       		.byte	0
+ 467 01b8 01       		.byte	1
+ 468 01b9 00       		.byte	0
+ 469 01ba 00       		.byte	0
+ 470 01bb 00       		.byte	0
+ 471 01bc 00       		.byte	0
+ 472 01bd 00       		.byte	0
+ 473 01be 00       		.byte	0
+ 474 01bf 00       		.byte	0
+ 475 01c0 00       		.byte	0
+ 476 01c1 00       		.byte	0
+ 477 01c2 02       		.byte	2
+ 478 01c3 00       		.byte	0
+ 479 01c4 01       		.byte	1
+ 480 01c5 01       		.byte	1
+ 481 01c6 00       		.byte	0
+ 482 01c7 00       		.byte	0
+ 483 01c8 00       		.byte	0
+ 484 01c9 00       		.byte	0
+ 485 01ca 00       		.byte	0
+ 486 01cb 00       		.byte	0
+ 487 01cc 00       		.byte	0
+ 488 01cd 00       		.byte	0
+ 489 01ce 10       		.byte	16
+ 490 01cf 10       		.byte	16
+ 491 01d0 00       		.byte	0
+ 492 01d1 00       		.byte	0
+ 493 01d2 00       		.byte	0
+ 494 01d3 00       		.byte	0
+ 495 01d4 00       		.byte	0
+ 496 01d5 00       		.byte	0
+ 497 01d6 00       		.byte	0
+ 498 01d7 00       		.byte	0
+ 499 01d8 00       		.byte	0
+ 500 01d9 00       		.byte	0
+ 501 01da 00       		.byte	0
+ 502 01db 00       		.byte	0
+ 503 01dc 00       		.byte	0
+ 504 01dd 00       		.byte	0
+ 505 01de 00       		.byte	0
+ 506 01df 00       		.byte	0
+ 507 01e0 00       		.byte	0
+ 508 01e1 00       		.byte	0
+ 509 01e2 00       		.byte	0
+ 510 01e3 00       		.byte	0
+ 511 01e4 00       		.byte	0
+ 512 01e5 00       		.byte	0
+ 513 01e6 08       		.byte	8
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 10
+
+
+ 514 01e7 00       		.byte	0
+ 515 01e8 04       		.byte	4
+ 516 01e9 04       		.byte	4
+ 517 01ea 00       		.byte	0
+ 518 01eb 04       		.byte	4
+ 519 01ec 00       		.byte	0
+ 520 01ed 00       		.byte	0
+ 521 01ee 00       		.byte	0
+ 522 01ef 01       		.byte	1
+ 523 01f0 00       		.byte	0
+ 524 01f1 00       		.byte	0
+ 525 01f2 00       		.byte	0
+ 526 01f3 00       		.byte	0
+ 527 01f4 00       		.byte	0
+ 528 01f5 00       		.byte	0
+ 529 01f6 00       		.byte	0
+ 530 01f7 00       		.byte	0
+ 531 01f8 00       		.byte	0
+ 532 01f9 00       		.byte	0
+ 533 01fa 00       		.byte	0
+ 534 01fb 00       		.byte	0
+ 535 01fc 00       		.byte	0
+ 536 01fd 00       		.byte	0
+ 537 01fe 00       		.byte	0
+ 538 01ff 00       		.byte	0
+ 539 0200 00       		.byte	0
+ 540 0201 00       		.byte	0
+ 541 0202 00       		.byte	0
+ 542 0203 00       		.byte	0
+ 543 0204 00       		.byte	0
+ 544 0205 00       		.byte	0
+ 545 0206 00       		.byte	0
+ 546 0207 00       		.byte	0
+ 547 0208 00       		.byte	0
+ 548 0209 00       		.byte	0
+ 549 020a 00       		.byte	0
+ 550 020b 00       		.byte	0
+ 551 020c 00       		.byte	0
+ 552 020d 00       		.byte	0
+ 553 020e 00       		.byte	0
+ 554 020f 00       		.byte	0
+ 555 0210 00       		.byte	0
+ 556 0211 00       		.byte	0
+ 557 0212 00       		.byte	0
+ 558 0213 00       		.byte	0
+ 559 0214 01       		.byte	1
+ 560 0215 00       		.byte	0
+ 561 0216 00       		.byte	0
+ 562 0217 00       		.byte	0
+ 563 0218 00       		.byte	0
+ 564 0219 00       		.byte	0
+ 565 021a 02       		.byte	2
+ 566 021b 00       		.byte	0
+ 567 021c 00       		.byte	0
+ 568 021d 00       		.byte	0
+ 569 021e 00       		.byte	0
+ 570 021f 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 11
+
+
+ 571 0220 00       		.byte	0
+ 572 0221 10       		.byte	16
+ 573 0222 00       		.byte	0
+ 574 0223 01       		.byte	1
+ 575 0224 00       		.byte	0
+ 576 0225 01       		.byte	1
+ 577 0226 00       		.byte	0
+ 578 0227 08       		.byte	8
+ 579 0228 00       		.byte	0
+ 580 0229 01       		.byte	1
+ 581 022a 00       		.byte	0
+ 582 022b 04       		.byte	4
+ 583 022c 00       		.byte	0
+ 584 022d 01       		.byte	1
+ 585 022e 00       		.byte	0
+ 586 022f 02       		.byte	2
+ 587 0230 01       		.byte	1
+ 588 0231 00       		.byte	0
+ 589 0232 00       		.byte	0
+ 590 0233 1E       		.byte	30
+ 591 0234 01       		.byte	1
+ 592 0235 00       		.byte	0
+ 593 0236 00       		.byte	0
+ 594 0237 01       		.byte	1
+ 595 0238 00       		.byte	0
+ 596 0239 00       		.byte	0
+ 597 023a 00       		.byte	0
+ 598 023b 00       		.byte	0
+ 599 023c 00       		.byte	0
+ 600 023d 00       		.byte	0
+ 601 023e 01       		.byte	1
+ 602 023f 00       		.byte	0
+ 603 0240 02       		.byte	2
+ 604 0241 00       		.byte	0
+ 605 0242 00       		.byte	0
+ 606 0243 00       		.byte	0
+ 607 0244 01       		.byte	1
+ 608 0245 00       		.byte	0
+ 609 0246 00       		.byte	0
+ 610 0247 1F       		.byte	31
+ 611 0248 00       		.byte	0
+ 612 0249 00       		.byte	0
+ 613 024a 00       		.byte	0
+ 614 024b 00       		.byte	0
+ 615 024c 00       		.byte	0
+ 616 024d 00       		.byte	0
+ 617 024e 10       		.byte	16
+ 618 024f 40       		.byte	64
+ 619 0250 00       		.byte	0
+ 620 0251 00       		.byte	0
+ 621 0252 00       		.byte	0
+ 622 0253 00       		.byte	0
+ 623 0254 00       		.byte	0
+ 624 0255 00       		.byte	0
+ 625 0256 00       		.byte	0
+ 626 0257 00       		.byte	0
+ 627 0258 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 12
+
+
+ 628 0259 00       		.byte	0
+ 629 025a 00       		.byte	0
+ 630 025b 00       		.byte	0
+ 631 025c 00       		.byte	0
+ 632 025d 00       		.byte	0
+ 633 025e 00       		.byte	0
+ 634 025f 00       		.byte	0
+ 635 0260 00       		.byte	0
+ 636 0261 00       		.byte	0
+ 637 0262 00       		.byte	0
+ 638 0263 00       		.byte	0
+ 639 0264 00       		.byte	0
+ 640 0265 00       		.byte	0
+ 641 0266 02       		.byte	2
+ 642 0267 24       		.byte	36
+ 643 0268 04       		.byte	4
+ 644 0269 04       		.byte	4
+ 645 026a 00       		.byte	0
+ 646 026b 24       		.byte	36
+ 647 026c 08       		.byte	8
+ 648 026d 80       		.byte	-128
+ 649 026e 08       		.byte	8
+ 650 026f 01       		.byte	1
+ 651 0270 00       		.byte	0
+ 652 0271 00       		.byte	0
+ 653 0272 00       		.byte	0
+ 654 0273 00       		.byte	0
+ 655 0274 00       		.byte	0
+ 656 0275 00       		.byte	0
+ 657 0276 00       		.byte	0
+ 658 0277 00       		.byte	0
+ 659 0278 00       		.byte	0
+ 660 0279 00       		.byte	0
+ 661 027a 00       		.byte	0
+ 662 027b 00       		.byte	0
+ 663 027c 00       		.byte	0
+ 664 027d 00       		.byte	0
+ 665 027e 00       		.byte	0
+ 666 027f 00       		.byte	0
+ 667 0280 00       		.byte	0
+ 668 0281 00       		.byte	0
+ 669 0282 00       		.byte	0
+ 670 0283 00       		.byte	0
+ 671 0284 00       		.byte	0
+ 672 0285 00       		.byte	0
+ 673 0286 00       		.byte	0
+ 674 0287 00       		.byte	0
+ 675 0288 00       		.byte	0
+ 676 0289 00       		.byte	0
+ 677 028a 00       		.byte	0
+ 678 028b 00       		.byte	0
+ 679 028c 00       		.byte	0
+ 680 028d 00       		.byte	0
+ 681 028e 00       		.byte	0
+ 682 028f 00       		.byte	0
+ 683 0290 02       		.byte	2
+ 684 0291 02       		.byte	2
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 13
+
+
+ 685 0292 00       		.byte	0
+ 686 0293 04       		.byte	4
+ 687 0294 00       		.byte	0
+ 688 0295 1B       		.byte	27
+ 689 0296 00       		.byte	0
+ 690 0297 00       		.byte	0
+ 691 0298 00       		.byte	0
+ 692 0299 1B       		.byte	27
+ 693 029a 00       		.byte	0
+ 694 029b 00       		.byte	0
+ 695 029c 00       		.byte	0
+ 696 029d 1B       		.byte	27
+ 697 029e 00       		.byte	0
+ 698 029f 00       		.byte	0
+ 699 02a0 00       		.byte	0
+ 700 02a1 00       		.byte	0
+ 701 02a2 01       		.byte	1
+ 702 02a3 00       		.byte	0
+ 703 02a4 00       		.byte	0
+ 704 02a5 04       		.byte	4
+ 705 02a6 00       		.byte	0
+ 706 02a7 10       		.byte	16
+ 707 02a8 00       		.byte	0
+ 708 02a9 00       		.byte	0
+ 709 02aa 03       		.byte	3
+ 710 02ab 00       		.byte	0
+ 711 02ac 00       		.byte	0
+ 712 02ad 04       		.byte	4
+ 713 02ae 00       		.byte	0
+ 714 02af 1A       		.byte	26
+ 715 02b0 00       		.byte	0
+ 716 02b1 1B       		.byte	27
+ 717 02b2 00       		.byte	0
+ 718 02b3 00       		.byte	0
+ 719 02b4 00       		.byte	0
+ 720 02b5 04       		.byte	4
+ 721 02b6 03       		.byte	3
+ 722 02b7 08       		.byte	8
+ 723 02b8 00       		.byte	0
+ 724 02b9 00       		.byte	0
+ 725 02ba 00       		.byte	0
+ 726 02bb 01       		.byte	1
+ 727 02bc 00       		.byte	0
+ 728 02bd 1A       		.byte	26
+ 729 02be 00       		.byte	0
+ 730 02bf 01       		.byte	1
+ 731 02c0 03       		.byte	3
+ 732 02c1 00       		.byte	0
+ 733 02c2 00       		.byte	0
+ 734 02c3 00       		.byte	0
+ 735 02c4 00       		.byte	0
+ 736 02c5 01       		.byte	1
+ 737 02c6 00       		.byte	0
+ 738 02c7 1E       		.byte	30
+ 739 02c8 00       		.byte	0
+ 740 02c9 00       		.byte	0
+ 741 02ca 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 14
+
+
+ 742 02cb 80       		.byte	-128
+ 743 02cc 00       		.byte	0
+ 744 02cd 00       		.byte	0
+ 745 02ce 00       		.byte	0
+ 746 02cf 10       		.byte	16
+ 747 02d0 00       		.byte	0
+ 748 02d1 00       		.byte	0
+ 749 02d2 00       		.byte	0
+ 750 02d3 00       		.byte	0
+ 751 02d4 00       		.byte	0
+ 752 02d5 00       		.byte	0
+ 753 02d6 00       		.byte	0
+ 754 02d7 00       		.byte	0
+ 755 02d8 00       		.byte	0
+ 756 02d9 00       		.byte	0
+ 757 02da 00       		.byte	0
+ 758 02db 00       		.byte	0
+ 759 02dc 00       		.byte	0
+ 760 02dd 00       		.byte	0
+ 761 02de 00       		.byte	0
+ 762 02df 00       		.byte	0
+ 763 02e0 00       		.byte	0
+ 764 02e1 00       		.byte	0
+ 765 02e2 00       		.byte	0
+ 766 02e3 00       		.byte	0
+ 767 02e4 40       		.byte	64
+ 768 02e5 00       		.byte	0
+ 769 02e6 04       		.byte	4
+ 770 02e7 00       		.byte	0
+ 771 02e8 04       		.byte	4
+ 772 02e9 04       		.byte	4
+ 773 02ea 00       		.byte	0
+ 774 02eb 04       		.byte	4
+ 775 02ec 00       		.byte	0
+ 776 02ed 00       		.byte	0
+ 777 02ee 00       		.byte	0
+ 778 02ef 01       		.byte	1
+ 779 02f0 00       		.byte	0
+ 780 02f1 00       		.byte	0
+ 781 02f2 00       		.byte	0
+ 782 02f3 00       		.byte	0
+ 783 02f4 00       		.byte	0
+ 784 02f5 00       		.byte	0
+ 785 02f6 00       		.byte	0
+ 786 02f7 00       		.byte	0
+ 787 02f8 00       		.byte	0
+ 788 02f9 00       		.byte	0
+ 789 02fa 00       		.byte	0
+ 790 02fb 00       		.byte	0
+ 791 02fc 00       		.byte	0
+ 792 02fd 00       		.byte	0
+ 793 02fe 00       		.byte	0
+ 794 02ff 00       		.byte	0
+ 795 0300 00       		.byte	0
+ 796 0301 00       		.byte	0
+ 797 0302 00       		.byte	0
+ 798 0303 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 15
+
+
+ 799 0304 00       		.byte	0
+ 800 0305 00       		.byte	0
+ 801 0306 00       		.byte	0
+ 802 0307 00       		.byte	0
+ 803 0308 00       		.byte	0
+ 804 0309 00       		.byte	0
+ 805 030a 00       		.byte	0
+ 806 030b 00       		.byte	0
+ 807 030c 00       		.byte	0
+ 808 030d 00       		.byte	0
+ 809 030e 00       		.byte	0
+ 810 030f 00       		.byte	0
+ 811 0310 00       		.byte	0
+ 812 0311 33       		.byte	51
+ 813 0312 13       		.byte	19
+ 814 0313 44       		.byte	68
+ 815 0314 00       		.byte	0
+ 816 0315 18       		.byte	24
+ 817 0316 00       		.byte	0
+ 818 0317 02       		.byte	2
+ 819 0318 07       		.byte	7
+ 820 0319 02       		.byte	2
+ 821 031a 10       		.byte	16
+ 822 031b 18       		.byte	24
+ 823 031c 0C       		.byte	12
+ 824 031d 82       		.byte	-126
+ 825 031e 00       		.byte	0
+ 826 031f 00       		.byte	0
+ 827 0320 01       		.byte	1
+ 828 0321 18       		.byte	24
+ 829 0322 06       		.byte	6
+ 830 0323 02       		.byte	2
+ 831 0324 00       		.byte	0
+ 832 0325 9C       		.byte	-100
+ 833 0326 00       		.byte	0
+ 834 0327 03       		.byte	3
+ 835 0328 11       		.byte	17
+ 836 0329 00       		.byte	0
+ 837 032a 06       		.byte	6
+ 838 032b 00       		.byte	0
+ 839 032c 0C       		.byte	12
+ 840 032d 1A       		.byte	26
+ 841 032e 00       		.byte	0
+ 842 032f 00       		.byte	0
+ 843 0330 04       		.byte	4
+ 844 0331 1A       		.byte	26
+ 845 0332 08       		.byte	8
+ 846 0333 00       		.byte	0
+ 847 0334 08       		.byte	8
+ 848 0335 C1       		.byte	-63
+ 849 0336 04       		.byte	4
+ 850 0337 38       		.byte	56
+ 851 0338 0C       		.byte	12
+ 852 0339 00       		.byte	0
+ 853 033a 00       		.byte	0
+ 854 033b 00       		.byte	0
+ 855 033c 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 16
+
+
+ 856 033d 18       		.byte	24
+ 857 033e 00       		.byte	0
+ 858 033f 00       		.byte	0
+ 859 0340 07       		.byte	7
+ 860 0341 13       		.byte	19
+ 861 0342 10       		.byte	16
+ 862 0343 0F       		.byte	15
+ 863 0344 08       		.byte	8
+ 864 0345 E0       		.byte	-32
+ 865 0346 00       		.byte	0
+ 866 0347 00       		.byte	0
+ 867 0348 00       		.byte	0
+ 868 0349 00       		.byte	0
+ 869 034a 02       		.byte	2
+ 870 034b 28       		.byte	40
+ 871 034c 00       		.byte	0
+ 872 034d 00       		.byte	0
+ 873 034e 14       		.byte	20
+ 874 034f 00       		.byte	0
+ 875 0350 63       		.byte	99
+ 876 0351 04       		.byte	4
+ 877 0352 20       		.byte	32
+ 878 0353 00       		.byte	0
+ 879 0354 05       		.byte	5
+ 880 0355 0E       		.byte	14
+ 881 0356 FC       		.byte	-4
+ 882 0357 BD       		.byte	-67
+ 883 0358 3D       		.byte	61
+ 884 0359 FF       		.byte	-1
+ 885 035a FF       		.byte	-1
+ 886 035b FF       		.byte	-1
+ 887 035c 22       		.byte	34
+ 888 035d 00       		.byte	0
+ 889 035e F0       		.byte	-16
+ 890 035f 08       		.byte	8
+ 891 0360 04       		.byte	4
+ 892 0361 00       		.byte	0
+ 893 0362 00       		.byte	0
+ 894 0363 00       		.byte	0
+ 895 0364 00       		.byte	0
+ 896 0365 00       		.byte	0
+ 897 0366 02       		.byte	2
+ 898 0367 2C       		.byte	44
+ 899 0368 04       		.byte	4
+ 900 0369 04       		.byte	4
+ 901 036a 04       		.byte	4
+ 902 036b 04       		.byte	4
+ 903 036c 00       		.byte	0
+ 904 036d 00       		.byte	0
+ 905 036e 00       		.byte	0
+ 906 036f 01       		.byte	1
+ 907 0370 00       		.byte	0
+ 908 0371 00       		.byte	0
+ 909 0372 C0       		.byte	-64
+ 910 0373 00       		.byte	0
+ 911 0374 40       		.byte	64
+ 912 0375 01       		.byte	1
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 17
+
+
+ 913 0376 10       		.byte	16
+ 914 0377 11       		.byte	17
+ 915 0378 C0       		.byte	-64
+ 916 0379 01       		.byte	1
+ 917 037a 00       		.byte	0
+ 918 037b 11       		.byte	17
+ 919 037c 40       		.byte	64
+ 920 037d 01       		.byte	1
+ 921 037e 40       		.byte	64
+ 922 037f 01       		.byte	1
+ 923 0380 00       		.byte	0
+ 924 0381 00       		.byte	0
+ 925 0382 00       		.byte	0
+ 926 0383 00       		.byte	0
+ 927 0384 00       		.byte	0
+ 928 0385 00       		.byte	0
+ 929 0386 00       		.byte	0
+ 930 0387 00       		.byte	0
+ 931 0388 00       		.byte	0
+ 932 0389 00       		.byte	0
+ 933 038a 00       		.byte	0
+ 934 038b 00       		.byte	0
+ 935 038c 00       		.byte	0
+ 936 038d 00       		.byte	0
+ 937 038e 00       		.byte	0
+ 938 038f 00       		.byte	0
+ 939 0390 00       		.byte	0
+ 940 0391 00       		.byte	0
+ 941 0392 00       		.byte	0
+ 942 0393 00       		.byte	0
+ 943 0394 00       		.byte	0
+ 944 0395 00       		.byte	0
+ 945 0396 00       		.byte	0
+ 946 0397 00       		.byte	0
+ 947 0398 00       		.byte	0
+ 948 0399 00       		.byte	0
+ 949 039a 00       		.byte	0
+ 950 039b 00       		.byte	0
+ 951 039c 00       		.byte	0
+ 952 039d 00       		.byte	0
+ 953 039e 00       		.byte	0
+ 954 039f 00       		.byte	0
+ 955 03a0 00       		.byte	0
+ 956 03a1 00       		.byte	0
+ 957 03a2 00       		.byte	0
+ 958 03a3 00       		.byte	0
+ 959 03a4 00       		.byte	0
+ 960 03a5 00       		.byte	0
+ 961 03a6 00       		.byte	0
+ 962 03a7 00       		.byte	0
+ 963 03a8 00       		.byte	0
+ 964 03a9 00       		.byte	0
+ 965 03aa 00       		.byte	0
+ 966 03ab 00       		.byte	0
+ 967 03ac 00       		.byte	0
+ 968 03ad 00       		.byte	0
+ 969 03ae 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 18
+
+
+ 970 03af 00       		.byte	0
+ 971 03b0 00       		.byte	0
+ 972 03b1 00       		.byte	0
+ 973 03b2 00       		.byte	0
+ 974 03b3 00       		.byte	0
+ 975 03b4 00       		.byte	0
+ 976 03b5 00       		.byte	0
+ 977 03b6 00       		.byte	0
+ 978 03b7 00       		.byte	0
+ 979 03b8 00       		.byte	0
+ 980 03b9 00       		.byte	0
+ 981 03ba 00       		.byte	0
+ 982 03bb 00       		.byte	0
+ 983 03bc 00       		.byte	0
+ 984 03bd 00       		.byte	0
+ 985 03be 00       		.byte	0
+ 986 03bf 00       		.byte	0
+ 987 03c0 00       		.byte	0
+ 988 03c1 00       		.byte	0
+ 989 03c2 00       		.byte	0
+ 990 03c3 00       		.byte	0
+ 991 03c4 00       		.byte	0
+ 992 03c5 00       		.byte	0
+ 993 03c6 00       		.byte	0
+ 994 03c7 00       		.byte	0
+ 995 03c8 00       		.byte	0
+ 996 03c9 00       		.byte	0
+ 997 03ca 00       		.byte	0
+ 998 03cb 00       		.byte	0
+ 999 03cc 00       		.byte	0
+ 1000 03cd 00       		.byte	0
+ 1001 03ce 00       		.byte	0
+ 1002 03cf 00       		.byte	0
+ 1003 03d0 00       		.byte	0
+ 1004 03d1 00       		.byte	0
+ 1005 03d2 00       		.byte	0
+ 1006 03d3 00       		.byte	0
+ 1007 03d4 00       		.byte	0
+ 1008 03d5 00       		.byte	0
+ 1009 03d6 00       		.byte	0
+ 1010 03d7 00       		.byte	0
+ 1011 03d8 00       		.byte	0
+ 1012 03d9 00       		.byte	0
+ 1013 03da 00       		.byte	0
+ 1014 03db 00       		.byte	0
+ 1015 03dc 00       		.byte	0
+ 1016 03dd 00       		.byte	0
+ 1017 03de 00       		.byte	0
+ 1018 03df 00       		.byte	0
+ 1019 03e0 00       		.byte	0
+ 1020 03e1 00       		.byte	0
+ 1021 03e2 00       		.byte	0
+ 1022 03e3 00       		.byte	0
+ 1023 03e4 09       		.byte	9
+ 1024 03e5 00       		.byte	0
+ 1025 03e6 04       		.byte	4
+ 1026 03e7 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 19
+
+
+ 1027 03e8 00       		.byte	0
+ 1028 03e9 00       		.byte	0
+ 1029 03ea 00       		.byte	0
+ 1030 03eb 04       		.byte	4
+ 1031 03ec 00       		.byte	0
+ 1032 03ed 00       		.byte	0
+ 1033 03ee 00       		.byte	0
+ 1034 03ef 01       		.byte	1
+ 1035 03f0 00       		.byte	0
+ 1036 03f1 00       		.byte	0
+ 1037 03f2 00       		.byte	0
+ 1038 03f3 00       		.byte	0
+ 1039 03f4 00       		.byte	0
+ 1040 03f5 00       		.byte	0
+ 1041 03f6 00       		.byte	0
+ 1042 03f7 00       		.byte	0
+ 1043 03f8 00       		.byte	0
+ 1044 03f9 00       		.byte	0
+ 1045 03fa 00       		.byte	0
+ 1046 03fb 00       		.byte	0
+ 1047 03fc 00       		.byte	0
+ 1048 03fd 00       		.byte	0
+ 1049 03fe 00       		.byte	0
+ 1050 03ff 00       		.byte	0
+ 1051 0400 00       		.byte	0
+ 1052 0401 00       		.byte	0
+ 1053 0402 00       		.byte	0
+ 1054 0403 00       		.byte	0
+ 1055 0404 00       		.byte	0
+ 1056 0405 00       		.byte	0
+ 1057 0406 00       		.byte	0
+ 1058 0407 00       		.byte	0
+ 1059 0408 00       		.byte	0
+ 1060 0409 00       		.byte	0
+ 1061 040a 00       		.byte	0
+ 1062 040b 00       		.byte	0
+ 1063 040c 00       		.byte	0
+ 1064 040d 00       		.byte	0
+ 1065 040e 00       		.byte	0
+ 1066 040f 00       		.byte	0
+ 1067 0410 00       		.byte	0
+ 1068 0411 00       		.byte	0
+ 1069 0412 00       		.byte	0
+ 1070 0413 00       		.byte	0
+ 1071 0414 00       		.byte	0
+ 1072 0415 00       		.byte	0
+ 1073 0416 00       		.byte	0
+ 1074 0417 00       		.byte	0
+ 1075 0418 00       		.byte	0
+ 1076 0419 00       		.byte	0
+ 1077 041a 00       		.byte	0
+ 1078 041b 00       		.byte	0
+ 1079 041c 00       		.byte	0
+ 1080 041d 00       		.byte	0
+ 1081 041e 00       		.byte	0
+ 1082 041f 00       		.byte	0
+ 1083 0420 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 20
+
+
+ 1084 0421 00       		.byte	0
+ 1085 0422 00       		.byte	0
+ 1086 0423 00       		.byte	0
+ 1087 0424 47       		.byte	71
+ 1088 0425 00       		.byte	0
+ 1089 0426 78       		.byte	120
+ 1090 0427 00       		.byte	0
+ 1091 0428 00       		.byte	0
+ 1092 0429 00       		.byte	0
+ 1093 042a 00       		.byte	0
+ 1094 042b 00       		.byte	0
+ 1095 042c 00       		.byte	0
+ 1096 042d 00       		.byte	0
+ 1097 042e 00       		.byte	0
+ 1098 042f 00       		.byte	0
+ 1099 0430 00       		.byte	0
+ 1100 0431 00       		.byte	0
+ 1101 0432 00       		.byte	0
+ 1102 0433 00       		.byte	0
+ 1103 0434 00       		.byte	0
+ 1104 0435 00       		.byte	0
+ 1105 0436 00       		.byte	0
+ 1106 0437 00       		.byte	0
+ 1107 0438 00       		.byte	0
+ 1108 0439 00       		.byte	0
+ 1109 043a 00       		.byte	0
+ 1110 043b 00       		.byte	0
+ 1111 043c 00       		.byte	0
+ 1112 043d 00       		.byte	0
+ 1113 043e 00       		.byte	0
+ 1114 043f 00       		.byte	0
+ 1115 0440 00       		.byte	0
+ 1116 0441 00       		.byte	0
+ 1117 0442 00       		.byte	0
+ 1118 0443 00       		.byte	0
+ 1119 0444 07       		.byte	7
+ 1120 0445 00       		.byte	0
+ 1121 0446 0F       		.byte	15
+ 1122 0447 00       		.byte	0
+ 1123 0448 00       		.byte	0
+ 1124 0449 00       		.byte	0
+ 1125 044a 00       		.byte	0
+ 1126 044b 00       		.byte	0
+ 1127 044c 00       		.byte	0
+ 1128 044d 00       		.byte	0
+ 1129 044e 00       		.byte	0
+ 1130 044f 00       		.byte	0
+ 1131 0450 01       		.byte	1
+ 1132 0451 00       		.byte	0
+ 1133 0452 00       		.byte	0
+ 1134 0453 00       		.byte	0
+ 1135 0454 00       		.byte	0
+ 1136 0455 00       		.byte	0
+ 1137 0456 00       		.byte	0
+ 1138 0457 00       		.byte	0
+ 1139 0458 00       		.byte	0
+ 1140 0459 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 21
+
+
+ 1141 045a 01       		.byte	1
+ 1142 045b 00       		.byte	0
+ 1143 045c 00       		.byte	0
+ 1144 045d 00       		.byte	0
+ 1145 045e 00       		.byte	0
+ 1146 045f 00       		.byte	0
+ 1147 0460 01       		.byte	1
+ 1148 0461 00       		.byte	0
+ 1149 0462 00       		.byte	0
+ 1150 0463 00       		.byte	0
+ 1151 0464 00       		.byte	0
+ 1152 0465 00       		.byte	0
+ 1153 0466 00       		.byte	0
+ 1154 0467 00       		.byte	0
+ 1155 0468 00       		.byte	0
+ 1156 0469 00       		.byte	0
+ 1157 046a 01       		.byte	1
+ 1158 046b 00       		.byte	0
+ 1159 046c 00       		.byte	0
+ 1160 046d 00       		.byte	0
+ 1161 046e 00       		.byte	0
+ 1162 046f 00       		.byte	0
+ 1163 0470 08       		.byte	8
+ 1164 0471 00       		.byte	0
+ 1165 0472 04       		.byte	4
+ 1166 0473 00       		.byte	0
+ 1167 0474 00       		.byte	0
+ 1168 0475 00       		.byte	0
+ 1169 0476 00       		.byte	0
+ 1170 0477 40       		.byte	64
+ 1171 0478 00       		.byte	0
+ 1172 0479 00       		.byte	0
+ 1173 047a 00       		.byte	0
+ 1174 047b 00       		.byte	0
+ 1175 047c 10       		.byte	16
+ 1176 047d 00       		.byte	0
+ 1177 047e 48       		.byte	72
+ 1178 047f 00       		.byte	0
+ 1179 0480 A2       		.byte	-94
+ 1180 0481 00       		.byte	0
+ 1181 0482 00       		.byte	0
+ 1182 0483 00       		.byte	0
+ 1183 0484 00       		.byte	0
+ 1184 0485 00       		.byte	0
+ 1185 0486 00       		.byte	0
+ 1186 0487 08       		.byte	8
+ 1187 0488 00       		.byte	0
+ 1188 0489 21       		.byte	33
+ 1189 048a 00       		.byte	0
+ 1190 048b 00       		.byte	0
+ 1191 048c 00       		.byte	0
+ 1192 048d 00       		.byte	0
+ 1193 048e 40       		.byte	64
+ 1194 048f 00       		.byte	0
+ 1195 0490 01       		.byte	1
+ 1196 0491 00       		.byte	0
+ 1197 0492 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 22
+
+
+ 1198 0493 00       		.byte	0
+ 1199 0494 00       		.byte	0
+ 1200 0495 20       		.byte	32
+ 1201 0496 40       		.byte	64
+ 1202 0497 00       		.byte	0
+ 1203 0498 00       		.byte	0
+ 1204 0499 05       		.byte	5
+ 1205 049a 04       		.byte	4
+ 1206 049b 00       		.byte	0
+ 1207 049c 10       		.byte	16
+ 1208 049d 00       		.byte	0
+ 1209 049e 00       		.byte	0
+ 1210 049f 8A       		.byte	-118
+ 1211 04a0 AA       		.byte	-86
+ 1212 04a1 00       		.byte	0
+ 1213 04a2 00       		.byte	0
+ 1214 04a3 00       		.byte	0
+ 1215 04a4 00       		.byte	0
+ 1216 04a5 00       		.byte	0
+ 1217 04a6 40       		.byte	64
+ 1218 04a7 08       		.byte	8
+ 1219 04a8 00       		.byte	0
+ 1220 04a9 00       		.byte	0
+ 1221 04aa 00       		.byte	0
+ 1222 04ab 00       		.byte	0
+ 1223 04ac 80       		.byte	-128
+ 1224 04ad 02       		.byte	2
+ 1225 04ae 14       		.byte	20
+ 1226 04af 00       		.byte	0
+ 1227 04b0 00       		.byte	0
+ 1228 04b1 00       		.byte	0
+ 1229 04b2 00       		.byte	0
+ 1230 04b3 00       		.byte	0
+ 1231 04b4 00       		.byte	0
+ 1232 04b5 20       		.byte	32
+ 1233 04b6 08       		.byte	8
+ 1234 04b7 00       		.byte	0
+ 1235 04b8 00       		.byte	0
+ 1236 04b9 00       		.byte	0
+ 1237 04ba 00       		.byte	0
+ 1238 04bb 00       		.byte	0
+ 1239 04bc 00       		.byte	0
+ 1240 04bd 00       		.byte	0
+ 1241 04be 00       		.byte	0
+ 1242 04bf 00       		.byte	0
+ 1243 04c0 00       		.byte	0
+ 1244 04c1 00       		.byte	0
+ 1245 04c2 00       		.byte	0
+ 1246 04c3 00       		.byte	0
+ 1247 04c4 00       		.byte	0
+ 1248 04c5 00       		.byte	0
+ 1249 04c6 00       		.byte	0
+ 1250 04c7 00       		.byte	0
+ 1251 04c8 00       		.byte	0
+ 1252 04c9 00       		.byte	0
+ 1253 04ca 00       		.byte	0
+ 1254 04cb 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 23
+
+
+ 1255 04cc 00       		.byte	0
+ 1256 04cd 00       		.byte	0
+ 1257 04ce 00       		.byte	0
+ 1258 04cf 00       		.byte	0
+ 1259 04d0 00       		.byte	0
+ 1260 04d1 00       		.byte	0
+ 1261 04d2 00       		.byte	0
+ 1262 04d3 08       		.byte	8
+ 1263 04d4 02       		.byte	2
+ 1264 04d5 00       		.byte	0
+ 1265 04d6 19       		.byte	25
+ 1266 04d7 00       		.byte	0
+ 1267 04d8 AE       		.byte	-82
+ 1268 04d9 00       		.byte	0
+ 1269 04da 80       		.byte	-128
+ 1270 04db 00       		.byte	0
+ 1271 04dc 00       		.byte	0
+ 1272 04dd 00       		.byte	0
+ 1273 04de 00       		.byte	0
+ 1274 04df 00       		.byte	0
+ 1275 04e0 00       		.byte	0
+ 1276 04e1 00       		.byte	0
+ 1277 04e2 00       		.byte	0
+ 1278 04e3 00       		.byte	0
+ 1279 04e4 00       		.byte	0
+ 1280 04e5 00       		.byte	0
+ 1281 04e6 00       		.byte	0
+ 1282 04e7 00       		.byte	0
+ 1283 04e8 80       		.byte	-128
+ 1284 04e9 04       		.byte	4
+ 1285 04ea 00       		.byte	0
+ 1286 04eb 00       		.byte	0
+ 1287 04ec 00       		.byte	0
+ 1288 04ed 00       		.byte	0
+ 1289 04ee 00       		.byte	0
+ 1290 04ef 00       		.byte	0
+ 1291 04f0 00       		.byte	0
+ 1292 04f1 00       		.byte	0
+ 1293 04f2 01       		.byte	1
+ 1294 04f3 00       		.byte	0
+ 1295 04f4 00       		.byte	0
+ 1296 04f5 00       		.byte	0
+ 1297 04f6 00       		.byte	0
+ 1298 04f7 00       		.byte	0
+ 1299 04f8 02       		.byte	2
+ 1300 04f9 00       		.byte	0
+ 1301 04fa 00       		.byte	0
+ 1302 04fb 08       		.byte	8
+ 1303 04fc 00       		.byte	0
+ 1304 04fd 00       		.byte	0
+ 1305 04fe 40       		.byte	64
+ 1306 04ff 00       		.byte	0
+ 1307 0500 00       		.byte	0
+ 1308 0501 04       		.byte	4
+ 1309 0502 14       		.byte	20
+ 1310 0503 00       		.byte	0
+ 1311 0504 01       		.byte	1
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 24
+
+
+ 1312 0505 00       		.byte	0
+ 1313 0506 80       		.byte	-128
+ 1314 0507 00       		.byte	0
+ 1315 0508 80       		.byte	-128
+ 1316 0509 04       		.byte	4
+ 1317 050a 10       		.byte	16
+ 1318 050b 48       		.byte	72
+ 1319 050c 00       		.byte	0
+ 1320 050d 20       		.byte	32
+ 1321 050e 00       		.byte	0
+ 1322 050f 00       		.byte	0
+ 1323 0510 40       		.byte	64
+ 1324 0511 01       		.byte	1
+ 1325 0512 04       		.byte	4
+ 1326 0513 8E       		.byte	-114
+ 1327 0514 A8       		.byte	-88
+ 1328 0515 00       		.byte	0
+ 1329 0516 00       		.byte	0
+ 1330 0517 00       		.byte	0
+ 1331 0518 00       		.byte	0
+ 1332 0519 00       		.byte	0
+ 1333 051a 80       		.byte	-128
+ 1334 051b 20       		.byte	32
+ 1335 051c 80       		.byte	-128
+ 1336 051d 00       		.byte	0
+ 1337 051e 00       		.byte	0
+ 1338 051f 00       		.byte	0
+ 1339 0520 00       		.byte	0
+ 1340 0521 00       		.byte	0
+ 1341 0522 00       		.byte	0
+ 1342 0523 00       		.byte	0
+ 1343 0524 00       		.byte	0
+ 1344 0525 00       		.byte	0
+ 1345 0526 02       		.byte	2
+ 1346 0527 00       		.byte	0
+ 1347 0528 00       		.byte	0
+ 1348 0529 00       		.byte	0
+ 1349 052a 00       		.byte	0
+ 1350 052b 00       		.byte	0
+ 1351 052c 00       		.byte	0
+ 1352 052d 00       		.byte	0
+ 1353 052e 00       		.byte	0
+ 1354 052f 00       		.byte	0
+ 1355 0530 16       		.byte	22
+ 1356 0531 00       		.byte	0
+ 1357 0532 50       		.byte	80
+ 1358 0533 00       		.byte	0
+ 1359 0534 2D       		.byte	45
+ 1360 0535 00       		.byte	0
+ 1361 0536 00       		.byte	0
+ 1362 0537 00       		.byte	0
+ 1363 0538 00       		.byte	0
+ 1364 0539 00       		.byte	0
+ 1365 053a F3       		.byte	-13
+ 1366 053b 00       		.byte	0
+ 1367 053c 5F       		.byte	95
+ 1368 053d 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 25
+
+
+ 1369 053e F0       		.byte	-16
+ 1370 053f 00       		.byte	0
+ 1371 0540 00       		.byte	0
+ 1372 0541 00       		.byte	0
+ 1373 0542 00       		.byte	0
+ 1374 0543 00       		.byte	0
+ 1375 0544 00       		.byte	0
+ 1376 0545 00       		.byte	0
+ 1377 0546 00       		.byte	0
+ 1378 0547 00       		.byte	0
+ 1379 0548 F4       		.byte	-12
+ 1380 0549 00       		.byte	0
+ 1381 054a 00       		.byte	0
+ 1382 054b 00       		.byte	0
+ 1383 054c 00       		.byte	0
+ 1384 054d 00       		.byte	0
+ 1385 054e 0A       		.byte	10
+ 1386 054f 00       		.byte	0
+ 1387 0550 00       		.byte	0
+ 1388 0551 00       		.byte	0
+ 1389 0552 00       		.byte	0
+ 1390 0553 00       		.byte	0
+ 1391 0554 00       		.byte	0
+ 1392 0555 00       		.byte	0
+ 1393 0556 40       		.byte	64
+ 1394 0557 00       		.byte	0
+ 1395 0558 00       		.byte	0
+ 1396 0559 00       		.byte	0
+ 1397 055a 00       		.byte	0
+ 1398 055b 00       		.byte	0
+ 1399 055c 00       		.byte	0
+ 1400 055d 00       		.byte	0
+ 1401 055e 10       		.byte	16
+ 1402 055f 00       		.byte	0
+ 1403 0560 00       		.byte	0
+ 1404 0561 00       		.byte	0
+ 1405 0562 00       		.byte	0
+ 1406 0563 00       		.byte	0
+ 1407 0564 00       		.byte	0
+ 1408 0565 00       		.byte	0
+ 1409 0566 00       		.byte	0
+ 1410 0567 00       		.byte	0
+ 1411 0568 00       		.byte	0
+ 1412 0569 00       		.byte	0
+ 1413 056a 00       		.byte	0
+ 1414 056b 00       		.byte	0
+ 1415 056c 00       		.byte	0
+ 1416 056d 00       		.byte	0
+ 1417 056e 00       		.byte	0
+ 1418 056f 00       		.byte	0
+ 1419 0570 00       		.byte	0
+ 1420 0571 00       		.byte	0
+ 1421 0572 00       		.byte	0
+ 1422 0573 00       		.byte	0
+ 1423 0574 00       		.byte	0
+ 1424 0575 00       		.byte	0
+ 1425 0576 01       		.byte	1
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 26
+
+
+ 1426 0577 48       		.byte	72
+ 1427 0578 00       		.byte	0
+ 1428 0579 00       		.byte	0
+ 1429 057a 00       		.byte	0
+ 1430 057b 00       		.byte	0
+ 1431 057c 10       		.byte	16
+ 1432 057d 00       		.byte	0
+ 1433 057e 4A       		.byte	74
+ 1434 057f 00       		.byte	0
+ 1435 0580 00       		.byte	0
+ 1436 0581 00       		.byte	0
+ 1437 0582 00       		.byte	0
+ 1438 0583 00       		.byte	0
+ 1439 0584 00       		.byte	0
+ 1440 0585 00       		.byte	0
+ 1441 0586 00       		.byte	0
+ 1442 0587 15       		.byte	21
+ 1443 0588 00       		.byte	0
+ 1444 0589 00       		.byte	0
+ 1445 058a 00       		.byte	0
+ 1446 058b 00       		.byte	0
+ 1447 058c 00       		.byte	0
+ 1448 058d 28       		.byte	40
+ 1449 058e 40       		.byte	64
+ 1450 058f 00       		.byte	0
+ 1451 0590 00       		.byte	0
+ 1452 0591 00       		.byte	0
+ 1453 0592 00       		.byte	0
+ 1454 0593 00       		.byte	0
+ 1455 0594 00       		.byte	0
+ 1456 0595 05       		.byte	5
+ 1457 0596 0C       		.byte	12
+ 1458 0597 48       		.byte	72
+ 1459 0598 00       		.byte	0
+ 1460 0599 00       		.byte	0
+ 1461 059a 00       		.byte	0
+ 1462 059b 00       		.byte	0
+ 1463 059c 10       		.byte	16
+ 1464 059d 00       		.byte	0
+ 1465 059e 40       		.byte	64
+ 1466 059f 80       		.byte	-128
+ 1467 05a0 00       		.byte	0
+ 1468 05a1 00       		.byte	0
+ 1469 05a2 00       		.byte	0
+ 1470 05a3 00       		.byte	0
+ 1471 05a4 00       		.byte	0
+ 1472 05a5 80       		.byte	-128
+ 1473 05a6 00       		.byte	0
+ 1474 05a7 09       		.byte	9
+ 1475 05a8 00       		.byte	0
+ 1476 05a9 00       		.byte	0
+ 1477 05aa 00       		.byte	0
+ 1478 05ab 00       		.byte	0
+ 1479 05ac 00       		.byte	0
+ 1480 05ad 02       		.byte	2
+ 1481 05ae 94       		.byte	-108
+ 1482 05af 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 27
+
+
+ 1483 05b0 00       		.byte	0
+ 1484 05b1 00       		.byte	0
+ 1485 05b2 00       		.byte	0
+ 1486 05b3 00       		.byte	0
+ 1487 05b4 00       		.byte	0
+ 1488 05b5 21       		.byte	33
+ 1489 05b6 00       		.byte	0
+ 1490 05b7 08       		.byte	8
+ 1491 05b8 00       		.byte	0
+ 1492 05b9 00       		.byte	0
+ 1493 05ba 00       		.byte	0
+ 1494 05bb 00       		.byte	0
+ 1495 05bc 02       		.byte	2
+ 1496 05bd 08       		.byte	8
+ 1497 05be 08       		.byte	8
+ 1498 05bf 20       		.byte	32
+ 1499 05c0 00       		.byte	0
+ 1500 05c1 00       		.byte	0
+ 1501 05c2 00       		.byte	0
+ 1502 05c3 00       		.byte	0
+ 1503 05c4 00       		.byte	0
+ 1504 05c5 00       		.byte	0
+ 1505 05c6 90       		.byte	-112
+ 1506 05c7 09       		.byte	9
+ 1507 05c8 00       		.byte	0
+ 1508 05c9 09       		.byte	9
+ 1509 05ca 00       		.byte	0
+ 1510 05cb A0       		.byte	-96
+ 1511 05cc 00       		.byte	0
+ 1512 05cd 00       		.byte	0
+ 1513 05ce 00       		.byte	0
+ 1514 05cf 00       		.byte	0
+ 1515 05d0 00       		.byte	0
+ 1516 05d1 40       		.byte	64
+ 1517 05d2 02       		.byte	2
+ 1518 05d3 00       		.byte	0
+ 1519 05d4 00       		.byte	0
+ 1520 05d5 02       		.byte	2
+ 1521 05d6 00       		.byte	0
+ 1522 05d7 00       		.byte	0
+ 1523 05d8 00       		.byte	0
+ 1524 05d9 00       		.byte	0
+ 1525 05da 00       		.byte	0
+ 1526 05db 00       		.byte	0
+ 1527 05dc 54       		.byte	84
+ 1528 05dd 00       		.byte	0
+ 1529 05de 16       		.byte	22
+ 1530 05df 97       		.byte	-105
+ 1531 05e0 00       		.byte	0
+ 1532 05e1 00       		.byte	0
+ 1533 05e2 00       		.byte	0
+ 1534 05e3 00       		.byte	0
+ 1535 05e4 40       		.byte	64
+ 1536 05e5 80       		.byte	-128
+ 1537 05e6 01       		.byte	1
+ 1538 05e7 00       		.byte	0
+ 1539 05e8 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 28
+
+
+ 1540 05e9 00       		.byte	0
+ 1541 05ea 00       		.byte	0
+ 1542 05eb 00       		.byte	0
+ 1543 05ec 00       		.byte	0
+ 1544 05ed 00       		.byte	0
+ 1545 05ee 00       		.byte	0
+ 1546 05ef 00       		.byte	0
+ 1547 05f0 00       		.byte	0
+ 1548 05f1 29       		.byte	41
+ 1549 05f2 00       		.byte	0
+ 1550 05f3 80       		.byte	-128
+ 1551 05f4 00       		.byte	0
+ 1552 05f5 00       		.byte	0
+ 1553 05f6 00       		.byte	0
+ 1554 05f7 00       		.byte	0
+ 1555 05f8 00       		.byte	0
+ 1556 05f9 00       		.byte	0
+ 1557 05fa 00       		.byte	0
+ 1558 05fb 00       		.byte	0
+ 1559 05fc 40       		.byte	64
+ 1560 05fd 00       		.byte	0
+ 1561 05fe 04       		.byte	4
+ 1562 05ff 00       		.byte	0
+ 1563 0600 00       		.byte	0
+ 1564 0601 04       		.byte	4
+ 1565 0602 00       		.byte	0
+ 1566 0603 00       		.byte	0
+ 1567 0604 29       		.byte	41
+ 1568 0605 00       		.byte	0
+ 1569 0606 C0       		.byte	-64
+ 1570 0607 00       		.byte	0
+ 1571 0608 00       		.byte	0
+ 1572 0609 46       		.byte	70
+ 1573 060a 00       		.byte	0
+ 1574 060b 00       		.byte	0
+ 1575 060c 80       		.byte	-128
+ 1576 060d 20       		.byte	32
+ 1577 060e 05       		.byte	5
+ 1578 060f 49       		.byte	73
+ 1579 0610 02       		.byte	2
+ 1580 0611 00       		.byte	0
+ 1581 0612 00       		.byte	0
+ 1582 0613 04       		.byte	4
+ 1583 0614 A8       		.byte	-88
+ 1584 0615 05       		.byte	5
+ 1585 0616 00       		.byte	0
+ 1586 0617 11       		.byte	17
+ 1587 0618 00       		.byte	0
+ 1588 0619 00       		.byte	0
+ 1589 061a 00       		.byte	0
+ 1590 061b 00       		.byte	0
+ 1591 061c 52       		.byte	82
+ 1592 061d 00       		.byte	0
+ 1593 061e 04       		.byte	4
+ 1594 061f 00       		.byte	0
+ 1595 0620 02       		.byte	2
+ 1596 0621 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 29
+
+
+ 1597 0622 00       		.byte	0
+ 1598 0623 00       		.byte	0
+ 1599 0624 00       		.byte	0
+ 1600 0625 00       		.byte	0
+ 1601 0626 00       		.byte	0
+ 1602 0627 00       		.byte	0
+ 1603 0628 00       		.byte	0
+ 1604 0629 00       		.byte	0
+ 1605 062a 00       		.byte	0
+ 1606 062b 00       		.byte	0
+ 1607 062c 00       		.byte	0
+ 1608 062d 00       		.byte	0
+ 1609 062e 00       		.byte	0
+ 1610 062f 00       		.byte	0
+ 1611 0630 D0       		.byte	-48
+ 1612 0631 00       		.byte	0
+ 1613 0632 D0       		.byte	-48
+ 1614 0633 00       		.byte	0
+ 1615 0634 70       		.byte	112
+ 1616 0635 00       		.byte	0
+ 1617 0636 00       		.byte	0
+ 1618 0637 00       		.byte	0
+ 1619 0638 00       		.byte	0
+ 1620 0639 00       		.byte	0
+ 1621 063a D0       		.byte	-48
+ 1622 063b 00       		.byte	0
+ 1623 063c D0       		.byte	-48
+ 1624 063d 00       		.byte	0
+ 1625 063e F0       		.byte	-16
+ 1626 063f 00       		.byte	0
+ 1627 0640 E0       		.byte	-32
+ 1628 0641 00       		.byte	0
+ 1629 0642 30       		.byte	48
+ 1630 0643 00       		.byte	0
+ 1631 0644 00       		.byte	0
+ 1632 0645 00       		.byte	0
+ 1633 0646 0F       		.byte	15
+ 1634 0647 00       		.byte	0
+ 1635 0648 89       		.byte	-119
+ 1636 0649 00       		.byte	0
+ 1637 064a 00       		.byte	0
+ 1638 064b 00       		.byte	0
+ 1639 064c 00       		.byte	0
+ 1640 064d 00       		.byte	0
+ 1641 064e 00       		.byte	0
+ 1642 064f 00       		.byte	0
+ 1643 0650 00       		.byte	0
+ 1644 0651 00       		.byte	0
+ 1645 0652 00       		.byte	0
+ 1646 0653 00       		.byte	0
+ 1647 0654 00       		.byte	0
+ 1648 0655 00       		.byte	0
+ 1649 0656 00       		.byte	0
+ 1650 0657 00       		.byte	0
+ 1651 0658 00       		.byte	0
+ 1652 0659 00       		.byte	0
+ 1653 065a 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 30
+
+
+ 1654 065b 00       		.byte	0
+ 1655 065c 80       		.byte	-128
+ 1656 065d 00       		.byte	0
+ 1657 065e 00       		.byte	0
+ 1658 065f 00       		.byte	0
+ 1659 0660 00       		.byte	0
+ 1660 0661 00       		.byte	0
+ 1661 0662 00       		.byte	0
+ 1662 0663 00       		.byte	0
+ 1663 0664 00       		.byte	0
+ 1664 0665 00       		.byte	0
+ 1665 0666 00       		.byte	0
+ 1666 0667 00       		.byte	0
+ 1667 0668 00       		.byte	0
+ 1668 0669 00       		.byte	0
+ 1669 066a 00       		.byte	0
+ 1670 066b 00       		.byte	0
+ 1671 066c 00       		.byte	0
+ 1672 066d 00       		.byte	0
+ 1673 066e 00       		.byte	0
+ 1674 066f 00       		.byte	0
+ 1675 0670 00       		.byte	0
+ 1676 0671 00       		.byte	0
+ 1677 0672 00       		.byte	0
+ 1678 0673 00       		.byte	0
+ 1679 0674 28       		.byte	40
+ 1680 0675 00       		.byte	0
+ 1681 0676 00       		.byte	0
+ 1682 0677 40       		.byte	64
+ 1683 0678 08       		.byte	8
+ 1684 0679 00       		.byte	0
+ 1685 067a 88       		.byte	-120
+ 1686 067b 08       		.byte	8
+ 1687 067c 00       		.byte	0
+ 1688 067d 00       		.byte	0
+ 1689 067e 44       		.byte	68
+ 1690 067f 22       		.byte	34
+ 1691 0680 A8       		.byte	-88
+ 1692 0681 00       		.byte	0
+ 1693 0682 00       		.byte	0
+ 1694 0683 00       		.byte	0
+ 1695 0684 00       		.byte	0
+ 1696 0685 00       		.byte	0
+ 1697 0686 05       		.byte	5
+ 1698 0687 09       		.byte	9
+ 1699 0688 00       		.byte	0
+ 1700 0689 18       		.byte	24
+ 1701 068a 00       		.byte	0
+ 1702 068b 00       		.byte	0
+ 1703 068c 00       		.byte	0
+ 1704 068d 00       		.byte	0
+ 1705 068e 04       		.byte	4
+ 1706 068f 00       		.byte	0
+ 1707 0690 00       		.byte	0
+ 1708 0691 00       		.byte	0
+ 1709 0692 00       		.byte	0
+ 1710 0693 04       		.byte	4
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 31
+
+
+ 1711 0694 00       		.byte	0
+ 1712 0695 00       		.byte	0
+ 1713 0696 42       		.byte	66
+ 1714 0697 00       		.byte	0
+ 1715 0698 00       		.byte	0
+ 1716 0699 08       		.byte	8
+ 1717 069a 00       		.byte	0
+ 1718 069b 00       		.byte	0
+ 1719 069c 04       		.byte	4
+ 1720 069d 21       		.byte	33
+ 1721 069e 00       		.byte	0
+ 1722 069f 80       		.byte	-128
+ 1723 06a0 00       		.byte	0
+ 1724 06a1 00       		.byte	0
+ 1725 06a2 00       		.byte	0
+ 1726 06a3 00       		.byte	0
+ 1727 06a4 00       		.byte	0
+ 1728 06a5 02       		.byte	2
+ 1729 06a6 02       		.byte	2
+ 1730 06a7 08       		.byte	8
+ 1731 06a8 04       		.byte	4
+ 1732 06a9 00       		.byte	0
+ 1733 06aa 00       		.byte	0
+ 1734 06ab 00       		.byte	0
+ 1735 06ac 00       		.byte	0
+ 1736 06ad 0A       		.byte	10
+ 1737 06ae 00       		.byte	0
+ 1738 06af 00       		.byte	0
+ 1739 06b0 00       		.byte	0
+ 1740 06b1 00       		.byte	0
+ 1741 06b2 00       		.byte	0
+ 1742 06b3 00       		.byte	0
+ 1743 06b4 00       		.byte	0
+ 1744 06b5 00       		.byte	0
+ 1745 06b6 00       		.byte	0
+ 1746 06b7 00       		.byte	0
+ 1747 06b8 00       		.byte	0
+ 1748 06b9 00       		.byte	0
+ 1749 06ba 00       		.byte	0
+ 1750 06bb 00       		.byte	0
+ 1751 06bc 00       		.byte	0
+ 1752 06bd 00       		.byte	0
+ 1753 06be 00       		.byte	0
+ 1754 06bf 00       		.byte	0
+ 1755 06c0 00       		.byte	0
+ 1756 06c1 00       		.byte	0
+ 1757 06c2 00       		.byte	0
+ 1758 06c3 00       		.byte	0
+ 1759 06c4 00       		.byte	0
+ 1760 06c5 00       		.byte	0
+ 1761 06c6 00       		.byte	0
+ 1762 06c7 00       		.byte	0
+ 1763 06c8 44       		.byte	68
+ 1764 06c9 10       		.byte	16
+ 1765 06ca 00       		.byte	0
+ 1766 06cb 00       		.byte	0
+ 1767 06cc 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 32
+
+
+ 1768 06cd 01       		.byte	1
+ 1769 06ce 00       		.byte	0
+ 1770 06cf 00       		.byte	0
+ 1771 06d0 2E       		.byte	46
+ 1772 06d1 00       		.byte	0
+ 1773 06d2 00       		.byte	0
+ 1774 06d3 00       		.byte	0
+ 1775 06d4 11       		.byte	17
+ 1776 06d5 00       		.byte	0
+ 1777 06d6 00       		.byte	0
+ 1778 06d7 84       		.byte	-124
+ 1779 06d8 00       		.byte	0
+ 1780 06d9 00       		.byte	0
+ 1781 06da 00       		.byte	0
+ 1782 06db 00       		.byte	0
+ 1783 06dc 00       		.byte	0
+ 1784 06dd 00       		.byte	0
+ 1785 06de 00       		.byte	0
+ 1786 06df 00       		.byte	0
+ 1787 06e0 00       		.byte	0
+ 1788 06e1 00       		.byte	0
+ 1789 06e2 00       		.byte	0
+ 1790 06e3 00       		.byte	0
+ 1791 06e4 00       		.byte	0
+ 1792 06e5 00       		.byte	0
+ 1793 06e6 00       		.byte	0
+ 1794 06e7 00       		.byte	0
+ 1795 06e8 01       		.byte	1
+ 1796 06e9 00       		.byte	0
+ 1797 06ea 40       		.byte	64
+ 1798 06eb 00       		.byte	0
+ 1799 06ec 00       		.byte	0
+ 1800 06ed 00       		.byte	0
+ 1801 06ee 00       		.byte	0
+ 1802 06ef 00       		.byte	0
+ 1803 06f0 00       		.byte	0
+ 1804 06f1 00       		.byte	0
+ 1805 06f2 00       		.byte	0
+ 1806 06f3 00       		.byte	0
+ 1807 06f4 00       		.byte	0
+ 1808 06f5 00       		.byte	0
+ 1809 06f6 04       		.byte	4
+ 1810 06f7 40       		.byte	64
+ 1811 06f8 00       		.byte	0
+ 1812 06f9 00       		.byte	0
+ 1813 06fa 00       		.byte	0
+ 1814 06fb 00       		.byte	0
+ 1815 06fc 00       		.byte	0
+ 1816 06fd 00       		.byte	0
+ 1817 06fe 00       		.byte	0
+ 1818 06ff 00       		.byte	0
+ 1819 0700 00       		.byte	0
+ 1820 0701 04       		.byte	4
+ 1821 0702 00       		.byte	0
+ 1822 0703 08       		.byte	8
+ 1823 0704 01       		.byte	1
+ 1824 0705 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 33
+
+
+ 1825 0706 00       		.byte	0
+ 1826 0707 00       		.byte	0
+ 1827 0708 00       		.byte	0
+ 1828 0709 44       		.byte	68
+ 1829 070a 00       		.byte	0
+ 1830 070b 00       		.byte	0
+ 1831 070c A0       		.byte	-96
+ 1832 070d 20       		.byte	32
+ 1833 070e 00       		.byte	0
+ 1834 070f 48       		.byte	72
+ 1835 0710 00       		.byte	0
+ 1836 0711 00       		.byte	0
+ 1837 0712 00       		.byte	0
+ 1838 0713 84       		.byte	-124
+ 1839 0714 00       		.byte	0
+ 1840 0715 05       		.byte	5
+ 1841 0716 00       		.byte	0
+ 1842 0717 10       		.byte	16
+ 1843 0718 00       		.byte	0
+ 1844 0719 00       		.byte	0
+ 1845 071a 00       		.byte	0
+ 1846 071b 00       		.byte	0
+ 1847 071c 00       		.byte	0
+ 1848 071d 00       		.byte	0
+ 1849 071e 00       		.byte	0
+ 1850 071f 00       		.byte	0
+ 1851 0720 00       		.byte	0
+ 1852 0721 00       		.byte	0
+ 1853 0722 02       		.byte	2
+ 1854 0723 00       		.byte	0
+ 1855 0724 00       		.byte	0
+ 1856 0725 00       		.byte	0
+ 1857 0726 00       		.byte	0
+ 1858 0727 00       		.byte	0
+ 1859 0728 00       		.byte	0
+ 1860 0729 00       		.byte	0
+ 1861 072a 00       		.byte	0
+ 1862 072b 00       		.byte	0
+ 1863 072c 00       		.byte	0
+ 1864 072d 00       		.byte	0
+ 1865 072e 00       		.byte	0
+ 1866 072f 00       		.byte	0
+ 1867 0730 70       		.byte	112
+ 1868 0731 00       		.byte	0
+ 1869 0732 FE       		.byte	-2
+ 1870 0733 00       		.byte	0
+ 1871 0734 FE       		.byte	-2
+ 1872 0735 00       		.byte	0
+ 1873 0736 00       		.byte	0
+ 1874 0737 00       		.byte	0
+ 1875 0738 00       		.byte	0
+ 1876 0739 00       		.byte	0
+ 1877 073a 82       		.byte	-126
+ 1878 073b 00       		.byte	0
+ 1879 073c C0       		.byte	-64
+ 1880 073d 00       		.byte	0
+ 1881 073e C2       		.byte	-62
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 34
+
+
+ 1882 073f 00       		.byte	0
+ 1883 0740 00       		.byte	0
+ 1884 0741 00       		.byte	0
+ 1885 0742 00       		.byte	0
+ 1886 0743 00       		.byte	0
+ 1887 0744 00       		.byte	0
+ 1888 0745 00       		.byte	0
+ 1889 0746 8E       		.byte	-114
+ 1890 0747 00       		.byte	0
+ 1891 0748 FE       		.byte	-2
+ 1892 0749 00       		.byte	0
+ 1893 074a 00       		.byte	0
+ 1894 074b 00       		.byte	0
+ 1895 074c 00       		.byte	0
+ 1896 074d 00       		.byte	0
+ 1897 074e 00       		.byte	0
+ 1898 074f 00       		.byte	0
+ 1899 0750 00       		.byte	0
+ 1900 0751 00       		.byte	0
+ 1901 0752 00       		.byte	0
+ 1902 0753 00       		.byte	0
+ 1903 0754 00       		.byte	0
+ 1904 0755 00       		.byte	0
+ 1905 0756 00       		.byte	0
+ 1906 0757 00       		.byte	0
+ 1907 0758 00       		.byte	0
+ 1908 0759 00       		.byte	0
+ 1909 075a 00       		.byte	0
+ 1910 075b 00       		.byte	0
+ 1911 075c 00       		.byte	0
+ 1912 075d 00       		.byte	0
+ 1913 075e 20       		.byte	32
+ 1914 075f 00       		.byte	0
+ 1915 0760 00       		.byte	0
+ 1916 0761 00       		.byte	0
+ 1917 0762 00       		.byte	0
+ 1918 0763 00       		.byte	0
+ 1919 0764 00       		.byte	0
+ 1920 0765 00       		.byte	0
+ 1921 0766 00       		.byte	0
+ 1922 0767 00       		.byte	0
+ 1923 0768 00       		.byte	0
+ 1924 0769 00       		.byte	0
+ 1925 076a 00       		.byte	0
+ 1926 076b 00       		.byte	0
+ 1927 076c 00       		.byte	0
+ 1928 076d 00       		.byte	0
+ 1929 076e 00       		.byte	0
+ 1930 076f 00       		.byte	0
+ 1931 0770 00       		.byte	0
+ 1932 0771 00       		.byte	0
+ 1933 0772 00       		.byte	0
+ 1934 0773 00       		.byte	0
+ 1935 0774 00       		.byte	0
+ 1936 0775 00       		.byte	0
+ 1937 0776 00       		.byte	0
+ 1938 0777 08       		.byte	8
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 35
+
+
+ 1939 0778 20       		.byte	32
+ 1940 0779 80       		.byte	-128
+ 1941 077a 00       		.byte	0
+ 1942 077b 00       		.byte	0
+ 1943 077c 00       		.byte	0
+ 1944 077d 00       		.byte	0
+ 1945 077e 00       		.byte	0
+ 1946 077f 20       		.byte	32
+ 1947 0780 01       		.byte	1
+ 1948 0781 20       		.byte	32
+ 1949 0782 04       		.byte	4
+ 1950 0783 00       		.byte	0
+ 1951 0784 00       		.byte	0
+ 1952 0785 00       		.byte	0
+ 1953 0786 00       		.byte	0
+ 1954 0787 40       		.byte	64
+ 1955 0788 00       		.byte	0
+ 1956 0789 00       		.byte	0
+ 1957 078a 40       		.byte	64
+ 1958 078b 0C       		.byte	12
+ 1959 078c 00       		.byte	0
+ 1960 078d 40       		.byte	64
+ 1961 078e 00       		.byte	0
+ 1962 078f 00       		.byte	0
+ 1963 0790 00       		.byte	0
+ 1964 0791 88       		.byte	-120
+ 1965 0792 01       		.byte	1
+ 1966 0793 00       		.byte	0
+ 1967 0794 00       		.byte	0
+ 1968 0795 00       		.byte	0
+ 1969 0796 00       		.byte	0
+ 1970 0797 01       		.byte	1
+ 1971 0798 20       		.byte	32
+ 1972 0799 00       		.byte	0
+ 1973 079a 00       		.byte	0
+ 1974 079b 00       		.byte	0
+ 1975 079c 00       		.byte	0
+ 1976 079d 00       		.byte	0
+ 1977 079e 00       		.byte	0
+ 1978 079f 00       		.byte	0
+ 1979 07a0 20       		.byte	32
+ 1980 07a1 80       		.byte	-128
+ 1981 07a2 00       		.byte	0
+ 1982 07a3 00       		.byte	0
+ 1983 07a4 00       		.byte	0
+ 1984 07a5 00       		.byte	0
+ 1985 07a6 00       		.byte	0
+ 1986 07a7 09       		.byte	9
+ 1987 07a8 00       		.byte	0
+ 1988 07a9 04       		.byte	4
+ 1989 07aa 04       		.byte	4
+ 1990 07ab 00       		.byte	0
+ 1991 07ac 00       		.byte	0
+ 1992 07ad 0A       		.byte	10
+ 1993 07ae 00       		.byte	0
+ 1994 07af 00       		.byte	0
+ 1995 07b0 01       		.byte	1
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 36
+
+
+ 1996 07b1 00       		.byte	0
+ 1997 07b2 00       		.byte	0
+ 1998 07b3 08       		.byte	8
+ 1999 07b4 00       		.byte	0
+ 2000 07b5 00       		.byte	0
+ 2001 07b6 00       		.byte	0
+ 2002 07b7 00       		.byte	0
+ 2003 07b8 20       		.byte	32
+ 2004 07b9 20       		.byte	32
+ 2005 07ba 40       		.byte	64
+ 2006 07bb 00       		.byte	0
+ 2007 07bc 00       		.byte	0
+ 2008 07bd 00       		.byte	0
+ 2009 07be 00       		.byte	0
+ 2010 07bf 00       		.byte	0
+ 2011 07c0 00       		.byte	0
+ 2012 07c1 20       		.byte	32
+ 2013 07c2 00       		.byte	0
+ 2014 07c3 84       		.byte	-124
+ 2015 07c4 00       		.byte	0
+ 2016 07c5 00       		.byte	0
+ 2017 07c6 00       		.byte	0
+ 2018 07c7 00       		.byte	0
+ 2019 07c8 04       		.byte	4
+ 2020 07c9 10       		.byte	16
+ 2021 07ca 40       		.byte	64
+ 2022 07cb 00       		.byte	0
+ 2023 07cc 00       		.byte	0
+ 2024 07cd 00       		.byte	0
+ 2025 07ce 80       		.byte	-128
+ 2026 07cf 00       		.byte	0
+ 2027 07d0 00       		.byte	0
+ 2028 07d1 38       		.byte	56
+ 2029 07d2 02       		.byte	2
+ 2030 07d3 00       		.byte	0
+ 2031 07d4 01       		.byte	1
+ 2032 07d5 00       		.byte	0
+ 2033 07d6 40       		.byte	64
+ 2034 07d7 00       		.byte	0
+ 2035 07d8 00       		.byte	0
+ 2036 07d9 00       		.byte	0
+ 2037 07da 00       		.byte	0
+ 2038 07db 00       		.byte	0
+ 2039 07dc 00       		.byte	0
+ 2040 07dd 00       		.byte	0
+ 2041 07de 00       		.byte	0
+ 2042 07df 00       		.byte	0
+ 2043 07e0 00       		.byte	0
+ 2044 07e1 00       		.byte	0
+ 2045 07e2 00       		.byte	0
+ 2046 07e3 00       		.byte	0
+ 2047 07e4 00       		.byte	0
+ 2048 07e5 00       		.byte	0
+ 2049 07e6 00       		.byte	0
+ 2050 07e7 00       		.byte	0
+ 2051 07e8 80       		.byte	-128
+ 2052 07e9 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 37
+
+
+ 2053 07ea 00       		.byte	0
+ 2054 07eb 00       		.byte	0
+ 2055 07ec 00       		.byte	0
+ 2056 07ed 00       		.byte	0
+ 2057 07ee 00       		.byte	0
+ 2058 07ef 00       		.byte	0
+ 2059 07f0 00       		.byte	0
+ 2060 07f1 04       		.byte	4
+ 2061 07f2 00       		.byte	0
+ 2062 07f3 00       		.byte	0
+ 2063 07f4 04       		.byte	4
+ 2064 07f5 00       		.byte	0
+ 2065 07f6 41       		.byte	65
+ 2066 07f7 00       		.byte	0
+ 2067 07f8 00       		.byte	0
+ 2068 07f9 00       		.byte	0
+ 2069 07fa 00       		.byte	0
+ 2070 07fb 01       		.byte	1
+ 2071 07fc 00       		.byte	0
+ 2072 07fd 00       		.byte	0
+ 2073 07fe 00       		.byte	0
+ 2074 07ff 00       		.byte	0
+ 2075 0800 00       		.byte	0
+ 2076 0801 00       		.byte	0
+ 2077 0802 00       		.byte	0
+ 2078 0803 00       		.byte	0
+ 2079 0804 00       		.byte	0
+ 2080 0805 00       		.byte	0
+ 2081 0806 00       		.byte	0
+ 2082 0807 00       		.byte	0
+ 2083 0808 00       		.byte	0
+ 2084 0809 00       		.byte	0
+ 2085 080a 00       		.byte	0
+ 2086 080b 00       		.byte	0
+ 2087 080c 00       		.byte	0
+ 2088 080d 00       		.byte	0
+ 2089 080e 00       		.byte	0
+ 2090 080f 00       		.byte	0
+ 2091 0810 00       		.byte	0
+ 2092 0811 10       		.byte	16
+ 2093 0812 00       		.byte	0
+ 2094 0813 00       		.byte	0
+ 2095 0814 00       		.byte	0
+ 2096 0815 00       		.byte	0
+ 2097 0816 00       		.byte	0
+ 2098 0817 00       		.byte	0
+ 2099 0818 00       		.byte	0
+ 2100 0819 00       		.byte	0
+ 2101 081a 00       		.byte	0
+ 2102 081b 00       		.byte	0
+ 2103 081c 00       		.byte	0
+ 2104 081d 00       		.byte	0
+ 2105 081e 00       		.byte	0
+ 2106 081f 00       		.byte	0
+ 2107 0820 00       		.byte	0
+ 2108 0821 00       		.byte	0
+ 2109 0822 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 38
+
+
+ 2110 0823 00       		.byte	0
+ 2111 0824 00       		.byte	0
+ 2112 0825 00       		.byte	0
+ 2113 0826 00       		.byte	0
+ 2114 0827 00       		.byte	0
+ 2115 0828 00       		.byte	0
+ 2116 0829 00       		.byte	0
+ 2117 082a 00       		.byte	0
+ 2118 082b 00       		.byte	0
+ 2119 082c 00       		.byte	0
+ 2120 082d 00       		.byte	0
+ 2121 082e 00       		.byte	0
+ 2122 082f 00       		.byte	0
+ 2123 0830 40       		.byte	64
+ 2124 0831 00       		.byte	0
+ 2125 0832 23       		.byte	35
+ 2126 0833 00       		.byte	0
+ 2127 0834 83       		.byte	-125
+ 2128 0835 00       		.byte	0
+ 2129 0836 00       		.byte	0
+ 2130 0837 00       		.byte	0
+ 2131 0838 00       		.byte	0
+ 2132 0839 00       		.byte	0
+ 2133 083a 02       		.byte	2
+ 2134 083b 00       		.byte	0
+ 2135 083c CC       		.byte	-52
+ 2136 083d 00       		.byte	0
+ 2137 083e C2       		.byte	-62
+ 2138 083f 00       		.byte	0
+ 2139 0840 0A       		.byte	10
+ 2140 0841 00       		.byte	0
+ 2141 0842 04       		.byte	4
+ 2142 0843 00       		.byte	0
+ 2143 0844 00       		.byte	0
+ 2144 0845 00       		.byte	0
+ 2145 0846 1E       		.byte	30
+ 2146 0847 00       		.byte	0
+ 2147 0848 13       		.byte	19
+ 2148 0849 00       		.byte	0
+ 2149 084a 00       		.byte	0
+ 2150 084b 00       		.byte	0
+ 2151 084c 00       		.byte	0
+ 2152 084d 00       		.byte	0
+ 2153 084e 08       		.byte	8
+ 2154 084f 00       		.byte	0
+ 2155 0850 00       		.byte	0
+ 2156 0851 00       		.byte	0
+ 2157 0852 00       		.byte	0
+ 2158 0853 00       		.byte	0
+ 2159 0854 00       		.byte	0
+ 2160 0855 00       		.byte	0
+ 2161 0856 20       		.byte	32
+ 2162 0857 00       		.byte	0
+ 2163 0858 00       		.byte	0
+ 2164 0859 00       		.byte	0
+ 2165 085a 00       		.byte	0
+ 2166 085b 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 39
+
+
+ 2167 085c 00       		.byte	0
+ 2168 085d 00       		.byte	0
+ 2169 085e 00       		.byte	0
+ 2170 085f 00       		.byte	0
+ 2171 0860 00       		.byte	0
+ 2172 0861 00       		.byte	0
+ 2173 0862 00       		.byte	0
+ 2174 0863 00       		.byte	0
+ 2175 0864 00       		.byte	0
+ 2176 0865 00       		.byte	0
+ 2177 0866 00       		.byte	0
+ 2178 0867 00       		.byte	0
+ 2179 0868 00       		.byte	0
+ 2180 0869 00       		.byte	0
+ 2181 086a 00       		.byte	0
+ 2182 086b 00       		.byte	0
+ 2183 086c 00       		.byte	0
+ 2184 086d 00       		.byte	0
+ 2185 086e 00       		.byte	0
+ 2186 086f 00       		.byte	0
+ 2187 0870 00       		.byte	0
+ 2188 0871 10       		.byte	16
+ 2189 0872 00       		.byte	0
+ 2190 0873 00       		.byte	0
+ 2191 0874 00       		.byte	0
+ 2192 0875 00       		.byte	0
+ 2193 0876 00       		.byte	0
+ 2194 0877 00       		.byte	0
+ 2195 0878 00       		.byte	0
+ 2196 0879 00       		.byte	0
+ 2197 087a 00       		.byte	0
+ 2198 087b 00       		.byte	0
+ 2199 087c 00       		.byte	0
+ 2200 087d 00       		.byte	0
+ 2201 087e 00       		.byte	0
+ 2202 087f 00       		.byte	0
+ 2203 0880 00       		.byte	0
+ 2204 0881 00       		.byte	0
+ 2205 0882 00       		.byte	0
+ 2206 0883 00       		.byte	0
+ 2207 0884 00       		.byte	0
+ 2208 0885 00       		.byte	0
+ 2209 0886 00       		.byte	0
+ 2210 0887 00       		.byte	0
+ 2211 0888 00       		.byte	0
+ 2212 0889 00       		.byte	0
+ 2213 088a 00       		.byte	0
+ 2214 088b 00       		.byte	0
+ 2215 088c 00       		.byte	0
+ 2216 088d 00       		.byte	0
+ 2217 088e 00       		.byte	0
+ 2218 088f 00       		.byte	0
+ 2219 0890 00       		.byte	0
+ 2220 0891 00       		.byte	0
+ 2221 0892 00       		.byte	0
+ 2222 0893 00       		.byte	0
+ 2223 0894 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 40
+
+
+ 2224 0895 00       		.byte	0
+ 2225 0896 00       		.byte	0
+ 2226 0897 00       		.byte	0
+ 2227 0898 00       		.byte	0
+ 2228 0899 00       		.byte	0
+ 2229 089a 00       		.byte	0
+ 2230 089b 00       		.byte	0
+ 2231 089c 00       		.byte	0
+ 2232 089d 00       		.byte	0
+ 2233 089e 00       		.byte	0
+ 2234 089f 00       		.byte	0
+ 2235 08a0 00       		.byte	0
+ 2236 08a1 00       		.byte	0
+ 2237 08a2 00       		.byte	0
+ 2238 08a3 00       		.byte	0
+ 2239 08a4 00       		.byte	0
+ 2240 08a5 00       		.byte	0
+ 2241 08a6 00       		.byte	0
+ 2242 08a7 00       		.byte	0
+ 2243 08a8 00       		.byte	0
+ 2244 08a9 00       		.byte	0
+ 2245 08aa 00       		.byte	0
+ 2246 08ab 00       		.byte	0
+ 2247 08ac 00       		.byte	0
+ 2248 08ad 00       		.byte	0
+ 2249 08ae 00       		.byte	0
+ 2250 08af 00       		.byte	0
+ 2251 08b0 00       		.byte	0
+ 2252 08b1 00       		.byte	0
+ 2253 08b2 00       		.byte	0
+ 2254 08b3 00       		.byte	0
+ 2255 08b4 00       		.byte	0
+ 2256 08b5 00       		.byte	0
+ 2257 08b6 00       		.byte	0
+ 2258 08b7 00       		.byte	0
+ 2259 08b8 00       		.byte	0
+ 2260 08b9 00       		.byte	0
+ 2261 08ba 00       		.byte	0
+ 2262 08bb 00       		.byte	0
+ 2263 08bc 00       		.byte	0
+ 2264 08bd 00       		.byte	0
+ 2265 08be 00       		.byte	0
+ 2266 08bf 00       		.byte	0
+ 2267 08c0 00       		.byte	0
+ 2268 08c1 00       		.byte	0
+ 2269 08c2 00       		.byte	0
+ 2270 08c3 00       		.byte	0
+ 2271 08c4 00       		.byte	0
+ 2272 08c5 00       		.byte	0
+ 2273 08c6 00       		.byte	0
+ 2274 08c7 00       		.byte	0
+ 2275 08c8 00       		.byte	0
+ 2276 08c9 00       		.byte	0
+ 2277 08ca 00       		.byte	0
+ 2278 08cb 00       		.byte	0
+ 2279 08cc 00       		.byte	0
+ 2280 08cd 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 41
+
+
+ 2281 08ce 00       		.byte	0
+ 2282 08cf 00       		.byte	0
+ 2283 08d0 00       		.byte	0
+ 2284 08d1 00       		.byte	0
+ 2285 08d2 00       		.byte	0
+ 2286 08d3 00       		.byte	0
+ 2287 08d4 00       		.byte	0
+ 2288 08d5 00       		.byte	0
+ 2289 08d6 00       		.byte	0
+ 2290 08d7 00       		.byte	0
+ 2291 08d8 00       		.byte	0
+ 2292 08d9 00       		.byte	0
+ 2293 08da 00       		.byte	0
+ 2294 08db 00       		.byte	0
+ 2295 08dc 00       		.byte	0
+ 2296 08dd 00       		.byte	0
+ 2297 08de 00       		.byte	0
+ 2298 08df 00       		.byte	0
+ 2299 08e0 00       		.byte	0
+ 2300 08e1 00       		.byte	0
+ 2301 08e2 00       		.byte	0
+ 2302 08e3 00       		.byte	0
+ 2303 08e4 00       		.byte	0
+ 2304 08e5 00       		.byte	0
+ 2305 08e6 00       		.byte	0
+ 2306 08e7 00       		.byte	0
+ 2307 08e8 00       		.byte	0
+ 2308 08e9 00       		.byte	0
+ 2309 08ea 00       		.byte	0
+ 2310 08eb 00       		.byte	0
+ 2311 08ec 00       		.byte	0
+ 2312 08ed 00       		.byte	0
+ 2313 08ee 00       		.byte	0
+ 2314 08ef 00       		.byte	0
+ 2315 08f0 00       		.byte	0
+ 2316 08f1 00       		.byte	0
+ 2317 08f2 00       		.byte	0
+ 2318 08f3 10       		.byte	16
+ 2319 08f4 00       		.byte	0
+ 2320 08f5 00       		.byte	0
+ 2321 08f6 00       		.byte	0
+ 2322 08f7 00       		.byte	0
+ 2323 08f8 00       		.byte	0
+ 2324 08f9 00       		.byte	0
+ 2325 08fa 00       		.byte	0
+ 2326 08fb 00       		.byte	0
+ 2327 08fc 00       		.byte	0
+ 2328 08fd 00       		.byte	0
+ 2329 08fe 01       		.byte	1
+ 2330 08ff 00       		.byte	0
+ 2331 0900 00       		.byte	0
+ 2332 0901 00       		.byte	0
+ 2333 0902 00       		.byte	0
+ 2334 0903 00       		.byte	0
+ 2335 0904 00       		.byte	0
+ 2336 0905 00       		.byte	0
+ 2337 0906 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 42
+
+
+ 2338 0907 00       		.byte	0
+ 2339 0908 00       		.byte	0
+ 2340 0909 00       		.byte	0
+ 2341 090a 00       		.byte	0
+ 2342 090b 00       		.byte	0
+ 2343 090c 00       		.byte	0
+ 2344 090d 00       		.byte	0
+ 2345 090e 01       		.byte	1
+ 2346 090f 10       		.byte	16
+ 2347 0910 00       		.byte	0
+ 2348 0911 00       		.byte	0
+ 2349 0912 00       		.byte	0
+ 2350 0913 00       		.byte	0
+ 2351 0914 00       		.byte	0
+ 2352 0915 00       		.byte	0
+ 2353 0916 00       		.byte	0
+ 2354 0917 00       		.byte	0
+ 2355 0918 00       		.byte	0
+ 2356 0919 00       		.byte	0
+ 2357 091a 00       		.byte	0
+ 2358 091b 00       		.byte	0
+ 2359 091c 00       		.byte	0
+ 2360 091d 00       		.byte	0
+ 2361 091e 00       		.byte	0
+ 2362 091f 40       		.byte	64
+ 2363 0920 00       		.byte	0
+ 2364 0921 00       		.byte	0
+ 2365 0922 00       		.byte	0
+ 2366 0923 00       		.byte	0
+ 2367 0924 00       		.byte	0
+ 2368 0925 00       		.byte	0
+ 2369 0926 00       		.byte	0
+ 2370 0927 20       		.byte	32
+ 2371 0928 00       		.byte	0
+ 2372 0929 00       		.byte	0
+ 2373 092a 00       		.byte	0
+ 2374 092b 00       		.byte	0
+ 2375 092c 00       		.byte	0
+ 2376 092d 00       		.byte	0
+ 2377 092e 00       		.byte	0
+ 2378 092f 00       		.byte	0
+ 2379 0930 00       		.byte	0
+ 2380 0931 00       		.byte	0
+ 2381 0932 00       		.byte	0
+ 2382 0933 00       		.byte	0
+ 2383 0934 00       		.byte	0
+ 2384 0935 00       		.byte	0
+ 2385 0936 00       		.byte	0
+ 2386 0937 00       		.byte	0
+ 2387 0938 00       		.byte	0
+ 2388 0939 00       		.byte	0
+ 2389 093a 00       		.byte	0
+ 2390 093b 00       		.byte	0
+ 2391 093c 00       		.byte	0
+ 2392 093d 00       		.byte	0
+ 2393 093e 00       		.byte	0
+ 2394 093f 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 43
+
+
+ 2395 0940 00       		.byte	0
+ 2396 0941 00       		.byte	0
+ 2397 0942 00       		.byte	0
+ 2398 0943 00       		.byte	0
+ 2399 0944 00       		.byte	0
+ 2400 0945 00       		.byte	0
+ 2401 0946 00       		.byte	0
+ 2402 0947 00       		.byte	0
+ 2403 0948 00       		.byte	0
+ 2404 0949 00       		.byte	0
+ 2405 094a 00       		.byte	0
+ 2406 094b 00       		.byte	0
+ 2407 094c 00       		.byte	0
+ 2408 094d 00       		.byte	0
+ 2409 094e 00       		.byte	0
+ 2410 094f 00       		.byte	0
+ 2411 0950 00       		.byte	0
+ 2412 0951 00       		.byte	0
+ 2413 0952 20       		.byte	32
+ 2414 0953 00       		.byte	0
+ 2415 0954 00       		.byte	0
+ 2416 0955 00       		.byte	0
+ 2417 0956 00       		.byte	0
+ 2418 0957 00       		.byte	0
+ 2419 0958 00       		.byte	0
+ 2420 0959 00       		.byte	0
+ 2421 095a 00       		.byte	0
+ 2422 095b 00       		.byte	0
+ 2423 095c 40       		.byte	64
+ 2424 095d 00       		.byte	0
+ 2425 095e 00       		.byte	0
+ 2426 095f 00       		.byte	0
+ 2427 0960 00       		.byte	0
+ 2428 0961 00       		.byte	0
+ 2429 0962 00       		.byte	0
+ 2430 0963 00       		.byte	0
+ 2431 0964 00       		.byte	0
+ 2432 0965 00       		.byte	0
+ 2433 0966 00       		.byte	0
+ 2434 0967 00       		.byte	0
+ 2435 0968 00       		.byte	0
+ 2436 0969 00       		.byte	0
+ 2437 096a 00       		.byte	0
+ 2438 096b 00       		.byte	0
+ 2439 096c 00       		.byte	0
+ 2440 096d 00       		.byte	0
+ 2441 096e 00       		.byte	0
+ 2442 096f 00       		.byte	0
+ 2443 0970 00       		.byte	0
+ 2444 0971 00       		.byte	0
+ 2445 0972 00       		.byte	0
+ 2446 0973 00       		.byte	0
+ 2447 0974 00       		.byte	0
+ 2448 0975 00       		.byte	0
+ 2449 0976 00       		.byte	0
+ 2450 0977 00       		.byte	0
+ 2451 0978 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 44
+
+
+ 2452 0979 00       		.byte	0
+ 2453 097a 00       		.byte	0
+ 2454 097b 00       		.byte	0
+ 2455 097c 00       		.byte	0
+ 2456 097d 00       		.byte	0
+ 2457 097e 00       		.byte	0
+ 2458 097f 00       		.byte	0
+ 2459 0980 00       		.byte	0
+ 2460 0981 00       		.byte	0
+ 2461 0982 00       		.byte	0
+ 2462 0983 40       		.byte	64
+ 2463 0984 00       		.byte	0
+ 2464 0985 00       		.byte	0
+ 2465 0986 00       		.byte	0
+ 2466 0987 00       		.byte	0
+ 2467 0988 00       		.byte	0
+ 2468 0989 00       		.byte	0
+ 2469 098a 00       		.byte	0
+ 2470 098b 00       		.byte	0
+ 2471 098c 00       		.byte	0
+ 2472 098d 00       		.byte	0
+ 2473 098e 01       		.byte	1
+ 2474 098f 30       		.byte	48
+ 2475 0990 00       		.byte	0
+ 2476 0991 00       		.byte	0
+ 2477 0992 00       		.byte	0
+ 2478 0993 00       		.byte	0
+ 2479 0994 00       		.byte	0
+ 2480 0995 00       		.byte	0
+ 2481 0996 00       		.byte	0
+ 2482 0997 00       		.byte	0
+ 2483 0998 00       		.byte	0
+ 2484 0999 00       		.byte	0
+ 2485 099a 00       		.byte	0
+ 2486 099b 00       		.byte	0
+ 2487 099c 00       		.byte	0
+ 2488 099d 00       		.byte	0
+ 2489 099e 00       		.byte	0
+ 2490 099f 00       		.byte	0
+ 2491 09a0 00       		.byte	0
+ 2492 09a1 00       		.byte	0
+ 2493 09a2 08       		.byte	8
+ 2494 09a3 00       		.byte	0
+ 2495 09a4 00       		.byte	0
+ 2496 09a5 00       		.byte	0
+ 2497 09a6 00       		.byte	0
+ 2498 09a7 00       		.byte	0
+ 2499 09a8 00       		.byte	0
+ 2500 09a9 00       		.byte	0
+ 2501 09aa 00       		.byte	0
+ 2502 09ab 00       		.byte	0
+ 2503 09ac 00       		.byte	0
+ 2504 09ad 00       		.byte	0
+ 2505 09ae 00       		.byte	0
+ 2506 09af 00       		.byte	0
+ 2507 09b0 00       		.byte	0
+ 2508 09b1 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 45
+
+
+ 2509 09b2 00       		.byte	0
+ 2510 09b3 00       		.byte	0
+ 2511 09b4 00       		.byte	0
+ 2512 09b5 00       		.byte	0
+ 2513 09b6 00       		.byte	0
+ 2514 09b7 00       		.byte	0
+ 2515 09b8 00       		.byte	0
+ 2516 09b9 00       		.byte	0
+ 2517 09ba 00       		.byte	0
+ 2518 09bb 00       		.byte	0
+ 2519 09bc 00       		.byte	0
+ 2520 09bd 00       		.byte	0
+ 2521 09be 00       		.byte	0
+ 2522 09bf 00       		.byte	0
+ 2523 09c0 00       		.byte	0
+ 2524 09c1 00       		.byte	0
+ 2525 09c2 00       		.byte	0
+ 2526 09c3 00       		.byte	0
+ 2527 09c4 00       		.byte	0
+ 2528 09c5 00       		.byte	0
+ 2529 09c6 00       		.byte	0
+ 2530 09c7 00       		.byte	0
+ 2531 09c8 00       		.byte	0
+ 2532 09c9 00       		.byte	0
+ 2533 09ca 00       		.byte	0
+ 2534 09cb 00       		.byte	0
+ 2535 09cc 00       		.byte	0
+ 2536 09cd 00       		.byte	0
+ 2537 09ce 00       		.byte	0
+ 2538 09cf 00       		.byte	0
+ 2539 09d0 00       		.byte	0
+ 2540 09d1 00       		.byte	0
+ 2541 09d2 00       		.byte	0
+ 2542 09d3 00       		.byte	0
+ 2543 09d4 00       		.byte	0
+ 2544 09d5 00       		.byte	0
+ 2545 09d6 00       		.byte	0
+ 2546 09d7 00       		.byte	0
+ 2547 09d8 00       		.byte	0
+ 2548 09d9 00       		.byte	0
+ 2549 09da 00       		.byte	0
+ 2550 09db 00       		.byte	0
+ 2551 09dc 00       		.byte	0
+ 2552 09dd 00       		.byte	0
+ 2553 09de 00       		.byte	0
+ 2554 09df 00       		.byte	0
+ 2555 09e0 00       		.byte	0
+ 2556 09e1 00       		.byte	0
+ 2557 09e2 00       		.byte	0
+ 2558 09e3 00       		.byte	0
+ 2559 09e4 00       		.byte	0
+ 2560 09e5 00       		.byte	0
+ 2561 09e6 00       		.byte	0
+ 2562 09e7 00       		.byte	0
+ 2563 09e8 00       		.byte	0
+ 2564 09e9 00       		.byte	0
+ 2565 09ea 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 46
+
+
+ 2566 09eb 00       		.byte	0
+ 2567 09ec 00       		.byte	0
+ 2568 09ed 00       		.byte	0
+ 2569 09ee 00       		.byte	0
+ 2570 09ef 00       		.byte	0
+ 2571 09f0 00       		.byte	0
+ 2572 09f1 00       		.byte	0
+ 2573 09f2 00       		.byte	0
+ 2574 09f3 00       		.byte	0
+ 2575 09f4 00       		.byte	0
+ 2576 09f5 00       		.byte	0
+ 2577 09f6 00       		.byte	0
+ 2578 09f7 82       		.byte	-126
+ 2579 09f8 00       		.byte	0
+ 2580 09f9 00       		.byte	0
+ 2581 09fa 00       		.byte	0
+ 2582 09fb 00       		.byte	0
+ 2583 09fc 00       		.byte	0
+ 2584 09fd 00       		.byte	0
+ 2585 09fe 00       		.byte	0
+ 2586 09ff 00       		.byte	0
+ 2587 0a00 00       		.byte	0
+ 2588 0a01 00       		.byte	0
+ 2589 0a02 00       		.byte	0
+ 2590 0a03 40       		.byte	64
+ 2591 0a04 00       		.byte	0
+ 2592 0a05 00       		.byte	0
+ 2593 0a06 00       		.byte	0
+ 2594 0a07 00       		.byte	0
+ 2595 0a08 00       		.byte	0
+ 2596 0a09 00       		.byte	0
+ 2597 0a0a 00       		.byte	0
+ 2598 0a0b 00       		.byte	0
+ 2599 0a0c 00       		.byte	0
+ 2600 0a0d 00       		.byte	0
+ 2601 0a0e 01       		.byte	1
+ 2602 0a0f B0       		.byte	-80
+ 2603 0a10 00       		.byte	0
+ 2604 0a11 00       		.byte	0
+ 2605 0a12 08       		.byte	8
+ 2606 0a13 00       		.byte	0
+ 2607 0a14 00       		.byte	0
+ 2608 0a15 00       		.byte	0
+ 2609 0a16 00       		.byte	0
+ 2610 0a17 02       		.byte	2
+ 2611 0a18 00       		.byte	0
+ 2612 0a19 00       		.byte	0
+ 2613 0a1a 00       		.byte	0
+ 2614 0a1b 00       		.byte	0
+ 2615 0a1c 00       		.byte	0
+ 2616 0a1d 00       		.byte	0
+ 2617 0a1e 00       		.byte	0
+ 2618 0a1f 00       		.byte	0
+ 2619 0a20 00       		.byte	0
+ 2620 0a21 00       		.byte	0
+ 2621 0a22 00       		.byte	0
+ 2622 0a23 01       		.byte	1
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 47
+
+
+ 2623 0a24 00       		.byte	0
+ 2624 0a25 00       		.byte	0
+ 2625 0a26 00       		.byte	0
+ 2626 0a27 00       		.byte	0
+ 2627 0a28 00       		.byte	0
+ 2628 0a29 00       		.byte	0
+ 2629 0a2a 00       		.byte	0
+ 2630 0a2b 00       		.byte	0
+ 2631 0a2c 00       		.byte	0
+ 2632 0a2d 00       		.byte	0
+ 2633 0a2e 00       		.byte	0
+ 2634 0a2f 00       		.byte	0
+ 2635 0a30 00       		.byte	0
+ 2636 0a31 00       		.byte	0
+ 2637 0a32 00       		.byte	0
+ 2638 0a33 00       		.byte	0
+ 2639 0a34 00       		.byte	0
+ 2640 0a35 00       		.byte	0
+ 2641 0a36 00       		.byte	0
+ 2642 0a37 00       		.byte	0
+ 2643 0a38 00       		.byte	0
+ 2644 0a39 00       		.byte	0
+ 2645 0a3a 00       		.byte	0
+ 2646 0a3b 00       		.byte	0
+ 2647 0a3c 00       		.byte	0
+ 2648 0a3d 00       		.byte	0
+ 2649 0a3e 00       		.byte	0
+ 2650 0a3f 00       		.byte	0
+ 2651 0a40 00       		.byte	0
+ 2652 0a41 00       		.byte	0
+ 2653 0a42 00       		.byte	0
+ 2654 0a43 00       		.byte	0
+ 2655 0a44 00       		.byte	0
+ 2656 0a45 00       		.byte	0
+ 2657 0a46 00       		.byte	0
+ 2658 0a47 00       		.byte	0
+ 2659 0a48 00       		.byte	0
+ 2660 0a49 00       		.byte	0
+ 2661 0a4a 00       		.byte	0
+ 2662 0a4b 00       		.byte	0
+ 2663 0a4c 00       		.byte	0
+ 2664 0a4d 00       		.byte	0
+ 2665 0a4e 00       		.byte	0
+ 2666 0a4f 00       		.byte	0
+ 2667 0a50 00       		.byte	0
+ 2668 0a51 00       		.byte	0
+ 2669 0a52 50       		.byte	80
+ 2670 0a53 00       		.byte	0
+ 2671 0a54 00       		.byte	0
+ 2672 0a55 00       		.byte	0
+ 2673 0a56 00       		.byte	0
+ 2674 0a57 00       		.byte	0
+ 2675 0a58 00       		.byte	0
+ 2676 0a59 00       		.byte	0
+ 2677 0a5a 00       		.byte	0
+ 2678 0a5b 00       		.byte	0
+ 2679 0a5c 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 48
+
+
+ 2680 0a5d 00       		.byte	0
+ 2681 0a5e 00       		.byte	0
+ 2682 0a5f 00       		.byte	0
+ 2683 0a60 00       		.byte	0
+ 2684 0a61 00       		.byte	0
+ 2685 0a62 00       		.byte	0
+ 2686 0a63 00       		.byte	0
+ 2687 0a64 00       		.byte	0
+ 2688 0a65 00       		.byte	0
+ 2689 0a66 00       		.byte	0
+ 2690 0a67 00       		.byte	0
+ 2691 0a68 00       		.byte	0
+ 2692 0a69 00       		.byte	0
+ 2693 0a6a 00       		.byte	0
+ 2694 0a6b 00       		.byte	0
+ 2695 0a6c 00       		.byte	0
+ 2696 0a6d 00       		.byte	0
+ 2697 0a6e 00       		.byte	0
+ 2698 0a6f 00       		.byte	0
+ 2699 0a70 04       		.byte	4
+ 2700 0a71 00       		.byte	0
+ 2701 0a72 00       		.byte	0
+ 2702 0a73 00       		.byte	0
+ 2703 0a74 80       		.byte	-128
+ 2704 0a75 00       		.byte	0
+ 2705 0a76 00       		.byte	0
+ 2706 0a77 00       		.byte	0
+ 2707 0a78 01       		.byte	1
+ 2708 0a79 00       		.byte	0
+ 2709 0a7a 00       		.byte	0
+ 2710 0a7b 00       		.byte	0
+ 2711 0a7c 00       		.byte	0
+ 2712 0a7d 00       		.byte	0
+ 2713 0a7e 00       		.byte	0
+ 2714 0a7f 00       		.byte	0
+ 2715 0a80 08       		.byte	8
+ 2716 0a81 00       		.byte	0
+ 2717 0a82 00       		.byte	0
+ 2718 0a83 40       		.byte	64
+ 2719 0a84 00       		.byte	0
+ 2720 0a85 00       		.byte	0
+ 2721 0a86 00       		.byte	0
+ 2722 0a87 00       		.byte	0
+ 2723 0a88 00       		.byte	0
+ 2724 0a89 00       		.byte	0
+ 2725 0a8a 00       		.byte	0
+ 2726 0a8b 00       		.byte	0
+ 2727 0a8c 81       		.byte	-127
+ 2728 0a8d 00       		.byte	0
+ 2729 0a8e 01       		.byte	1
+ 2730 0a8f B1       		.byte	-79
+ 2731 0a90 00       		.byte	0
+ 2732 0a91 00       		.byte	0
+ 2733 0a92 08       		.byte	8
+ 2734 0a93 00       		.byte	0
+ 2735 0a94 00       		.byte	0
+ 2736 0a95 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 49
+
+
+ 2737 0a96 00       		.byte	0
+ 2738 0a97 02       		.byte	2
+ 2739 0a98 00       		.byte	0
+ 2740 0a99 00       		.byte	0
+ 2741 0a9a 00       		.byte	0
+ 2742 0a9b 00       		.byte	0
+ 2743 0a9c 00       		.byte	0
+ 2744 0a9d 00       		.byte	0
+ 2745 0a9e 00       		.byte	0
+ 2746 0a9f 00       		.byte	0
+ 2747 0aa0 00       		.byte	0
+ 2748 0aa1 00       		.byte	0
+ 2749 0aa2 00       		.byte	0
+ 2750 0aa3 00       		.byte	0
+ 2751 0aa4 00       		.byte	0
+ 2752 0aa5 00       		.byte	0
+ 2753 0aa6 00       		.byte	0
+ 2754 0aa7 00       		.byte	0
+ 2755 0aa8 00       		.byte	0
+ 2756 0aa9 00       		.byte	0
+ 2757 0aaa 00       		.byte	0
+ 2758 0aab 00       		.byte	0
+ 2759 0aac 00       		.byte	0
+ 2760 0aad 00       		.byte	0
+ 2761 0aae 00       		.byte	0
+ 2762 0aaf 00       		.byte	0
+ 2763 0ab0 00       		.byte	0
+ 2764 0ab1 00       		.byte	0
+ 2765 0ab2 00       		.byte	0
+ 2766 0ab3 00       		.byte	0
+ 2767 0ab4 00       		.byte	0
+ 2768 0ab5 00       		.byte	0
+ 2769 0ab6 00       		.byte	0
+ 2770 0ab7 00       		.byte	0
+ 2771 0ab8 00       		.byte	0
+ 2772 0ab9 00       		.byte	0
+ 2773 0aba 00       		.byte	0
+ 2774 0abb 00       		.byte	0
+ 2775 0abc 00       		.byte	0
+ 2776 0abd 00       		.byte	0
+ 2777 0abe 00       		.byte	0
+ 2778 0abf 00       		.byte	0
+ 2779 0ac0 00       		.byte	0
+ 2780 0ac1 00       		.byte	0
+ 2781 0ac2 00       		.byte	0
+ 2782 0ac3 00       		.byte	0
+ 2783 0ac4 00       		.byte	0
+ 2784 0ac5 00       		.byte	0
+ 2785 0ac6 00       		.byte	0
+ 2786 0ac7 00       		.byte	0
+ 2787 0ac8 00       		.byte	0
+ 2788 0ac9 00       		.byte	0
+ 2789 0aca 00       		.byte	0
+ 2790 0acb 00       		.byte	0
+ 2791 0acc 00       		.byte	0
+ 2792 0acd 00       		.byte	0
+ 2793 0ace 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 50
+
+
+ 2794 0acf 00       		.byte	0
+ 2795 0ad0 00       		.byte	0
+ 2796 0ad1 00       		.byte	0
+ 2797 0ad2 00       		.byte	0
+ 2798 0ad3 00       		.byte	0
+ 2799 0ad4 80       		.byte	-128
+ 2800 0ad5 00       		.byte	0
+ 2801 0ad6 40       		.byte	64
+ 2802 0ad7 00       		.byte	0
+ 2803 0ad8 00       		.byte	0
+ 2804 0ad9 00       		.byte	0
+ 2805 0ada 00       		.byte	0
+ 2806 0adb 00       		.byte	0
+ 2807 0adc 00       		.byte	0
+ 2808 0add 00       		.byte	0
+ 2809 0ade 00       		.byte	0
+ 2810 0adf 00       		.byte	0
+ 2811 0ae0 00       		.byte	0
+ 2812 0ae1 00       		.byte	0
+ 2813 0ae2 00       		.byte	0
+ 2814 0ae3 00       		.byte	0
+ 2815 0ae4 00       		.byte	0
+ 2816 0ae5 00       		.byte	0
+ 2817 0ae6 00       		.byte	0
+ 2818 0ae7 00       		.byte	0
+ 2819 0ae8 00       		.byte	0
+ 2820 0ae9 00       		.byte	0
+ 2821 0aea 00       		.byte	0
+ 2822 0aeb 00       		.byte	0
+ 2823 0aec 00       		.byte	0
+ 2824 0aed 00       		.byte	0
+ 2825 0aee 00       		.byte	0
+ 2826 0aef 00       		.byte	0
+ 2827 0af0 00       		.byte	0
+ 2828 0af1 00       		.byte	0
+ 2829 0af2 08       		.byte	8
+ 2830 0af3 00       		.byte	0
+ 2831 0af4 08       		.byte	8
+ 2832 0af5 00       		.byte	0
+ 2833 0af6 00       		.byte	0
+ 2834 0af7 00       		.byte	0
+ 2835 0af8 00       		.byte	0
+ 2836 0af9 00       		.byte	0
+ 2837 0afa 00       		.byte	0
+ 2838 0afb 00       		.byte	0
+ 2839 0afc 20       		.byte	32
+ 2840 0afd 00       		.byte	0
+ 2841 0afe 00       		.byte	0
+ 2842 0aff 40       		.byte	64
+ 2843 0b00 00       		.byte	0
+ 2844 0b01 00       		.byte	0
+ 2845 0b02 00       		.byte	0
+ 2846 0b03 00       		.byte	0
+ 2847 0b04 00       		.byte	0
+ 2848 0b05 00       		.byte	0
+ 2849 0b06 00       		.byte	0
+ 2850 0b07 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 51
+
+
+ 2851 0b08 00       		.byte	0
+ 2852 0b09 00       		.byte	0
+ 2853 0b0a 00       		.byte	0
+ 2854 0b0b 00       		.byte	0
+ 2855 0b0c 00       		.byte	0
+ 2856 0b0d 00       		.byte	0
+ 2857 0b0e 00       		.byte	0
+ 2858 0b0f 00       		.byte	0
+ 2859 0b10 00       		.byte	0
+ 2860 0b11 00       		.byte	0
+ 2861 0b12 00       		.byte	0
+ 2862 0b13 00       		.byte	0
+ 2863 0b14 00       		.byte	0
+ 2864 0b15 00       		.byte	0
+ 2865 0b16 00       		.byte	0
+ 2866 0b17 00       		.byte	0
+ 2867 0b18 00       		.byte	0
+ 2868 0b19 00       		.byte	0
+ 2869 0b1a 00       		.byte	0
+ 2870 0b1b 00       		.byte	0
+ 2871 0b1c 00       		.byte	0
+ 2872 0b1d 00       		.byte	0
+ 2873 0b1e 00       		.byte	0
+ 2874 0b1f 00       		.byte	0
+ 2875 0b20 00       		.byte	0
+ 2876 0b21 00       		.byte	0
+ 2877 0b22 00       		.byte	0
+ 2878 0b23 00       		.byte	0
+ 2879 0b24 00       		.byte	0
+ 2880 0b25 00       		.byte	0
+ 2881 0b26 00       		.byte	0
+ 2882 0b27 00       		.byte	0
+ 2883 0b28 00       		.byte	0
+ 2884 0b29 00       		.byte	0
+ 2885 0b2a 00       		.byte	0
+ 2886 0b2b 00       		.byte	0
+ 2887 0b2c 00       		.byte	0
+ 2888 0b2d 00       		.byte	0
+ 2889 0b2e 00       		.byte	0
+ 2890 0b2f 00       		.byte	0
+ 2891 0b30 00       		.byte	0
+ 2892 0b31 00       		.byte	0
+ 2893 0b32 00       		.byte	0
+ 2894 0b33 00       		.byte	0
+ 2895 0b34 00       		.byte	0
+ 2896 0b35 00       		.byte	0
+ 2897 0b36 00       		.byte	0
+ 2898 0b37 00       		.byte	0
+ 2899 0b38 00       		.byte	0
+ 2900 0b39 00       		.byte	0
+ 2901 0b3a 00       		.byte	0
+ 2902 0b3b 00       		.byte	0
+ 2903 0b3c 00       		.byte	0
+ 2904 0b3d 00       		.byte	0
+ 2905 0b3e 00       		.byte	0
+ 2906 0b3f 00       		.byte	0
+ 2907 0b40 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 52
+
+
+ 2908 0b41 00       		.byte	0
+ 2909 0b42 00       		.byte	0
+ 2910 0b43 00       		.byte	0
+ 2911 0b44 00       		.byte	0
+ 2912 0b45 00       		.byte	0
+ 2913 0b46 00       		.byte	0
+ 2914 0b47 00       		.byte	0
+ 2915 0b48 80       		.byte	-128
+ 2916 0b49 00       		.byte	0
+ 2917 0b4a 00       		.byte	0
+ 2918 0b4b 00       		.byte	0
+ 2919 0b4c 00       		.byte	0
+ 2920 0b4d 00       		.byte	0
+ 2921 0b4e 00       		.byte	0
+ 2922 0b4f 80       		.byte	-128
+ 2923 0b50 00       		.byte	0
+ 2924 0b51 00       		.byte	0
+ 2925 0b52 01       		.byte	1
+ 2926 0b53 00       		.byte	0
+ 2927 0b54 01       		.byte	1
+ 2928 0b55 00       		.byte	0
+ 2929 0b56 00       		.byte	0
+ 2930 0b57 00       		.byte	0
+ 2931 0b58 00       		.byte	0
+ 2932 0b59 00       		.byte	0
+ 2933 0b5a 00       		.byte	0
+ 2934 0b5b 00       		.byte	0
+ 2935 0b5c 00       		.byte	0
+ 2936 0b5d 00       		.byte	0
+ 2937 0b5e 00       		.byte	0
+ 2938 0b5f 00       		.byte	0
+ 2939 0b60 00       		.byte	0
+ 2940 0b61 00       		.byte	0
+ 2941 0b62 00       		.byte	0
+ 2942 0b63 00       		.byte	0
+ 2943 0b64 00       		.byte	0
+ 2944 0b65 00       		.byte	0
+ 2945 0b66 00       		.byte	0
+ 2946 0b67 00       		.byte	0
+ 2947 0b68 00       		.byte	0
+ 2948 0b69 00       		.byte	0
+ 2949 0b6a 00       		.byte	0
+ 2950 0b6b 00       		.byte	0
+ 2951 0b6c 00       		.byte	0
+ 2952 0b6d 00       		.byte	0
+ 2953 0b6e 00       		.byte	0
+ 2954 0b6f 00       		.byte	0
+ 2955 0b70 20       		.byte	32
+ 2956 0b71 00       		.byte	0
+ 2957 0b72 00       		.byte	0
+ 2958 0b73 00       		.byte	0
+ 2959 0b74 00       		.byte	0
+ 2960 0b75 00       		.byte	0
+ 2961 0b76 00       		.byte	0
+ 2962 0b77 00       		.byte	0
+ 2963 0b78 00       		.byte	0
+ 2964 0b79 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 53
+
+
+ 2965 0b7a 00       		.byte	0
+ 2966 0b7b 00       		.byte	0
+ 2967 0b7c 00       		.byte	0
+ 2968 0b7d 00       		.byte	0
+ 2969 0b7e 00       		.byte	0
+ 2970 0b7f 00       		.byte	0
+ 2971 0b80 00       		.byte	0
+ 2972 0b81 00       		.byte	0
+ 2973 0b82 00       		.byte	0
+ 2974 0b83 00       		.byte	0
+ 2975 0b84 00       		.byte	0
+ 2976 0b85 00       		.byte	0
+ 2977 0b86 00       		.byte	0
+ 2978 0b87 00       		.byte	0
+ 2979 0b88 00       		.byte	0
+ 2980 0b89 00       		.byte	0
+ 2981 0b8a 00       		.byte	0
+ 2982 0b8b 00       		.byte	0
+ 2983 0b8c 00       		.byte	0
+ 2984 0b8d 00       		.byte	0
+ 2985 0b8e 00       		.byte	0
+ 2986 0b8f 31       		.byte	49
+ 2987 0b90 00       		.byte	0
+ 2988 0b91 00       		.byte	0
+ 2989 0b92 00       		.byte	0
+ 2990 0b93 00       		.byte	0
+ 2991 0b94 00       		.byte	0
+ 2992 0b95 00       		.byte	0
+ 2993 0b96 00       		.byte	0
+ 2994 0b97 02       		.byte	2
+ 2995 0b98 00       		.byte	0
+ 2996 0b99 00       		.byte	0
+ 2997 0b9a 00       		.byte	0
+ 2998 0b9b 00       		.byte	0
+ 2999 0b9c 00       		.byte	0
+ 3000 0b9d 00       		.byte	0
+ 3001 0b9e 00       		.byte	0
+ 3002 0b9f 00       		.byte	0
+ 3003 0ba0 00       		.byte	0
+ 3004 0ba1 00       		.byte	0
+ 3005 0ba2 00       		.byte	0
+ 3006 0ba3 00       		.byte	0
+ 3007 0ba4 00       		.byte	0
+ 3008 0ba5 00       		.byte	0
+ 3009 0ba6 00       		.byte	0
+ 3010 0ba7 00       		.byte	0
+ 3011 0ba8 00       		.byte	0
+ 3012 0ba9 00       		.byte	0
+ 3013 0baa 00       		.byte	0
+ 3014 0bab 00       		.byte	0
+ 3015 0bac 00       		.byte	0
+ 3016 0bad 00       		.byte	0
+ 3017 0bae 00       		.byte	0
+ 3018 0baf 00       		.byte	0
+ 3019 0bb0 60       		.byte	96
+ 3020 0bb1 00       		.byte	0
+ 3021 0bb2 A0       		.byte	-96
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 54
+
+
+ 3022 0bb3 00       		.byte	0
+ 3023 0bb4 00       		.byte	0
+ 3024 0bb5 00       		.byte	0
+ 3025 0bb6 00       		.byte	0
+ 3026 0bb7 00       		.byte	0
+ 3027 0bb8 00       		.byte	0
+ 3028 0bb9 00       		.byte	0
+ 3029 0bba 00       		.byte	0
+ 3030 0bbb 00       		.byte	0
+ 3031 0bbc 00       		.byte	0
+ 3032 0bbd 00       		.byte	0
+ 3033 0bbe 00       		.byte	0
+ 3034 0bbf 00       		.byte	0
+ 3035 0bc0 00       		.byte	0
+ 3036 0bc1 00       		.byte	0
+ 3037 0bc2 00       		.byte	0
+ 3038 0bc3 00       		.byte	0
+ 3039 0bc4 80       		.byte	-128
+ 3040 0bc5 00       		.byte	0
+ 3041 0bc6 A0       		.byte	-96
+ 3042 0bc7 00       		.byte	0
+ 3043 0bc8 40       		.byte	64
+ 3044 0bc9 00       		.byte	0
+ 3045 0bca 00       		.byte	0
+ 3046 0bcb 00       		.byte	0
+ 3047 0bcc 00       		.byte	0
+ 3048 0bcd 00       		.byte	0
+ 3049 0bce 00       		.byte	0
+ 3050 0bcf 00       		.byte	0
+ 3051 0bd0 80       		.byte	-128
+ 3052 0bd1 00       		.byte	0
+ 3053 0bd2 00       		.byte	0
+ 3054 0bd3 00       		.byte	0
+ 3055 0bd4 00       		.byte	0
+ 3056 0bd5 00       		.byte	0
+ 3057 0bd6 00       		.byte	0
+ 3058 0bd7 00       		.byte	0
+ 3059 0bd8 00       		.byte	0
+ 3060 0bd9 00       		.byte	0
+ 3061 0bda 00       		.byte	0
+ 3062 0bdb 00       		.byte	0
+ 3063 0bdc 00       		.byte	0
+ 3064 0bdd 00       		.byte	0
+ 3065 0bde 00       		.byte	0
+ 3066 0bdf 00       		.byte	0
+ 3067 0be0 00       		.byte	0
+ 3068 0be1 00       		.byte	0
+ 3069 0be2 00       		.byte	0
+ 3070 0be3 00       		.byte	0
+ 3071 0be4 00       		.byte	0
+ 3072 0be5 00       		.byte	0
+ 3073 0be6 00       		.byte	0
+ 3074 0be7 00       		.byte	0
+ 3075 0be8 00       		.byte	0
+ 3076 0be9 00       		.byte	0
+ 3077 0bea 00       		.byte	0
+ 3078 0beb 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 55
+
+
+ 3079 0bec 00       		.byte	0
+ 3080 0bed 00       		.byte	0
+ 3081 0bee 00       		.byte	0
+ 3082 0bef 00       		.byte	0
+ 3083 0bf0 00       		.byte	0
+ 3084 0bf1 00       		.byte	0
+ 3085 0bf2 00       		.byte	0
+ 3086 0bf3 00       		.byte	0
+ 3087 0bf4 00       		.byte	0
+ 3088 0bf5 00       		.byte	0
+ 3089 0bf6 00       		.byte	0
+ 3090 0bf7 00       		.byte	0
+ 3091 0bf8 00       		.byte	0
+ 3092 0bf9 00       		.byte	0
+ 3093 0bfa 00       		.byte	0
+ 3094 0bfb 00       		.byte	0
+ 3095 0bfc 00       		.byte	0
+ 3096 0bfd 00       		.byte	0
+ 3097 0bfe 00       		.byte	0
+ 3098 0bff 00       		.byte	0
+ 3099 0c00 00       		.byte	0
+ 3100 0c01 00       		.byte	0
+ 3101 0c02 00       		.byte	0
+ 3102 0c03 00       		.byte	0
+ 3103 0c04 00       		.byte	0
+ 3104 0c05 00       		.byte	0
+ 3105 0c06 00       		.byte	0
+ 3106 0c07 00       		.byte	0
+ 3107 0c08 00       		.byte	0
+ 3108 0c09 00       		.byte	0
+ 3109 0c0a 00       		.byte	0
+ 3110 0c0b 00       		.byte	0
+ 3111 0c0c 00       		.byte	0
+ 3112 0c0d 00       		.byte	0
+ 3113 0c0e 00       		.byte	0
+ 3114 0c0f 00       		.byte	0
+ 3115 0c10 00       		.byte	0
+ 3116 0c11 00       		.byte	0
+ 3117 0c12 00       		.byte	0
+ 3118 0c13 00       		.byte	0
+ 3119 0c14 00       		.byte	0
+ 3120 0c15 00       		.byte	0
+ 3121 0c16 00       		.byte	0
+ 3122 0c17 00       		.byte	0
+ 3123 0c18 00       		.byte	0
+ 3124 0c19 00       		.byte	0
+ 3125 0c1a 00       		.byte	0
+ 3126 0c1b 00       		.byte	0
+ 3127 0c1c 00       		.byte	0
+ 3128 0c1d 00       		.byte	0
+ 3129 0c1e 00       		.byte	0
+ 3130 0c1f 00       		.byte	0
+ 3131 0c20 00       		.byte	0
+ 3132 0c21 00       		.byte	0
+ 3133 0c22 00       		.byte	0
+ 3134 0c23 12       		.byte	18
+ 3135 0c24 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 56
+
+
+ 3136 0c25 00       		.byte	0
+ 3137 0c26 00       		.byte	0
+ 3138 0c27 21       		.byte	33
+ 3139 0c28 00       		.byte	0
+ 3140 0c29 00       		.byte	0
+ 3141 0c2a 00       		.byte	0
+ 3142 0c2b 00       		.byte	0
+ 3143 0c2c 00       		.byte	0
+ 3144 0c2d 00       		.byte	0
+ 3145 0c2e 00       		.byte	0
+ 3146 0c2f 00       		.byte	0
+ 3147 0c30 00       		.byte	0
+ 3148 0c31 00       		.byte	0
+ 3149 0c32 00       		.byte	0
+ 3150 0c33 00       		.byte	0
+ 3151 0c34 00       		.byte	0
+ 3152 0c35 00       		.byte	0
+ 3153 0c36 00       		.byte	0
+ 3154 0c37 00       		.byte	0
+ 3155 0c38 00       		.byte	0
+ 3156 0c39 00       		.byte	0
+ 3157 0c3a 00       		.byte	0
+ 3158 0c3b 00       		.byte	0
+ 3159 0c3c 00       		.byte	0
+ 3160 0c3d 00       		.byte	0
+ 3161 0c3e 00       		.byte	0
+ 3162 0c3f 00       		.byte	0
+ 3163 0c40 00       		.byte	0
+ 3164 0c41 00       		.byte	0
+ 3165 0c42 00       		.byte	0
+ 3166 0c43 00       		.byte	0
+ 3167 0c44 00       		.byte	0
+ 3168 0c45 00       		.byte	0
+ 3169 0c46 00       		.byte	0
+ 3170 0c47 00       		.byte	0
+ 3171 0c48 00       		.byte	0
+ 3172 0c49 00       		.byte	0
+ 3173 0c4a 00       		.byte	0
+ 3174 0c4b 00       		.byte	0
+ 3175 0c4c 00       		.byte	0
+ 3176 0c4d 00       		.byte	0
+ 3177 0c4e 00       		.byte	0
+ 3178 0c4f 00       		.byte	0
+ 3179 0c50 00       		.byte	0
+ 3180 0c51 00       		.byte	0
+ 3181 0c52 00       		.byte	0
+ 3182 0c53 00       		.byte	0
+ 3183 0c54 00       		.byte	0
+ 3184 0c55 00       		.byte	0
+ 3185 0c56 00       		.byte	0
+ 3186 0c57 00       		.byte	0
+ 3187 0c58 00       		.byte	0
+ 3188 0c59 00       		.byte	0
+ 3189 0c5a 00       		.byte	0
+ 3190 0c5b 00       		.byte	0
+ 3191 0c5c 00       		.byte	0
+ 3192 0c5d 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 57
+
+
+ 3193 0c5e 00       		.byte	0
+ 3194 0c5f 00       		.byte	0
+ 3195 0c60 00       		.byte	0
+ 3196 0c61 00       		.byte	0
+ 3197 0c62 00       		.byte	0
+ 3198 0c63 00       		.byte	0
+ 3199 0c64 00       		.byte	0
+ 3200 0c65 00       		.byte	0
+ 3201 0c66 00       		.byte	0
+ 3202 0c67 00       		.byte	0
+ 3203 0c68 00       		.byte	0
+ 3204 0c69 00       		.byte	0
+ 3205 0c6a 00       		.byte	0
+ 3206 0c6b 00       		.byte	0
+ 3207 0c6c 00       		.byte	0
+ 3208 0c6d 00       		.byte	0
+ 3209 0c6e 00       		.byte	0
+ 3210 0c6f 00       		.byte	0
+ 3211 0c70 00       		.byte	0
+ 3212 0c71 00       		.byte	0
+ 3213 0c72 00       		.byte	0
+ 3214 0c73 00       		.byte	0
+ 3215 0c74 00       		.byte	0
+ 3216 0c75 00       		.byte	0
+ 3217 0c76 00       		.byte	0
+ 3218 0c77 00       		.byte	0
+ 3219 0c78 00       		.byte	0
+ 3220 0c79 00       		.byte	0
+ 3221 0c7a 00       		.byte	0
+ 3222 0c7b 00       		.byte	0
+ 3223 0c7c 00       		.byte	0
+ 3224 0c7d 00       		.byte	0
+ 3225 0c7e 00       		.byte	0
+ 3226 0c7f 00       		.byte	0
+ 3227 0c80 00       		.byte	0
+ 3228 0c81 00       		.byte	0
+ 3229 0c82 00       		.byte	0
+ 3230 0c83 00       		.byte	0
+ 3231 0c84 00       		.byte	0
+ 3232 0c85 00       		.byte	0
+ 3233 0c86 00       		.byte	0
+ 3234 0c87 00       		.byte	0
+ 3235 0c88 00       		.byte	0
+ 3236 0c89 00       		.byte	0
+ 3237 0c8a 00       		.byte	0
+ 3238 0c8b 00       		.byte	0
+ 3239 0c8c 00       		.byte	0
+ 3240 0c8d 00       		.byte	0
+ 3241 0c8e 00       		.byte	0
+ 3242 0c8f 00       		.byte	0
+ 3243 0c90 00       		.byte	0
+ 3244 0c91 00       		.byte	0
+ 3245 0c92 00       		.byte	0
+ 3246 0c93 00       		.byte	0
+ 3247 0c94 00       		.byte	0
+ 3248 0c95 00       		.byte	0
+ 3249 0c96 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 58
+
+
+ 3250 0c97 00       		.byte	0
+ 3251 0c98 00       		.byte	0
+ 3252 0c99 00       		.byte	0
+ 3253 0c9a 00       		.byte	0
+ 3254 0c9b 00       		.byte	0
+ 3255 0c9c 00       		.byte	0
+ 3256 0c9d 00       		.byte	0
+ 3257 0c9e 00       		.byte	0
+ 3258 0c9f 00       		.byte	0
+ 3259 0ca0 00       		.byte	0
+ 3260 0ca1 00       		.byte	0
+ 3261 0ca2 00       		.byte	0
+ 3262 0ca3 00       		.byte	0
+ 3263 0ca4 00       		.byte	0
+ 3264 0ca5 00       		.byte	0
+ 3265 0ca6 00       		.byte	0
+ 3266 0ca7 00       		.byte	0
+ 3267 0ca8 00       		.byte	0
+ 3268 0ca9 00       		.byte	0
+ 3269 0caa 00       		.byte	0
+ 3270 0cab 00       		.byte	0
+ 3271 0cac 00       		.byte	0
+ 3272 0cad 00       		.byte	0
+ 3273 0cae 00       		.byte	0
+ 3274 0caf 00       		.byte	0
+ 3275 0cb0 00       		.byte	0
+ 3276 0cb1 00       		.byte	0
+ 3277 0cb2 00       		.byte	0
+ 3278 0cb3 00       		.byte	0
+ 3279 0cb4 00       		.byte	0
+ 3280 0cb5 00       		.byte	0
+ 3281 0cb6 00       		.byte	0
+ 3282 0cb7 00       		.byte	0
+ 3283 0cb8 00       		.byte	0
+ 3284 0cb9 00       		.byte	0
+ 3285 0cba 00       		.byte	0
+ 3286 0cbb 00       		.byte	0
+ 3287 0cbc F0       		.byte	-16
+ 3288 0cbd 00       		.byte	0
+ 3289 0cbe 00       		.byte	0
+ 3290 0cbf 00       		.byte	0
+ 3291 0cc0 00       		.byte	0
+ 3292 0cc1 00       		.byte	0
+ 3293 0cc2 00       		.byte	0
+ 3294 0cc3 00       		.byte	0
+ 3295 0cc4 00       		.byte	0
+ 3296 0cc5 00       		.byte	0
+ 3297 0cc6 00       		.byte	0
+ 3298 0cc7 00       		.byte	0
+ 3299 0cc8 00       		.byte	0
+ 3300 0cc9 00       		.byte	0
+ 3301 0cca 00       		.byte	0
+ 3302 0ccb 00       		.byte	0
+ 3303 0ccc 00       		.byte	0
+ 3304 0ccd 00       		.byte	0
+ 3305 0cce 00       		.byte	0
+ 3306 0ccf 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 59
+
+
+ 3307 0cd0 00       		.byte	0
+ 3308 0cd1 00       		.byte	0
+ 3309 0cd2 00       		.byte	0
+ 3310 0cd3 00       		.byte	0
+ 3311 0cd4 00       		.byte	0
+ 3312 0cd5 00       		.byte	0
+ 3313 0cd6 00       		.byte	0
+ 3314 0cd7 00       		.byte	0
+ 3315 0cd8 00       		.byte	0
+ 3316 0cd9 00       		.byte	0
+ 3317 0cda 00       		.byte	0
+ 3318 0cdb 00       		.byte	0
+ 3319 0cdc 00       		.byte	0
+ 3320 0cdd 00       		.byte	0
+ 3321 0cde 00       		.byte	0
+ 3322 0cdf 00       		.byte	0
+ 3323 0ce0 00       		.byte	0
+ 3324 0ce1 00       		.byte	0
+ 3325 0ce2 00       		.byte	0
+ 3326 0ce3 00       		.byte	0
+ 3327 0ce4 00       		.byte	0
+ 3328 0ce5 00       		.byte	0
+ 3329 0ce6 00       		.byte	0
+ 3330 0ce7 00       		.byte	0
+ 3331 0ce8 00       		.byte	0
+ 3332 0ce9 00       		.byte	0
+ 3333 0cea 00       		.byte	0
+ 3334 0ceb 00       		.byte	0
+ 3335 0cec 00       		.byte	0
+ 3336 0ced 00       		.byte	0
+ 3337 0cee 00       		.byte	0
+ 3338 0cef 00       		.byte	0
+ 3339 0cf0 A6       		.byte	-90
+ 3340 0cf1 59       		.byte	89
+ 3341 0cf2 59       		.byte	89
+ 3342 0cf3 00       		.byte	0
+ 3343 0cf4 59       		.byte	89
+ 3344 0cf5 00       		.byte	0
+ 3345 0cf6 00       		.byte	0
+ 3346 0cf7 00       		.byte	0
+ 3347 0cf8 00       		.byte	0
+ 3348 0cf9 7F       		.byte	127
+ 3349 0cfa 7F       		.byte	127
+ 3350 0cfb 00       		.byte	0
+ 3351 0cfc 00       		.byte	0
+ 3352 0cfd 00       		.byte	0
+ 3353 0cfe 00       		.byte	0
+ 3354 0cff 00       		.byte	0
+ 3355              		.section	.cywolatch,"a",%progbits
+ 3356              		.type	cy_meta_wonvl, %object
+ 3357              		.size	cy_meta_wonvl, 4
+ 3358              	cy_meta_wonvl:
+ 3359 0000 BC       		.byte	-68
+ 3360 0001 90       		.byte	-112
+ 3361 0002 AC       		.byte	-84
+ 3362 0003 AF       		.byte	-81
+ 3363              		.section	.cycustnvl,"a",%progbits
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 60
+
+
+ 3364              		.type	cy_meta_custnvl, %object
+ 3365              		.size	cy_meta_custnvl, 4
+ 3366              	cy_meta_custnvl:
+ 3367 0000 00       		.byte	0
+ 3368 0001 00       		.byte	0
+ 3369 0002 40       		.byte	64
+ 3370 0003 05       		.byte	5
+ 3371              		.section	.cymeta,"a",%progbits
+ 3372              		.type	cy_metadata, %object
+ 3373              		.size	cy_metadata, 12
+ 3374              	cy_metadata:
+ 3375 0000 00       		.byte	0
+ 3376 0001 01       		.byte	1
+ 3377 0002 2E       		.byte	46
+ 3378 0003 12       		.byte	18
+ 3379 0004 30       		.byte	48
+ 3380 0005 69       		.byte	105
+ 3381 0006 00       		.byte	0
+ 3382 0007 01       		.byte	1
+ 3383 0008 00       		.byte	0
+ 3384 0009 00       		.byte	0
+ 3385 000a 00       		.byte	0
+ 3386 000b 00       		.byte	0
+ 3387              		.section	.cyflashprotect,"a",%progbits
+ 3388              		.type	cy_meta_flashprotect, %object
+ 3389              		.size	cy_meta_flashprotect, 256
+ 3390              	cy_meta_flashprotect:
+ 3391 0000 00000000 		.space	256
+ 3391      00000000 
+ 3391      00000000 
+ 3391      00000000 
+ 3391      00000000 
+ 3392              		.text
+ 3393              	.Letext0:
+ 3394              		.file 1 ".\\Generated_Source\\PSoC5\\cymetadata.c"
+ 3395              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 3396              		.section	.debug_info,"",%progbits
+ 3397              	.Ldebug_info0:
+ 3398 0000 3B010000 		.4byte	0x13b
+ 3399 0004 0400     		.2byte	0x4
+ 3400 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 3401 000a 04       		.byte	0x4
+ 3402 000b 01       		.uleb128 0x1
+ 3403 000c 4D010000 		.4byte	.LASF18
+ 3404 0010 01       		.byte	0x1
+ 3405 0011 00000000 		.4byte	.LASF19
+ 3406 0015 26000000 		.4byte	.LASF20
+ 3407 0019 00000000 		.4byte	.Ldebug_line0
+ 3408 001d 02       		.uleb128 0x2
+ 3409 001e 01       		.byte	0x1
+ 3410 001f 06       		.byte	0x6
+ 3411 0020 E4010000 		.4byte	.LASF0
+ 3412 0024 02       		.uleb128 0x2
+ 3413 0025 01       		.byte	0x1
+ 3414 0026 08       		.byte	0x8
+ 3415 0027 84000000 		.4byte	.LASF1
+ 3416 002b 02       		.uleb128 0x2
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 61
+
+
+ 3417 002c 02       		.byte	0x2
+ 3418 002d 05       		.byte	0x5
+ 3419 002e 43010000 		.4byte	.LASF2
+ 3420 0032 02       		.uleb128 0x2
+ 3421 0033 02       		.byte	0x2
+ 3422 0034 07       		.byte	0x7
+ 3423 0035 A4000000 		.4byte	.LASF3
+ 3424 0039 02       		.uleb128 0x2
+ 3425 003a 04       		.byte	0x4
+ 3426 003b 05       		.byte	0x5
+ 3427 003c DB010000 		.4byte	.LASF4
+ 3428 0040 02       		.uleb128 0x2
+ 3429 0041 04       		.byte	0x4
+ 3430 0042 07       		.byte	0x7
+ 3431 0043 92000000 		.4byte	.LASF5
+ 3432 0047 02       		.uleb128 0x2
+ 3433 0048 08       		.byte	0x8
+ 3434 0049 05       		.byte	0x5
+ 3435 004a 30010000 		.4byte	.LASF6
+ 3436 004e 02       		.uleb128 0x2
+ 3437 004f 08       		.byte	0x8
+ 3438 0050 07       		.byte	0x7
+ 3439 0051 ED000000 		.4byte	.LASF7
+ 3440 0055 03       		.uleb128 0x3
+ 3441 0056 04       		.byte	0x4
+ 3442 0057 05       		.byte	0x5
+ 3443 0058 696E7400 		.ascii	"int\000"
+ 3444 005c 02       		.uleb128 0x2
+ 3445 005d 04       		.byte	0x4
+ 3446 005e 07       		.byte	0x7
+ 3447 005f E0000000 		.4byte	.LASF8
+ 3448 0063 04       		.uleb128 0x4
+ 3449 0064 7E000000 		.4byte	.LASF21
+ 3450 0068 02       		.byte	0x2
+ 3451 0069 3801     		.2byte	0x138
+ 3452 006b 24000000 		.4byte	0x24
+ 3453 006f 02       		.uleb128 0x2
+ 3454 0070 04       		.byte	0x4
+ 3455 0071 04       		.byte	0x4
+ 3456 0072 78000000 		.4byte	.LASF9
+ 3457 0076 02       		.uleb128 0x2
+ 3458 0077 08       		.byte	0x8
+ 3459 0078 04       		.byte	0x4
+ 3460 0079 B7000000 		.4byte	.LASF10
+ 3461 007d 02       		.uleb128 0x2
+ 3462 007e 01       		.byte	0x1
+ 3463 007f 08       		.byte	0x8
+ 3464 0080 3E010000 		.4byte	.LASF11
+ 3465 0084 05       		.uleb128 0x5
+ 3466 0085 63000000 		.4byte	0x63
+ 3467 0089 95000000 		.4byte	0x95
+ 3468 008d 06       		.uleb128 0x6
+ 3469 008e 95000000 		.4byte	0x95
+ 3470 0092 FF0C     		.2byte	0xcff
+ 3471 0094 00       		.byte	0
+ 3472 0095 02       		.uleb128 0x2
+ 3473 0096 04       		.byte	0x4
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 62
+
+
+ 3474 0097 07       		.byte	0x7
+ 3475 0098 27010000 		.4byte	.LASF12
+ 3476 009c 07       		.uleb128 0x7
+ 3477 009d CE000000 		.4byte	.LASF13
+ 3478 00a1 01       		.byte	0x1
+ 3479 00a2 1F       		.byte	0x1f
+ 3480 00a3 AD000000 		.4byte	0xad
+ 3481 00a7 05       		.uleb128 0x5
+ 3482 00a8 03       		.byte	0x3
+ 3483 00a9 00000000 		.4byte	cy_meta_configecc
+ 3484 00ad 08       		.uleb128 0x8
+ 3485 00ae 84000000 		.4byte	0x84
+ 3486 00b2 05       		.uleb128 0x5
+ 3487 00b3 63000000 		.4byte	0x63
+ 3488 00b7 C2000000 		.4byte	0xc2
+ 3489 00bb 09       		.uleb128 0x9
+ 3490 00bc 95000000 		.4byte	0x95
+ 3491 00c0 03       		.byte	0x3
+ 3492 00c1 00       		.byte	0
+ 3493 00c2 0A       		.uleb128 0xa
+ 3494 00c3 BE000000 		.4byte	.LASF14
+ 3495 00c7 01       		.byte	0x1
+ 3496 00c8 CC01     		.2byte	0x1cc
+ 3497 00ca D4000000 		.4byte	0xd4
+ 3498 00ce 05       		.uleb128 0x5
+ 3499 00cf 03       		.byte	0x3
+ 3500 00d0 00000000 		.4byte	cy_meta_custnvl
+ 3501 00d4 08       		.uleb128 0x8
+ 3502 00d5 B2000000 		.4byte	0xb2
+ 3503 00d9 0A       		.uleb128 0xa
+ 3504 00da 19010000 		.4byte	.LASF15
+ 3505 00de 01       		.byte	0x1
+ 3506 00df DA01     		.2byte	0x1da
+ 3507 00e1 EB000000 		.4byte	0xeb
+ 3508 00e5 05       		.uleb128 0x5
+ 3509 00e6 03       		.byte	0x3
+ 3510 00e7 00000000 		.4byte	cy_meta_wonvl
+ 3511 00eb 08       		.uleb128 0x8
+ 3512 00ec B2000000 		.4byte	0xb2
+ 3513 00f0 05       		.uleb128 0x5
+ 3514 00f1 63000000 		.4byte	0x63
+ 3515 00f5 00010000 		.4byte	0x100
+ 3516 00f9 09       		.uleb128 0x9
+ 3517 00fa 95000000 		.4byte	0x95
+ 3518 00fe FF       		.byte	0xff
+ 3519 00ff 00       		.byte	0
+ 3520 0100 0A       		.uleb128 0xa
+ 3521 0101 04010000 		.4byte	.LASF16
+ 3522 0105 01       		.byte	0x1
+ 3523 0106 E801     		.2byte	0x1e8
+ 3524 0108 12010000 		.4byte	0x112
+ 3525 010c 05       		.uleb128 0x5
+ 3526 010d 03       		.byte	0x3
+ 3527 010e 00000000 		.4byte	cy_meta_flashprotect
+ 3528 0112 08       		.uleb128 0x8
+ 3529 0113 F0000000 		.4byte	0xf0
+ 3530 0117 05       		.uleb128 0x5
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 63
+
+
+ 3531 0118 63000000 		.4byte	0x63
+ 3532 011c 27010000 		.4byte	0x127
+ 3533 0120 09       		.uleb128 0x9
+ 3534 0121 95000000 		.4byte	0x95
+ 3535 0125 0B       		.byte	0xb
+ 3536 0126 00       		.byte	0
+ 3537 0127 0A       		.uleb128 0xa
+ 3538 0128 6C000000 		.4byte	.LASF17
+ 3539 012c 01       		.byte	0x1
+ 3540 012d 1502     		.2byte	0x215
+ 3541 012f 39010000 		.4byte	0x139
+ 3542 0133 05       		.uleb128 0x5
+ 3543 0134 03       		.byte	0x3
+ 3544 0135 00000000 		.4byte	cy_metadata
+ 3545 0139 08       		.uleb128 0x8
+ 3546 013a 17010000 		.4byte	0x117
+ 3547 013e 00       		.byte	0
+ 3548              		.section	.debug_abbrev,"",%progbits
+ 3549              	.Ldebug_abbrev0:
+ 3550 0000 01       		.uleb128 0x1
+ 3551 0001 11       		.uleb128 0x11
+ 3552 0002 01       		.byte	0x1
+ 3553 0003 25       		.uleb128 0x25
+ 3554 0004 0E       		.uleb128 0xe
+ 3555 0005 13       		.uleb128 0x13
+ 3556 0006 0B       		.uleb128 0xb
+ 3557 0007 03       		.uleb128 0x3
+ 3558 0008 0E       		.uleb128 0xe
+ 3559 0009 1B       		.uleb128 0x1b
+ 3560 000a 0E       		.uleb128 0xe
+ 3561 000b 10       		.uleb128 0x10
+ 3562 000c 17       		.uleb128 0x17
+ 3563 000d 00       		.byte	0
+ 3564 000e 00       		.byte	0
+ 3565 000f 02       		.uleb128 0x2
+ 3566 0010 24       		.uleb128 0x24
+ 3567 0011 00       		.byte	0
+ 3568 0012 0B       		.uleb128 0xb
+ 3569 0013 0B       		.uleb128 0xb
+ 3570 0014 3E       		.uleb128 0x3e
+ 3571 0015 0B       		.uleb128 0xb
+ 3572 0016 03       		.uleb128 0x3
+ 3573 0017 0E       		.uleb128 0xe
+ 3574 0018 00       		.byte	0
+ 3575 0019 00       		.byte	0
+ 3576 001a 03       		.uleb128 0x3
+ 3577 001b 24       		.uleb128 0x24
+ 3578 001c 00       		.byte	0
+ 3579 001d 0B       		.uleb128 0xb
+ 3580 001e 0B       		.uleb128 0xb
+ 3581 001f 3E       		.uleb128 0x3e
+ 3582 0020 0B       		.uleb128 0xb
+ 3583 0021 03       		.uleb128 0x3
+ 3584 0022 08       		.uleb128 0x8
+ 3585 0023 00       		.byte	0
+ 3586 0024 00       		.byte	0
+ 3587 0025 04       		.uleb128 0x4
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 64
+
+
+ 3588 0026 16       		.uleb128 0x16
+ 3589 0027 00       		.byte	0
+ 3590 0028 03       		.uleb128 0x3
+ 3591 0029 0E       		.uleb128 0xe
+ 3592 002a 3A       		.uleb128 0x3a
+ 3593 002b 0B       		.uleb128 0xb
+ 3594 002c 3B       		.uleb128 0x3b
+ 3595 002d 05       		.uleb128 0x5
+ 3596 002e 49       		.uleb128 0x49
+ 3597 002f 13       		.uleb128 0x13
+ 3598 0030 00       		.byte	0
+ 3599 0031 00       		.byte	0
+ 3600 0032 05       		.uleb128 0x5
+ 3601 0033 01       		.uleb128 0x1
+ 3602 0034 01       		.byte	0x1
+ 3603 0035 49       		.uleb128 0x49
+ 3604 0036 13       		.uleb128 0x13
+ 3605 0037 01       		.uleb128 0x1
+ 3606 0038 13       		.uleb128 0x13
+ 3607 0039 00       		.byte	0
+ 3608 003a 00       		.byte	0
+ 3609 003b 06       		.uleb128 0x6
+ 3610 003c 21       		.uleb128 0x21
+ 3611 003d 00       		.byte	0
+ 3612 003e 49       		.uleb128 0x49
+ 3613 003f 13       		.uleb128 0x13
+ 3614 0040 2F       		.uleb128 0x2f
+ 3615 0041 05       		.uleb128 0x5
+ 3616 0042 00       		.byte	0
+ 3617 0043 00       		.byte	0
+ 3618 0044 07       		.uleb128 0x7
+ 3619 0045 34       		.uleb128 0x34
+ 3620 0046 00       		.byte	0
+ 3621 0047 03       		.uleb128 0x3
+ 3622 0048 0E       		.uleb128 0xe
+ 3623 0049 3A       		.uleb128 0x3a
+ 3624 004a 0B       		.uleb128 0xb
+ 3625 004b 3B       		.uleb128 0x3b
+ 3626 004c 0B       		.uleb128 0xb
+ 3627 004d 49       		.uleb128 0x49
+ 3628 004e 13       		.uleb128 0x13
+ 3629 004f 3F       		.uleb128 0x3f
+ 3630 0050 19       		.uleb128 0x19
+ 3631 0051 02       		.uleb128 0x2
+ 3632 0052 18       		.uleb128 0x18
+ 3633 0053 00       		.byte	0
+ 3634 0054 00       		.byte	0
+ 3635 0055 08       		.uleb128 0x8
+ 3636 0056 26       		.uleb128 0x26
+ 3637 0057 00       		.byte	0
+ 3638 0058 49       		.uleb128 0x49
+ 3639 0059 13       		.uleb128 0x13
+ 3640 005a 00       		.byte	0
+ 3641 005b 00       		.byte	0
+ 3642 005c 09       		.uleb128 0x9
+ 3643 005d 21       		.uleb128 0x21
+ 3644 005e 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 65
+
+
+ 3645 005f 49       		.uleb128 0x49
+ 3646 0060 13       		.uleb128 0x13
+ 3647 0061 2F       		.uleb128 0x2f
+ 3648 0062 0B       		.uleb128 0xb
+ 3649 0063 00       		.byte	0
+ 3650 0064 00       		.byte	0
+ 3651 0065 0A       		.uleb128 0xa
+ 3652 0066 34       		.uleb128 0x34
+ 3653 0067 00       		.byte	0
+ 3654 0068 03       		.uleb128 0x3
+ 3655 0069 0E       		.uleb128 0xe
+ 3656 006a 3A       		.uleb128 0x3a
+ 3657 006b 0B       		.uleb128 0xb
+ 3658 006c 3B       		.uleb128 0x3b
+ 3659 006d 05       		.uleb128 0x5
+ 3660 006e 49       		.uleb128 0x49
+ 3661 006f 13       		.uleb128 0x13
+ 3662 0070 3F       		.uleb128 0x3f
+ 3663 0071 19       		.uleb128 0x19
+ 3664 0072 02       		.uleb128 0x2
+ 3665 0073 18       		.uleb128 0x18
+ 3666 0074 00       		.byte	0
+ 3667 0075 00       		.byte	0
+ 3668 0076 00       		.byte	0
+ 3669              		.section	.debug_aranges,"",%progbits
+ 3670 0000 14000000 		.4byte	0x14
+ 3671 0004 0200     		.2byte	0x2
+ 3672 0006 00000000 		.4byte	.Ldebug_info0
+ 3673 000a 04       		.byte	0x4
+ 3674 000b 00       		.byte	0
+ 3675 000c 0000     		.2byte	0
+ 3676 000e 0000     		.2byte	0
+ 3677 0010 00000000 		.4byte	0
+ 3678 0014 00000000 		.4byte	0
+ 3679              		.section	.debug_line,"",%progbits
+ 3680              	.Ldebug_line0:
+ 3681 0000 4F000000 		.section	.debug_str,"MS",%progbits,1
+ 3681      02004900 
+ 3681      00000201 
+ 3681      FB0E0D00 
+ 3681      01010101 
+ 3682              	.LASF19:
+ 3683 0000 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cymetadata.c\000"
+ 3683      6E657261 
+ 3683      7465645F 
+ 3683      536F7572 
+ 3683      63655C50 
+ 3684              	.LASF20:
+ 3685 0026 433A5C55 		.ascii	"C:\\Users\\jthem\\Documents\\PSoC Creator\\PWMExamp"
+ 3685      73657273 
+ 3685      5C6A7468 
+ 3685      656D5C44 
+ 3685      6F63756D 
+ 3686 0054 6C653031 		.ascii	"le01\\SPI_Design02.cydsn\000"
+ 3686      5C535049 
+ 3686      5F446573 
+ 3686      69676E30 
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 66
+
+
+ 3686      322E6379 
+ 3687              	.LASF17:
+ 3688 006c 63795F6D 		.ascii	"cy_metadata\000"
+ 3688      65746164 
+ 3688      61746100 
+ 3689              	.LASF9:
+ 3690 0078 666C6F61 		.ascii	"float\000"
+ 3690      7400
+ 3691              	.LASF21:
+ 3692 007e 75696E74 		.ascii	"uint8\000"
+ 3692      3800
+ 3693              	.LASF1:
+ 3694 0084 756E7369 		.ascii	"unsigned char\000"
+ 3694      676E6564 
+ 3694      20636861 
+ 3694      7200
+ 3695              	.LASF5:
+ 3696 0092 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3696      20756E73 
+ 3696      69676E65 
+ 3696      6420696E 
+ 3696      7400
+ 3697              	.LASF3:
+ 3698 00a4 73686F72 		.ascii	"short unsigned int\000"
+ 3698      7420756E 
+ 3698      7369676E 
+ 3698      65642069 
+ 3698      6E7400
+ 3699              	.LASF10:
+ 3700 00b7 646F7562 		.ascii	"double\000"
+ 3700      6C6500
+ 3701              	.LASF14:
+ 3702 00be 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 3702      6574615F 
+ 3702      63757374 
+ 3702      6E766C00 
+ 3703              	.LASF13:
+ 3704 00ce 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 3704      6574615F 
+ 3704      636F6E66 
+ 3704      69676563 
+ 3704      6300
+ 3705              	.LASF8:
+ 3706 00e0 756E7369 		.ascii	"unsigned int\000"
+ 3706      676E6564 
+ 3706      20696E74 
+ 3706      00
+ 3707              	.LASF7:
+ 3708 00ed 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3708      206C6F6E 
+ 3708      6720756E 
+ 3708      7369676E 
+ 3708      65642069 
+ 3709              	.LASF16:
+ 3710 0104 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 3710      6574615F 
+ 3710      666C6173 
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cc1HAE4t.s 			page 67
+
+
+ 3710      6870726F 
+ 3710      74656374 
+ 3711              	.LASF15:
+ 3712 0119 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 3712      6574615F 
+ 3712      776F6E76 
+ 3712      6C00
+ 3713              	.LASF12:
+ 3714 0127 73697A65 		.ascii	"sizetype\000"
+ 3714      74797065 
+ 3714      00
+ 3715              	.LASF6:
+ 3716 0130 6C6F6E67 		.ascii	"long long int\000"
+ 3716      206C6F6E 
+ 3716      6720696E 
+ 3716      7400
+ 3717              	.LASF11:
+ 3718 013e 63686172 		.ascii	"char\000"
+ 3718      00
+ 3719              	.LASF2:
+ 3720 0143 73686F72 		.ascii	"short int\000"
+ 3720      7420696E 
+ 3720      7400
+ 3721              	.LASF18:
+ 3722 014d 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 3722      4320342E 
+ 3722      392E3320 
+ 3722      32303135 
+ 3722      30333033 
+ 3723 0180 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 3723      20726576 
+ 3723      6973696F 
+ 3723      6E203232 
+ 3723      31323230 
+ 3724 01b3 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 3724      66756E63 
+ 3724      74696F6E 
+ 3724      2D736563 
+ 3724      74696F6E 
+ 3725              	.LASF4:
+ 3726 01db 6C6F6E67 		.ascii	"long int\000"
+ 3726      20696E74 
+ 3726      00
+ 3727              	.LASF0:
+ 3728 01e4 7369676E 		.ascii	"signed char\000"
+ 3728      65642063 
+ 3728      68617200 
+ 3729              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -1,0 +1,7 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev\psoc3\AnalogDevice\PSoC35AnalogDevice.cylib\PSoC35AnalogDevice.cyprj|5e5e5c18-0ace-4b1d-b70f-fb5d84965cc5
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|89230ece-a619-43e4-912e-d4f4cacac25b
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|8614dbbf-e029-4f55-bce3-2a8310e66163
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|c75b0af5-8818-49b8-b5e5-e49d96752527
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|d6e497b9-decb-4a65-844a-5f46060ebafc
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|7439d31c-50ce-423c-b5fd-9abbfc4d69c2
+C:\Users\jthem\Documents\PSoC Creator\PWMExample01\HelloWorld_Blinky02.cydsn\HelloWorld_Blinky02.cyprj|a5f28b1a-d7b1-4f27-ac4b-a09b2365457b

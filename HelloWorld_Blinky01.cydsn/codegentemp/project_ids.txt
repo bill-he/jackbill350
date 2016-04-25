@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|c1fd8751-78db-4f09-8a0c-83b909d1e679
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|cd9b3804-31b1-491a-82b7-1cd6157e6b78
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|1846ecd1-b5e8-452c-918a-c59191a3c8bd
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|ad85db86-78ea-45da-b26b-def8a8397b4e
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c94e80d8-41de-4dd8-a45c-31df4e24015d
+C:\Users\jthem\Documents\PSoC Creator\PWMExample01\HelloWorld_Blinky01.cydsn\HelloWorld_Blinky01.cyprj|fa98798c-66d5-452c-8f4f-d35434916e39

@@ -1,0 +1,441 @@
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cckFYYqr.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.main,"ax",%progbits
+  19              		.align	2
+  20              		.global	main
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	main, %function
+  24              	main:
+  25              	.LFB63:
+  26              		.file 1 ".\\main.c"
+   1:.\main.c      **** /*******************************************************************************
+   2:.\main.c      **** * File: main.c      
+   3:.\main.c      **** *
+   4:.\main.c      **** * Version: 1.0
+   5:.\main.c      **** * 
+   6:.\main.c      **** * Description:
+   7:.\main.c      **** *  This is a source code for example project that demonstates how to generate
+   8:.\main.c      **** *  a simple SineWave using the WaveDAC8 component.
+   9:.\main.c      **** *
+  10:.\main.c      **** * Hardware Dependency:
+  11:.\main.c      **** *  Pin Connections:
+  12:.\main.c      **** *  P0[0] --> SineWave output
+  13:.\main.c      **** * 
+  14:.\main.c      **** * Code Tested With:
+  15:.\main.c      **** *  1. PPSoC Creator 3.0 build 1124
+  16:.\main.c      **** *  2. DP8051 Keil 9.51
+  17:.\main.c      **** *  3. ARM GCC 4.7.3
+  18:.\main.c      **** *
+  19:.\main.c      **** ********************************************************************************
+  20:.\main.c      **** * Copyright 2013, Cypress Semiconductor Corporation. All rights reserved.
+  21:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation and is protected
+  22:.\main.c      **** * by and subject to worldwide patent and copyright laws and treaties.
+  23:.\main.c      **** * Therefore, you may use this software only as provided in the license agreement
+  24:.\main.c      **** * accompanying the software package from which you obtained this software.
+  25:.\main.c      **** * CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  26:.\main.c      **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
+  27:.\main.c      **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  28:.\main.c      **** *******************************************************************************/
+  29:.\main.c      **** 
+  30:.\main.c      **** #include <project.h>
+  31:.\main.c      **** 
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cckFYYqr.s 			page 2
+
+
+  32:.\main.c      **** 
+  33:.\main.c      **** int main()
+  34:.\main.c      **** {
+  27              		.loc 1 34 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  35:.\main.c      ****     WaveDAC8_1_Start(); /* Start WaveDAC8  */
+  37              		.loc 1 35 0
+  38 0004 FFF7FEFF 		bl	WaveDAC8_1_Start
+  39              	.L2:
+  36:.\main.c      **** 	
+  37:.\main.c      ****     for(;;);            /* Loop forever    */
+  40              		.loc 1 37 0 discriminator 1
+  41 0008 FEE7     		b	.L2
+  42              		.cfi_endproc
+  43              	.LFE63:
+  44              		.size	main, .-main
+  45 000a 00BF     		.text
+  46              	.Letext0:
+  47              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+  48              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+  49              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+  50              		.section	.debug_info,"",%progbits
+  51              	.Ldebug_info0:
+  52 0000 C0000000 		.4byte	0xc0
+  53 0004 0400     		.2byte	0x4
+  54 0006 00000000 		.4byte	.Ldebug_abbrev0
+  55 000a 04       		.byte	0x4
+  56 000b 01       		.uleb128 0x1
+  57 000c C4000000 		.4byte	.LASF15
+  58 0010 01       		.byte	0x1
+  59 0011 52010000 		.4byte	.LASF16
+  60 0015 45000000 		.4byte	.LASF17
+  61 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  62 001d 00000000 		.4byte	0
+  63 0021 00000000 		.4byte	.Ldebug_line0
+  64 0025 02       		.uleb128 0x2
+  65 0026 01       		.byte	0x1
+  66 0027 06       		.byte	0x6
+  67 0028 6F010000 		.4byte	.LASF0
+  68 002c 02       		.uleb128 0x2
+  69 002d 01       		.byte	0x1
+  70 002e 08       		.byte	0x8
+  71 002f A8000000 		.4byte	.LASF1
+  72 0033 02       		.uleb128 0x2
+  73 0034 02       		.byte	0x2
+  74 0035 05       		.byte	0x5
+  75 0036 8B010000 		.4byte	.LASF2
+  76 003a 02       		.uleb128 0x2
+  77 003b 02       		.byte	0x2
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cckFYYqr.s 			page 3
+
+
+  78 003c 07       		.byte	0x7
+  79 003d 0E000000 		.4byte	.LASF3
+  80 0041 03       		.uleb128 0x3
+  81 0042 7B010000 		.4byte	.LASF9
+  82 0046 02       		.byte	0x2
+  83 0047 3F       		.byte	0x3f
+  84 0048 4C000000 		.4byte	0x4c
+  85 004c 02       		.uleb128 0x2
+  86 004d 04       		.byte	0x4
+  87 004e 05       		.byte	0x5
+  88 004f BB000000 		.4byte	.LASF4
+  89 0053 02       		.uleb128 0x2
+  90 0054 04       		.byte	0x4
+  91 0055 07       		.byte	0x7
+  92 0056 33000000 		.4byte	.LASF5
+  93 005a 02       		.uleb128 0x2
+  94 005b 08       		.byte	0x8
+  95 005c 05       		.byte	0x5
+  96 005d 00000000 		.4byte	.LASF6
+  97 0061 02       		.uleb128 0x2
+  98 0062 08       		.byte	0x8
+  99 0063 07       		.byte	0x7
+ 100 0064 91000000 		.4byte	.LASF7
+ 101 0068 04       		.uleb128 0x4
+ 102 0069 04       		.byte	0x4
+ 103 006a 05       		.byte	0x5
+ 104 006b 696E7400 		.ascii	"int\000"
+ 105 006f 02       		.uleb128 0x2
+ 106 0070 04       		.byte	0x4
+ 107 0071 07       		.byte	0x7
+ 108 0072 21000000 		.4byte	.LASF8
+ 109 0076 03       		.uleb128 0x3
+ 110 0077 95010000 		.4byte	.LASF10
+ 111 007b 03       		.byte	0x3
+ 112 007c 2C       		.byte	0x2c
+ 113 007d 41000000 		.4byte	0x41
+ 114 0081 02       		.uleb128 0x2
+ 115 0082 04       		.byte	0x4
+ 116 0083 04       		.byte	0x4
+ 117 0084 85010000 		.4byte	.LASF11
+ 118 0088 02       		.uleb128 0x2
+ 119 0089 08       		.byte	0x8
+ 120 008a 04       		.byte	0x4
+ 121 008b 5B010000 		.4byte	.LASF12
+ 122 008f 02       		.uleb128 0x2
+ 123 0090 01       		.byte	0x1
+ 124 0091 08       		.byte	0x8
+ 125 0092 B6000000 		.4byte	.LASF13
+ 126 0096 02       		.uleb128 0x2
+ 127 0097 04       		.byte	0x4
+ 128 0098 07       		.byte	0x7
+ 129 0099 9D010000 		.4byte	.LASF14
+ 130 009d 05       		.uleb128 0x5
+ 131 009e 2E000000 		.4byte	.LASF18
+ 132 00a2 01       		.byte	0x1
+ 133 00a3 21       		.byte	0x21
+ 134 00a4 68000000 		.4byte	0x68
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cckFYYqr.s 			page 4
+
+
+ 135 00a8 00000000 		.4byte	.LFB63
+ 136 00ac 0A000000 		.4byte	.LFE63-.LFB63
+ 137 00b0 01       		.uleb128 0x1
+ 138 00b1 9C       		.byte	0x9c
+ 139 00b2 06       		.uleb128 0x6
+ 140 00b3 62010000 		.4byte	.LASF19
+ 141 00b7 04       		.byte	0x4
+ 142 00b8 5506     		.2byte	0x655
+ 143 00ba BE000000 		.4byte	0xbe
+ 144 00be 07       		.uleb128 0x7
+ 145 00bf 76000000 		.4byte	0x76
+ 146 00c3 00       		.byte	0
+ 147              		.section	.debug_abbrev,"",%progbits
+ 148              	.Ldebug_abbrev0:
+ 149 0000 01       		.uleb128 0x1
+ 150 0001 11       		.uleb128 0x11
+ 151 0002 01       		.byte	0x1
+ 152 0003 25       		.uleb128 0x25
+ 153 0004 0E       		.uleb128 0xe
+ 154 0005 13       		.uleb128 0x13
+ 155 0006 0B       		.uleb128 0xb
+ 156 0007 03       		.uleb128 0x3
+ 157 0008 0E       		.uleb128 0xe
+ 158 0009 1B       		.uleb128 0x1b
+ 159 000a 0E       		.uleb128 0xe
+ 160 000b 55       		.uleb128 0x55
+ 161 000c 17       		.uleb128 0x17
+ 162 000d 11       		.uleb128 0x11
+ 163 000e 01       		.uleb128 0x1
+ 164 000f 10       		.uleb128 0x10
+ 165 0010 17       		.uleb128 0x17
+ 166 0011 00       		.byte	0
+ 167 0012 00       		.byte	0
+ 168 0013 02       		.uleb128 0x2
+ 169 0014 24       		.uleb128 0x24
+ 170 0015 00       		.byte	0
+ 171 0016 0B       		.uleb128 0xb
+ 172 0017 0B       		.uleb128 0xb
+ 173 0018 3E       		.uleb128 0x3e
+ 174 0019 0B       		.uleb128 0xb
+ 175 001a 03       		.uleb128 0x3
+ 176 001b 0E       		.uleb128 0xe
+ 177 001c 00       		.byte	0
+ 178 001d 00       		.byte	0
+ 179 001e 03       		.uleb128 0x3
+ 180 001f 16       		.uleb128 0x16
+ 181 0020 00       		.byte	0
+ 182 0021 03       		.uleb128 0x3
+ 183 0022 0E       		.uleb128 0xe
+ 184 0023 3A       		.uleb128 0x3a
+ 185 0024 0B       		.uleb128 0xb
+ 186 0025 3B       		.uleb128 0x3b
+ 187 0026 0B       		.uleb128 0xb
+ 188 0027 49       		.uleb128 0x49
+ 189 0028 13       		.uleb128 0x13
+ 190 0029 00       		.byte	0
+ 191 002a 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cckFYYqr.s 			page 5
+
+
+ 192 002b 04       		.uleb128 0x4
+ 193 002c 24       		.uleb128 0x24
+ 194 002d 00       		.byte	0
+ 195 002e 0B       		.uleb128 0xb
+ 196 002f 0B       		.uleb128 0xb
+ 197 0030 3E       		.uleb128 0x3e
+ 198 0031 0B       		.uleb128 0xb
+ 199 0032 03       		.uleb128 0x3
+ 200 0033 08       		.uleb128 0x8
+ 201 0034 00       		.byte	0
+ 202 0035 00       		.byte	0
+ 203 0036 05       		.uleb128 0x5
+ 204 0037 2E       		.uleb128 0x2e
+ 205 0038 00       		.byte	0
+ 206 0039 3F       		.uleb128 0x3f
+ 207 003a 19       		.uleb128 0x19
+ 208 003b 03       		.uleb128 0x3
+ 209 003c 0E       		.uleb128 0xe
+ 210 003d 3A       		.uleb128 0x3a
+ 211 003e 0B       		.uleb128 0xb
+ 212 003f 3B       		.uleb128 0x3b
+ 213 0040 0B       		.uleb128 0xb
+ 214 0041 49       		.uleb128 0x49
+ 215 0042 13       		.uleb128 0x13
+ 216 0043 11       		.uleb128 0x11
+ 217 0044 01       		.uleb128 0x1
+ 218 0045 12       		.uleb128 0x12
+ 219 0046 06       		.uleb128 0x6
+ 220 0047 40       		.uleb128 0x40
+ 221 0048 18       		.uleb128 0x18
+ 222 0049 9642     		.uleb128 0x2116
+ 223 004b 19       		.uleb128 0x19
+ 224 004c 00       		.byte	0
+ 225 004d 00       		.byte	0
+ 226 004e 06       		.uleb128 0x6
+ 227 004f 34       		.uleb128 0x34
+ 228 0050 00       		.byte	0
+ 229 0051 03       		.uleb128 0x3
+ 230 0052 0E       		.uleb128 0xe
+ 231 0053 3A       		.uleb128 0x3a
+ 232 0054 0B       		.uleb128 0xb
+ 233 0055 3B       		.uleb128 0x3b
+ 234 0056 05       		.uleb128 0x5
+ 235 0057 49       		.uleb128 0x49
+ 236 0058 13       		.uleb128 0x13
+ 237 0059 3F       		.uleb128 0x3f
+ 238 005a 19       		.uleb128 0x19
+ 239 005b 3C       		.uleb128 0x3c
+ 240 005c 19       		.uleb128 0x19
+ 241 005d 00       		.byte	0
+ 242 005e 00       		.byte	0
+ 243 005f 07       		.uleb128 0x7
+ 244 0060 35       		.uleb128 0x35
+ 245 0061 00       		.byte	0
+ 246 0062 49       		.uleb128 0x49
+ 247 0063 13       		.uleb128 0x13
+ 248 0064 00       		.byte	0
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cckFYYqr.s 			page 6
+
+
+ 249 0065 00       		.byte	0
+ 250 0066 00       		.byte	0
+ 251              		.section	.debug_aranges,"",%progbits
+ 252 0000 1C000000 		.4byte	0x1c
+ 253 0004 0200     		.2byte	0x2
+ 254 0006 00000000 		.4byte	.Ldebug_info0
+ 255 000a 04       		.byte	0x4
+ 256 000b 00       		.byte	0
+ 257 000c 0000     		.2byte	0
+ 258 000e 0000     		.2byte	0
+ 259 0010 00000000 		.4byte	.LFB63
+ 260 0014 0A000000 		.4byte	.LFE63-.LFB63
+ 261 0018 00000000 		.4byte	0
+ 262 001c 00000000 		.4byte	0
+ 263              		.section	.debug_ranges,"",%progbits
+ 264              	.Ldebug_ranges0:
+ 265 0000 00000000 		.4byte	.LFB63
+ 266 0004 0A000000 		.4byte	.LFE63
+ 267 0008 00000000 		.4byte	0
+ 268 000c 00000000 		.4byte	0
+ 269              		.section	.debug_line,"",%progbits
+ 270              	.Ldebug_line0:
+ 271 0000 57010000 		.section	.debug_str,"MS",%progbits,1
+ 271      02003C01 
+ 271      00000201 
+ 271      FB0E0D00 
+ 271      01010101 
+ 272              	.LASF6:
+ 273 0000 6C6F6E67 		.ascii	"long long int\000"
+ 273      206C6F6E 
+ 273      6720696E 
+ 273      7400
+ 274              	.LASF3:
+ 275 000e 73686F72 		.ascii	"short unsigned int\000"
+ 275      7420756E 
+ 275      7369676E 
+ 275      65642069 
+ 275      6E7400
+ 276              	.LASF8:
+ 277 0021 756E7369 		.ascii	"unsigned int\000"
+ 277      676E6564 
+ 277      20696E74 
+ 277      00
+ 278              	.LASF18:
+ 279 002e 6D61696E 		.ascii	"main\000"
+ 279      00
+ 280              	.LASF5:
+ 281 0033 6C6F6E67 		.ascii	"long unsigned int\000"
+ 281      20756E73 
+ 281      69676E65 
+ 281      6420696E 
+ 281      7400
+ 282              	.LASF17:
+ 283 0045 433A5C55 		.ascii	"C:\\Users\\jthem\\Documents\\PSoC Creator\\PWMExamp"
+ 283      73657273 
+ 283      5C6A7468 
+ 283      656D5C44 
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cckFYYqr.s 			page 7
+
+
+ 283      6F63756D 
+ 284 0073 6C653031 		.ascii	"le01\\WaveDAC8_Example01.cydsn\000"
+ 284      5C576176 
+ 284      65444143 
+ 284      385F4578 
+ 284      616D706C 
+ 285              	.LASF7:
+ 286 0091 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 286      206C6F6E 
+ 286      6720756E 
+ 286      7369676E 
+ 286      65642069 
+ 287              	.LASF1:
+ 288 00a8 756E7369 		.ascii	"unsigned char\000"
+ 288      676E6564 
+ 288      20636861 
+ 288      7200
+ 289              	.LASF13:
+ 290 00b6 63686172 		.ascii	"char\000"
+ 290      00
+ 291              	.LASF4:
+ 292 00bb 6C6F6E67 		.ascii	"long int\000"
+ 292      20696E74 
+ 292      00
+ 293              	.LASF15:
+ 294 00c4 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 294      4320342E 
+ 294      392E3320 
+ 294      32303135 
+ 294      30333033 
+ 295 00f7 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 295      20726576 
+ 295      6973696F 
+ 295      6E203232 
+ 295      31323230 
+ 296 012a 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 296      66756E63 
+ 296      74696F6E 
+ 296      2D736563 
+ 296      74696F6E 
+ 297              	.LASF16:
+ 298 0152 2E5C6D61 		.ascii	".\\main.c\000"
+ 298      696E2E63 
+ 298      00
+ 299              	.LASF12:
+ 300 015b 646F7562 		.ascii	"double\000"
+ 300      6C6500
+ 301              	.LASF19:
+ 302 0162 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 302      52784275 
+ 302      66666572 
+ 302      00
+ 303              	.LASF0:
+ 304 016f 7369676E 		.ascii	"signed char\000"
+ 304      65642063 
+ 304      68617200 
+ 305              	.LASF9:
+ARM GAS  C:\Users\jthem\AppData\Local\Temp\cckFYYqr.s 			page 8
+
+
+ 306 017b 5F5F696E 		.ascii	"__int32_t\000"
+ 306      7433325F 
+ 306      7400
+ 307              	.LASF11:
+ 308 0185 666C6F61 		.ascii	"float\000"
+ 308      7400
+ 309              	.LASF2:
+ 310 018b 73686F72 		.ascii	"short int\000"
+ 310      7420696E 
+ 310      7400
+ 311              	.LASF10:
+ 312 0195 696E7433 		.ascii	"int32_t\000"
+ 312      325F7400 
+ 313              	.LASF14:
+ 314 019d 73697A65 		.ascii	"sizetype\000"
+ 314      74797065 
+ 314      00
+ 315              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
